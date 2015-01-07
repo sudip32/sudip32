@@ -1,0 +1,1317 @@
+var isclickOrNot = 0;
+var fileName5 = "";
+
+$(document).ready(function () {
+    // Check if user is in Login page
+    var link = window.location.toString();
+    if (link.indexOf("Login") != -1) {
+        loginUp();
+    }
+
+    // On enter initiate login or signup
+    $(document).keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            if ($("#userName").is(":focus") || $("#Password").is(":focus")) {
+                loginUser();
+            }
+            else if ($("#SignupFirstName").is(":focus") || $("#SignupLastName").is(":focus") || $("#SignupUsername").is(":focus") || $("#SignupPassword").is(":focus")) {
+                signUpUser();
+            }
+            else if ($("#forgotPassEmail").is(":focus")) {
+                sendforgot();
+            }
+        }
+    });
+
+    // simulate clicking upload photo Start
+    $("#uploadPhoto").click(function () {
+        $("#SingleImage").trigger('click');
+    });
+    // simulate clicking upload photo End
+
+    $(".templateContainer").find(".template").each(function () {
+        // If user click on template add class
+        $(this).click(function () {
+            $(".templateContainer").find(".template").removeClass("selected");
+            $(this).addClass("selected");
+            $("#templateId").attr("value", $(this).attr("number"));
+        });
+
+        // If user hovers on a template, display preview
+        $(".bigTemplate, .form5").mouseleave(function () {
+            $(".bigTemplate").find("img").attr("src", "");
+            $(".bigTemplate").stop().animate({ height: "0px", width: "0px" }, 200, "easeInOutQuad", function () {
+
+            });
+        });
+        $(this).mouseenter(function () {
+            if (parseInt($(this).position().left) == 0 || parseInt($(this).position().left) == 150) {
+                
+                $(".bigTemplate").css({ right: "532px" });
+            }
+            else {
+                $(".bigTemplate").css({ right: "-191px" });
+            }
+            $(".bigTemplate").find("img").attr("src", $(this).find("img").attr("src"));
+            $(".bigTemplate").stop().animate({ height: "355px", width: "265px" }, 200, "easeInOutQuad", function () {
+
+            });
+        });
+    });
+
+    $(document).keydown(function (objEvent) {
+        var elid = $(document.activeElement).is("input[type=text]");
+        var elid2 = $(document.activeElement).is("input[type=password]");
+        var elid3 = $(document.activeElement).is("textarea");
+
+        // no tab keypress
+        if (objEvent.keyCode == 9 && $(".secondBigWrapper").is(':animated') == false && ($(".form1").find("input").last().is(":focus") || $(".form2").find(".eduContainer").find("input").last().is(":focus") || $(".form3").find(".expContainer").find("input").last().is(":focus") || $(".form4").find("input").last().is(":focus") || $(".form5").find("input").last().is(":focus") || $(".form6").find("input").last().is(":focus") || $(".form7").find("input").last().is(":focus") || $(".form8").find("input").last().is(":focus"))) {  //tab pressed
+            objEvent.preventDefault(); // stops its action
+        }
+        else if (objEvent.keyCode == 9 && !elid && !elid2 && !elid3) {
+            objEvent.preventDefault(); // stops its action
+        }
+
+        // Disable backspace if not in input or textarea
+        if (objEvent.keyCode === 8 && !elid && !elid2 && !elid3) {
+            return false;
+        }
+    });
+});
+
+/////// move the main content wrapper - Start ///////
+function moveUp() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        // set skills height
+        $(".form4").css({ height: "264px" });
+
+        // Set hash when movins for login redirection
+        window.location.hash = "Basics";
+
+        $(".wrapper").find(".firstWrapper").animate({ marginTop: "-486px" }, 700, "easeInOutQuad", function () {
+            $(".leftColumn").find(".leftArrow").show();
+            $(".rightColumn").find(".rightArrow").show();
+            $("#lowerTopMenu").show();
+            $(".wrapper").css({ height: "auto" });
+        });
+    }
+}
+function moveDown() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        // always show the move next
+        if (parseInt($(".secondBigWrapper").css('marginLeft')) != -6930 && parseInt($(".secondBigWrapper").css('marginLeft')) != -5940)
+            $(".rightColumn").find(".rightArrow").show();
+
+        if (parseInt($(".secondBigWrapper").css('marginLeft')) == 0) {
+            $(".leftColumn").find(".leftArrow").hide();
+            $(".rightColumn").find(".rightArrow").hide();
+            $("#lowerTopMenu").hide();
+            $(".wrapper").css({ height: "483px" });
+            $(".wrapper").find(".firstWrapper").animate({ marginTop: "0px" }, 700, "easeInOutQuad", function () {
+
+            });
+        }
+        else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -990) {
+            moveToBasics();
+        }
+        else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -1980) {
+            moveToEducation();
+        }
+        else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -2970) {
+            moveToExperience();
+        }
+        else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -3960) {
+            moveToSkills();
+        }
+        else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -4950) {
+            moveToTemplates();
+        }
+        else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -5940) {
+            moveToFinish();
+        }
+        else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -6930) {
+            moveToSignup();
+        }
+    }
+}
+function moveNext() {
+    minimalizeEducation();
+    minimalizeExperience();
+    if (parseInt($(".secondBigWrapper").css('marginLeft')) == 0) {
+        moveToEducation();
+    }
+    else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -990) {
+        moveToExperience();
+    }
+    else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -1980) {
+        moveToSkills();
+    }
+    else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -2970) {
+        moveToTemplates();
+    }
+    else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -3960) {
+        moveToFinish();
+    }
+    else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -4950) {
+        moveToSignup();
+    }
+    else if (parseInt($(".secondBigWrapper").css('marginLeft')) == -5940) {
+        moveToForgotPass();
+    }
+}
+
+function moveToBasics() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        $(".saveNow").hide();
+
+        // Set hash when movins for login redirection
+        window.location.hash = "Basics";
+
+        // set skills height
+        $(".form4").css({ height: "264px" });
+
+        $(".rightColumn").find(".rightArrow").show();
+        minimalizeEducation();
+        $(".secondBigWrapper").animate({ marginLeft: "0px" }, 700, "easeInOutQuad", function () {
+            $(".lowerTopMenu").css({ backgroundPosition: "0 -1px" });
+            $(".lowerTopMenuItem").css({ color: "#6D6E70", fontWeight: "normal" });
+            $(".lowerTopMenuItem").first().css({ color: "white", fontWeight: "bold" });
+            $(".saveNow").show();
+        });
+
+
+    }
+}
+function moveToEducation() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        $(".saveNow").hide();
+
+        // Set hash when movins for login redirection
+        window.location.hash = "Education";
+
+        // set skills height
+        $(".form4").css({ height: "264px" });
+
+        $(".rightColumn").find(".rightArrow").show();
+        minimalizeExperience();
+        $(".secondBigWrapper").animate({ marginLeft: "-990px" }, 700, "easeInOutQuad", function () {
+            $(".lowerTopMenu").css({ backgroundPosition: "0 -55px" });
+            $(".lowerTopMenuItem").css({ color: "#6D6E70", fontWeight: "normal" });
+            $(".lowerTopMenuItem").first().next().css({ color: "white", fontWeight: "bold" });
+            maximizeEducation();
+            $(".saveNow").show();
+        });
+    }
+}
+function moveToExperience() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        $(".saveNow").hide();
+
+        // Set hash when movins for login redirection
+        window.location.hash = "Experience";
+
+        // set skills height
+        $(".form4").css({ height: "264px" });
+
+        $(".rightColumn").find(".rightArrow").show();
+        $(".secondBigWrapper").animate({ marginLeft: "-1980px" }, 700, "easeInOutQuad", function () {
+            $(".lowerTopMenu").css({ backgroundPosition: "0 -110px" });
+            $(".lowerTopMenuItem").css({ color: "#6D6E70", fontWeight: "normal" });
+            $(".lowerTopMenuItem").first().next().next().css({ color: "white", fontWeight: "bold" });
+            maximizeExperience();
+            $(".saveNow").show();
+        });
+    }
+}
+function moveToSkills() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        $(".saveNow").hide();
+
+        // Set hash when movins for login redirection
+        window.location.hash = "Skills";
+
+        // check if we should remove delete icons or not : start
+        if ($(".form4").find(".languageContainer").length == 1) {
+            $(".form4").find(".languageContainer").find(".delete").remove();
+        }
+        if ($(".form4").find(".languageContainer2").length == 1) {
+            $(".form4").find(".languageContainer2").find(".delete").remove();
+        }
+        if ($(".form4").find(".languageContainer3").length == 1) {
+            $(".form4").find(".languageContainer3").find(".delete").remove();
+        }
+        if ($(".form4").find(".languageContainer4").length == 1) {
+            $(".form4").find(".languageContainer4").find(".delete").remove();
+        }
+        // check if we should remove delete icons or not : end
+
+        $(".rightColumn").find(".rightArrow").show();
+        $(".secondBigWrapper").animate({ marginLeft: "-2970px" }, 700, "easeInOutQuad", function () {
+            $(".lowerTopMenu").css({ backgroundPosition: "0 -164px" });
+            $(".lowerTopMenuItem").css({ color: "#6D6E70", fontWeight: "normal" });
+            $(".lowerTopMenuItem").first().next().next().next().css({ color: "white", fontWeight: "bold" });
+
+            // set height of skills
+            $(".form4").css({ height: "auto" });
+
+            $(".saveNow").show();
+        });
+    }
+}
+function moveToTemplates() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        $(".saveNow").hide();
+
+        // Set hash when movins for login redirection
+        window.location.hash = "Templates";
+
+        // set skills height
+        $(".form4").css({ height: "264px" });
+
+        $(".rightColumn").find(".rightArrow").show();
+        $(".secondBigWrapper").animate({ marginLeft: "-3960px" }, 700, "easeInOutQuad", function () {
+            $(".lowerTopMenu").css({ backgroundPosition: "0 -219px" });
+            $(".lowerTopMenuItem").css({ color: "#6D6E70", fontWeight: "normal" });
+            $(".lowerTopMenuItem").first().next().next().next().next().css({ color: "white", fontWeight: "bold" });
+
+            // Initiate template slider
+            //initiateTemplateSlider();
+
+            $(".saveNow").show();
+        });
+    }
+}
+function moveToFinish() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        // set skills height
+        $(".form4").css({ height: "264px" });
+
+        // Set hash when movins for login redirection
+        window.location.hash = "Finish";
+
+        $(".rightColumn").find(".rightArrow").show();
+        $(".secondBigWrapper").animate({ marginLeft: "-4950px" }, 700, "easeInOutQuad", function () {
+            $(".rightColumn").find(".rightArrow").hide();
+        });
+    }
+}
+function moveToSignup() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        // set skills height
+        $(".form4").css({ height: "264px" });
+
+        // Set hash when movins for login redirection
+        window.location.hash = "Home";
+
+        $(".secondBigWrapper").animate({ marginLeft: "-5940px" }, 700, "easeInOutQuad", function () {
+            $(".rightColumn").find(".rightArrow").hide();
+        });
+    }
+}
+function moveToForgotPass() {
+    if ($(".secondBigWrapper").is(':animated') == false) {
+        // set skills height
+        $(".form4").css({ height: "264px" });
+
+        $(".secondBigWrapper").animate({ marginLeft: "-6930px" }, 700, "easeInOutQuad", function () {
+            $(".rightColumn").find(".rightArrow").hide();
+        });
+    }
+}
+//////// move the main content wrapper - End /////////
+// Template slider initiation 
+function initiateTemplateSlider() {
+    if ($(".templateContainer").find(".template").length > 4) {
+        $(".templateContainer").animate({ top: "-30px" }, 2000, "easeInOutQuad");
+        $(".templateContainer").mouseenter(function () {
+            if (parseInt($(".templateWrapper").find(".templateContainer").css('top')) != -202) {
+                $(".templateContainer").stop();
+                $(".templateContainer").css({ top: "0px" });
+                $(".templateContainer").unbind("mouseenter");
+            }
+        });
+    }
+}
+
+
+// add another education element
+function addAnotherEducation() {
+    var numberOfCurrentElements = $(".wrapper .secondBigWrapper .thirdWrapper .form2").find(".eduContainer").length + 1;
+
+    var htmlToAdd = "<div class=\"eduContainer\">";
+    htmlToAdd += "<div class='arrows'><div class='arrowsUp'></div><div class='arrowsDown'></div></div>";
+    htmlToAdd += "<input type='text' value=\"Name of School / College / University\" name='universityName" + numberOfCurrentElements + "' id='universityName" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Name of School / College / University'\" onclick=\"if(this.value=='Name of School / College / University')this.value=''\" style=\"width: 510px;\">";
+    htmlToAdd += "<input type='text' value=\"City or Location\" name='location" + numberOfCurrentElements + "' id='location" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='City or Location'\" onclick=\"if(this.value=='City or Location')this.value=''\">";
+    htmlToAdd += "<input type='text' style=\"margin-left: 27px; margin-right: 0;\" value=\"Class / Course / Major\" name='classCourse" + numberOfCurrentElements + "' id='classCourse" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Class / Course / Major'\" onclick=\"if(this.value=='Class / Course / Major')this.value=''\">";
+    htmlToAdd += "<input type='text' value=\"Start Date:     eg. Jan 2010\" name='startDate" + numberOfCurrentElements + "' id='startDate1" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Start Date:     eg. Jan 2010'\" onclick=\"if(this.value=='Start Date:     eg. Jan 2010')this.value=''\">";
+    htmlToAdd += "<input type='text' style=\"margin-left: 27px; margin-right: 0;\" value=\"End Date:     eg. July 2015\" id='endDate" + numberOfCurrentElements + "' name='endDate" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='End Date:     eg. July 2015'\" onclick=\"if(this.value=='End Date:     eg. July 2015')this.value=''\">";
+    htmlToAdd += "<textarea name='description" + numberOfCurrentElements + "' id='description" + numberOfCurrentElements + "' onblur=\"if($.trim($(this).text()) == '')$(this).text('Describe your studying experience in a couple of sentences.')\" onclick=\"if($.trim($(this).text()) == 'Describe your studying experience in a couple of sentences.')$(this).text('')\">Describe your studying experience in a couple of sentences.</textarea><div onclick=\"deleteEducation(this)\" class=\"delete\"></div></div>";
+
+    minimalizeEducation();
+    $(".wrapper .secondBigWrapper .thirdWrapper .form2").append(htmlToAdd);
+
+    // onclick on eduContainer expand element if small
+    $(".eduContainer").each(function () {
+        $(this).click(function () {
+            if (parseInt($(this).css('height')) == 49) {
+                minimalizeEducation();
+                maximizeEducation($(this));
+            }
+        });
+    });
+
+    // Add textEditor to last element
+    var idToChange = $(".eduContainer").last().find("textarea").attr("id");
+
+    CKEDITOR.replace(idToChange,
+    {
+        customConfig: 'config2.js',
+        contentsCss:"/Scripts/ckeditor/skins/moono/Precious.css",
+        width: 550,
+        height: 110,
+    });
+
+    // To sort out info
+    sortOutInformation();
+}
+
+// fix height of all education containers to be small
+function minimalizeEducation() {
+    $(".wrapper .secondBigWrapper .thirdWrapper .form2").find(".eduContainer").css({ height: "49px", opacity: "0.7" });
+}
+
+// fix height of all last education containers to be normal
+function maximizeEducation(object) {
+    if (object == null) {
+        $(".wrapper .secondBigWrapper .thirdWrapper .form2").find(".eduContainer").last().css({ height: "305px", opacity: "1" });
+    }
+    else {
+        $(object).css({ height: "305px", opacity: "1" });
+    }
+}
+
+
+
+
+// add another experience element
+function addAnotherExperience() {
+    var numberOfCurrentElements = $(".wrapper .secondBigWrapper .fourthWrapper .form3").find(".expContainer").length + 1;
+
+    var htmlToAdd = "<div class=\"expContainer\">";
+    htmlToAdd += "<div class='arrows'><div class='arrowsUp'></div><div class='arrowsDown'></div></div>";
+    htmlToAdd += "<input type='text' value=\"Company Name\" name='companyName" + numberOfCurrentElements + "' id='companyName" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Company Name'\" onclick=\"if(this.value=='Company Name')this.value=''\" style=\"width: 510px;\">";
+    htmlToAdd += "<input type='text' value=\"City or Location\" name='companyLocation" + numberOfCurrentElements + "' id='companyLocation" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='City or Location'\" onclick=\"if(this.value=='City or Location')this.value=''\">";
+    htmlToAdd += "<input type='text' style=\"margin-left: 27px; margin-right: 0;\" value=\"Position\" name='Position" + numberOfCurrentElements + "' id='Position" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Position'\" onclick=\"if(this.value=='Position')this.value=''\">";
+    htmlToAdd += "<input type='text' value=\"Start Date:     eg. Jan 2010\" name='companyStart" + numberOfCurrentElements + "' id='companyStart" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Start Date:     eg. Jan 2010'\" onclick=\"if(this.value=='Start Date:     eg. Jan 2010')this.value=''\">";
+    htmlToAdd += "<input type='text' style=\"margin-left: 27px; margin-right: 0;\" value=\"End Date:     eg. July 2015\" name='companyEnd" + numberOfCurrentElements + "' id='companyEnd" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='End Date:     eg. July 2015'\" onclick=\"if(this.value=='End Date:     eg. July 2015')this.value=''\">";
+    htmlToAdd += "<textarea name='workDescription" + numberOfCurrentElements + "' id='workDescription" + numberOfCurrentElements + "' onblur=\"if($.trim($(this).text()) == '')$(this).text('Describe your working experience in a couple of sentences.')\" onclick=\"if($.trim($(this).text()) == 'Describe your working experience in a couple of sentences.')$(this).text('')\">Describe your working experience in a couple of sentences.</textarea><div onclick=\"deleteExperience(this)\" class=\"delete\"></div></div>";
+
+    minimalizeExperience();
+    $(".wrapper .secondBigWrapper .fourthWrapper .form3").append(htmlToAdd);
+
+    // onclick on expContainer expand element if small
+    $(".expContainer").each(function () {
+        $(this).click(function () {
+            if (parseInt($(this).css('height')) == 49) {
+                minimalizeExperience();
+                maximizeExperience($(this));
+            }
+        });
+    });
+
+    // Add textEditor to last element
+    var idToChange = $(".expContainer").last().find("textarea").attr("id");
+
+    CKEDITOR.replace(idToChange,
+    {
+        customConfig: 'config2.js',
+        contentsCss:"/Scripts/ckeditor/skins/moono/Precious.css",
+        width: 550,
+        height: 110,
+    });
+
+    // To sort out info
+    sortOutInformation();
+}
+
+// fix height of all experience containers to be small
+function minimalizeExperience() {
+    $(".wrapper .secondBigWrapper .fourthWrapper .form3").find(".expContainer").css({ height: "49px", opacity: "0.7" });
+}
+
+// fix height of all last experience containers to be normal
+function maximizeExperience(object) {
+    if (object == null) {
+        $(".wrapper .secondBigWrapper .fourthWrapper .form3").find(".expContainer").last().css({ height: "305px", opacity: "1" });
+    }
+    else {
+        $(object).css({ height: "305px", opacity: "1" });
+    }
+}
+
+
+
+
+
+
+
+
+// deletes cv picture
+function deletePic() {
+    $("#uploadPhoto").html("");
+}
+
+// add skills information
+function addAnotherLanguage() {
+    var count = $(".form4").find(".languageContainer").length + 1;
+    var html = '<div class="languageContainer"><input type="text" style="width: 510px;" onclick="if(this.value==\'Insert a Language Skill  e.g. Italian (fluent in speech, writing and reading)\')this.value=\'\'" onblur="if(this.value==\'\')this.value=\'Insert a Language Skill  e.g. Italian (fluent in speech, writing and reading)\'" name="languageSkill' + count + '" id="languageSkill' + count + '" value="Insert a Language Skill  e.g. Italian (fluent in speech, writing and reading)" /><div class="delete" onclick="deleteSkillsPart(this)"></div></div>';
+    $(html).insertAfter($(".languageContainer").last());
+}
+function addAnotherTechnical() {
+    var count = $(".form4").find(".languageContainer2").length + 1;
+    var html = '<div class="languageContainer2"><input type="text" style="width: 510px;" onclick="if(this.value==\'Insert a Technical Skill  e.g. Leading a work group\')this.value=\'\'" onblur="if(this.value==\'\')this.value=\'Insert a Technical Skill  e.g. Leading a work group\'" name="technicalSkill' + count + '" id="technicalSkill' + count + '" value="Insert a Technical Skill  e.g. Leading a work group" /><div class="delete" onclick="deleteSkillsPart(this)"></div></div>';
+    $(html).insertAfter($(".languageContainer2").last());
+}
+function addAnotherComputerTechnical() {
+    var count = $(".form4").find(".languageContainer3").length + 1;
+    var html = '<div class="languageContainer3"><input type="text" style="width: 510px;" onclick="if(this.value==\'Insert a Computer Skill  e.g. Proficient in Microsoft Office 2007 and 2010\')this.value=\'\'" onblur="if(this.value==\'\')this.value=\'Insert a Computer Skill  e.g. Proficient in Microsoft Office 2007 and 2010\'" name="computerSkill' + count + '" id="computerSkill' + count + '" value="Insert a Computer Skill  e.g. Proficient in Microsoft Office 2007 and 2010" /><div class="delete" onclick="deleteSkillsPart(this)"></div></div>';
+    $(html).insertAfter($(".languageContainer3").last());
+}
+function addAnotherReference() {
+    var count = $(".form4").find(".languageContainer4").length + 1;
+    var html = '<div class="languageContainer4"><input type="text" style="width: 510px;" onclick="if(this.value==\'Insert a Reference  e.g. Ms. Derpina, IT manager :  +64 213 546\')this.value=\'\'" onblur="if(this.value==\'\')this.value=\'Insert a Reference  e.g. Ms. Derpina, IT manager :  +64 213 546\'" name="reference' + count + '" id="reference' + count + '" value="Insert a Reference  e.g. Ms. Derpina, IT manager :  +64 213 546" /><div class="delete" onclick="deleteSkillsPart(this)"></div></div>';
+    $(html).insertAfter($(".languageContainer4").last());
+}
+// delete skills information
+function deleteSkillsPart(objct) {
+    var countInfoClass = $(objct).parent().attr("class");
+    var countInfoNumber = 0;
+
+    if (countInfoClass == "languageContainer") {
+        countInfoNumber = $(objct).parent().parent().find(".languageContainer").length;
+        if (countInfoNumber > 1) {
+            $(objct).parent().remove();
+            var startCounting = 1;
+            $(".languageContainer").each(function () {
+                $(this).find("input").attr("id", "languageSkill" + startCounting);
+                $(this).find("input").attr("name", "languageSkill" + startCounting);
+                startCounting++;
+            });
+        }
+    }
+    else if (countInfoClass == "languageContainer2") {
+        countInfoNumber = $(objct).parent().parent().find(".languageContainer2").length;
+        if (countInfoNumber > 1) {
+            $(objct).parent().remove();
+            var startCounting = 1;
+            $(".languageContainer2").each(function () {
+                $(this).find("input").attr("id", "technicalSkill" + startCounting);
+                $(this).find("input").attr("name", "technicalSkill" + startCounting);
+                startCounting++;
+            });
+        }
+    }
+    else if (countInfoClass == "languageContainer3") {
+        countInfoNumber = $(objct).parent().parent().find(".languageContainer3").length;
+        if (countInfoNumber > 1) {
+            $(objct).parent().remove();
+            var startCounting = 1;
+            $(".languageContainer3").each(function () {
+                $(this).find("input").attr("id", "computerSkill" + startCounting);
+                $(this).find("input").attr("name", "computerSkill" + startCounting);
+                startCounting++;
+            });
+        }
+    }
+    else if (countInfoClass == "languageContainer4") {
+        countInfoNumber = $(objct).parent().parent().find(".languageContainer4").length;
+        if (countInfoNumber > 1) {
+            $(objct).parent().remove();
+            var startCounting = 1;
+            $(".languageContainer4").each(function () {
+                $(this).find("input").attr("id", "reference" + startCounting);
+                $(this).find("input").attr("name", "reference" + startCounting);
+                startCounting++;
+            });
+        }
+    }
+}
+// delete education
+function deleteEducation(objct) {
+    $(objct).parent().remove();
+    maximizeEducation();
+    var startCounting = 1;
+    $(".eduContainer").each(function () {
+        $(this).find("input").each(function () {
+            var strg = $(this).attr("id");
+            var sliceString = strg.slice(0, strg.length - 1);
+            $(this).attr("id", sliceString + startCounting.toString());
+        });
+        startCounting++;
+    });
+}
+// delete experience
+function deleteExperience(objct) {
+    $(objct).parent().remove();
+    maximizeExperience();
+    var startCounting = 1;
+    $(".expContainer").each(function () {
+        $(this).find("input").each(function () {
+            var strg = $(this).attr("id");
+            var sliceString = strg.slice(0, strg.length - 1);
+            $(this).attr("id", sliceString + startCounting.toString());
+        });
+        startCounting++;
+    });
+}
+
+
+
+// login move from up
+function loginUp() {
+    $(".wrapper").find(".firstWrapper").css({ marginTop: "-486px" });
+    $(".wrapper").find(".secondBigWrapper").css({ marginLeft: "-5940px" });
+    $(".leftColumn").find(".leftArrow").hide();
+    $(".rightColumn").find(".rightArrow").hide();
+    $("#lowerTopMenu").hide();
+    $(".wrapper").css({ height: "auto" });
+}
+
+// logout function
+function logout() {
+    var routeUrl = location.protocol + '//' + location.host;
+    var poststr = "";
+    $.ajax({
+        url: routeUrl + '/home/logout',
+        type: 'POST',
+        data: '' + poststr,
+        success: function (data) {
+            if (data == "1") {
+                window.location = "http://www.yourcvbuilder.com";
+            }
+            else if (data == "0") {
+                alert("Something went wrong with your internet connection, please try again later.");
+            }
+        }
+    });
+}
+
+
+
+// moveTemplateUp and moveTemplateDown
+function moveTemplateUp() {
+    $(".templateWrapper").find(".templateContainer").animate({ top: "0px" }, 500, "easeInOutQuad", function () {
+        $(".moveTemplateUp").hide();
+        $(".moveTemplateDown").show();
+    });
+}
+function moveTemplateDown() {
+    $(".templateWrapper").find(".templateContainer").animate({ top: "-202px" }, 500, "easeInOutQuad", function () {
+        $(".moveTemplateUp").show();
+        $(".moveTemplateDown").hide();
+    });
+}
+
+
+
+// Show help popup just before download
+function preDownloadPdf() {
+    $("#alertMessages").freeow("<b>Before downloading</b>", "Please make sure you allow popups on your browser. Disable your popup blocker or your download won't start. <br><br>Press Ok to continue to download or Cancel to return and allow popups first<br><br><div style='font-weight: bold; float: left; margin-right: 43px; font-family: arial;' onclick='$(\".gray\").remove();downloadPDF();'>Ok</div><div style='font-weight: bold; display: inline; font-family: arial;' onclick='$(\".gray\").remove();'>Cancel</div>", {
+        classes: ["gray", ""],
+        autoHide: false,
+        onClick: function (event) {
+                
+            }
+    });
+}
+
+
+
+// Assure the user that his information will be saved
+function displayAssuranceMessage() {
+    $("#alertMessages").freeow("Save your progress", "<h2 style='font-size: 13px;'>Signup for free (or Login) to securely save your information and be able to view and download your CV. <br>It takes a second...</h2>", {
+        classes: ["gray", ""],
+        autoHide: false,
+        onClick: function (event) {
+            $("#alertMessages").hide();
+        }
+    });
+}
+
+
+
+// download PDF
+function downloadPDF() {
+    var routeUrl = location.protocol + '//' + location.host;
+    // a little security
+    var isSet = 0;
+    $(".downloadpdf").css({ visibility: "hidden" });
+    $("#hideShowOnDownload").css({ visibility: "visible" });
+
+    if (isSet == 0) {
+        isSet = 1;
+        var poststr = $('form').serialize();
+        $.ajax({
+            url: routeUrl + '/home/createTempData',
+            type: 'POST',
+            data: '' + poststr,
+            success: function (data) {
+                if (data != "2") {
+                    isSet = 0;
+                    window.open(routeUrl + '/printPdf/' + data);
+                    $(".downloadpdf").css({ visibility: "visible" });
+                    $("#hideShowOnDownload").css({ visibility: "hidden" });
+                }
+                else if (data == "2") {
+                    $("#alertMessages").freeow("Error", "Something went wrong, please try again.", {
+                        classes: ["gray", "error"],
+                        autoHide: true
+                    });
+                    isSet = 0;
+                    $(".downloadpdf").css({ visibility: "visible" });
+                    $("#hideShowOnDownload").css({ visibility: "hidden" });
+                }
+            }
+        });
+    }
+}
+
+// Forgot Password Send
+function sendforgot() {
+    var routeUrl = location.protocol + '//' + location.host;
+    var email = $("#forgotPassEmail").val();
+    var AtPos = email.indexOf("@");
+    var StopPos = email.lastIndexOf(".");
+    var StopSecondPos = email.length;
+    var readyOrNot = 0;
+
+    if ((jQuery.trim($("#forgotPassEmail").val()) == "" || jQuery.trim($("#forgotPassEmail").val()) == "E-mail address" || (AtPos == -1 || StopPos == -1 || (StopPos != -1 && StopPos == StopSecondPos - 1)))) {
+        $("#forgotPassEmail").css({ color: "red" });
+        readyOrNot = 1;
+    }
+    else {
+        $("#forgotPassEmail").css({ color: "#9B9B9B" });
+    }
+
+    if (readyOrNot == 0) {
+        // a little security
+        readyOrNot = 1;
+        $(".sendforgot").css({ visibility: "hidden" });
+
+        var poststr = "forgotPass=" + $("#forgotPassEmail").val();
+
+        $.ajax({
+            url: routeUrl + '/home/forgotPassword',
+            type: 'POST',
+            data: '' + poststr,
+            success: function (data) {
+                if (data == "1") {
+                    readyOrNot = 0;
+                    $(".sendforgot").css({ visibility: "visible" });
+                    $("#alertMessages").freeow("Forgot Password", "An email has just been sent.", {
+                        classes: ["gray", "notice"],
+                        autoHide: true
+                    });
+                }
+                else if (data == "2") {
+                    readyOrNot = 0;
+                    $(".sendforgot").css({ visibility: "visible" });
+                    $("#alertMessages").freeow("Error", "Username does not exist in our databases.", {
+                        classes: ["gray", "error"],
+                        autoHide: true
+                    });
+                }
+            }
+        });
+    }
+}
+
+// Login User
+function loginUser() {
+    var routeUrl        = location.protocol + '//' + location.host;
+    var email           = $("#userName").val();
+    var AtPos           = email.indexOf("@");
+    var StopPos         = email.lastIndexOf(".");
+    var StopSecondPos   = email.length;
+
+    var readyOrNot = 0;
+
+    if ((jQuery.trim($("#userName").val()) == "" || jQuery.trim($("#userName").val()) == "E-mail address" || (AtPos == -1 || StopPos == -1 || (StopPos != -1 && StopPos == StopSecondPos - 1)))) {
+        $("#userName").css({ color: "red" });
+        readyOrNot = 1;
+    }
+    else {
+        $("#userName").css({ color: "#9B9B9B" });
+    }
+
+    if (jQuery.trim($("#Password").val()) == "Password" || jQuery.trim($("#Password").val()) == "") {
+        $("#Password").css({ color: "red" });
+        readyOrNot = 1;
+    }
+    else {
+        $("#Password").css({ color: "#9B9B9B" });
+    }
+
+    if (readyOrNot == 0) {
+        // a little security
+        readyOrNot = 1;
+        $(".login").css({ visibility: "hidden" });
+
+        $(".loginContainer").find(".loader").show();
+        var poststr = $('form').serialize();
+
+        $.ajax({
+            url: routeUrl + '/home/loginUser',
+            type: 'POST',
+            data: '' + poststr,
+            success: function (data) {
+                if (data == "1") {
+                    $(".loginContainer").find(".loader").hide();
+                    location.reload();
+                }
+                else if (data == "2") {
+                    readyOrNot = 0;
+                    $(".loginContainer").find(".loader").hide();
+                    $(".login").css({ visibility: "visible" });
+                    $("#alertMessages").freeow("Error", "Incorrect Username or Password.", {
+                        classes: ["gray", "error"],
+                        autoHide: true
+                    });
+                }
+            }
+        });
+    }
+}
+
+// on save, save the cv info
+function save() {
+    var routeUrl = location.protocol + '//' + location.host;
+    var isSet = 0;
+
+    // Update textareas with ckeditors values : Start
+    for (var instanceName in CKEDITOR.instances)
+        CKEDITOR.instances[instanceName].updateElement();
+    // Update textareas with ckeditors values : End
+
+    var poststr = $('form').serialize();
+
+    if (isSet == 0) {
+        // a little security
+        isSet = 1;
+        $(".save").css({ visibility: "hidden" });
+        $(".saveNow").css({ visibility: "hidden" });
+
+        $.ajax({
+            url: routeUrl + '/home/createTempData',
+            type: 'POST',
+            data: '' + poststr,
+            success: function (data) {
+                if ($(".aboutContactHelp").find(".loGinIn").length != 0) { // If logged first time from LinkedIn
+                    location.reload();
+                }
+                else {
+                    if (data != "2" && data != "3") {
+                        $("#TempDownLink").val(data);
+                        isSet = 0;
+                        $(".save").css({ visibility: "visible" });
+                        $(".saveNow").css({ visibility: "visible" });
+                        $("#alertMessages").freeow("Success", "your info was successfully saved.", {
+                            classes: ["gray", "notice"],
+                            autoHide: true
+                        });
+                    }
+                    else if (data == "2") {
+                        isSet = 0;
+                        $(".save").css({ visibility: "visible" });
+                        $(".saveNow").css({ visibility: "visible" });
+                        $("#alertMessages").freeow("Error", "Something went wrong, please try again.", {
+                            classes: ["gray", "error"],
+                            autoHide: true
+                        });
+                    }
+                    else if (data == "3") {
+                        isSet = 0;
+                        $(".save").css({ visibility: "visible" });
+                        $(".saveNow").css({ visibility: "visible" });
+                        $("#alertMessages").freeow("Error", "You have been disconnected. Please sign in again.", {
+                            classes: ["gray", "error"],
+                            autoHide: true
+                        });
+                    }
+                }
+            }
+        });
+    }
+}
+
+// User Sign up
+function signUpUser() {
+    var routeUrl        = location.protocol + '//' + location.host;
+    var email           = $("#SignupUsername").val();
+    var AtPos           = email.indexOf("@");
+    var StopPos         = email.lastIndexOf(".");
+    var StopSecondPos   = email.length;
+
+    var readyOrNot = 0;
+
+    if (jQuery.trim($("#SignupFirstName").val()) == "First name" || jQuery.trim($("#SignupFirstName").val()) == "") {
+        $("#SignupFirstName").css({ color: "red" });
+        readyOrNot = 1;
+    }
+    else {
+        $("#SignupFirstName").css({ color: "#9B9B9B" });
+    }
+
+    if (jQuery.trim($("#SignupLastName").val()) == "Last name" || jQuery.trim($("#SignupLastName").val()) == "") {
+        $("#SignupLastName").css({ color: "red" });
+        readyOrNot = 1;
+    }
+    else {
+        $("#SignupLastName").css({ color: "#9B9B9B" });
+    }
+
+    if ((jQuery.trim($("#SignupUsername").val()) == "" || jQuery.trim($("#SignupUsername").val()) == "E-mail address (Username)" || (AtPos == -1 || StopPos == -1 || (StopPos != -1 && StopPos == StopSecondPos - 1)))) {
+        $("#SignupUsername").css({color:"red"});
+        readyOrNot = 1;
+    }
+    else {
+        $("#SignupUsername").css({color:"#9B9B9B"});
+    }
+
+    if (jQuery.trim($("#SignupPassword").val()) == "Password" || jQuery.trim($("#SignupPassword").val()) == "") {
+        $("#SignupPassword").css({color:"red"});
+        readyOrNot = 1;
+    }
+    else {
+        $("#SignupPassword").css({color:"#9B9B9B"});
+    }
+
+    if(readyOrNot == 0)
+    {
+        // a little security
+        readyOrNot = 1;
+        $(".signup").css({ visibility: "hidden" });
+         
+        $("#userName").val($("#SignupUsername").val());
+        $("#Password").val($("#SignupPassword").val());
+        $("#firstName").val($("#SignupFirstName").val());
+        $("#lastName").val($("#SignupLastName").val());
+        var poststr = $('form').serialize();
+
+        $(".signupContainer").find(".loader").show();
+        $.ajax({
+            url: routeUrl + '/home/createUser',
+            type: 'POST',
+            data: '' + poststr,
+            success: function (data) {
+                if (data == "1") {
+                    window.location = 'http://www.yourcvbuilder.com/#Basics';
+                    location.reload();
+                }
+                else if (data == "2") {
+                    readyOrNot = 0;
+                    $(".signup").css({ visibility: "visible" });
+                    $(".signupContainer").find(".loader").hide();
+                    $("#alertMessages").freeow("Error", "Something went wrong, please try again.", {
+                        classes: ["gray", "error"],
+                        autoHide: true
+                    });
+                }
+                else if (data == "3") {
+                    readyOrNot = 0;
+                    $(".signup").css({ visibility: "visible" });
+                    $(".signupContainer").find(".loader").hide();
+                    $("#alertMessages").freeow("Error", "This username is already used !", {
+                        classes: ["gray", "error"],
+                        autoHide: true
+                    });
+                }
+            }
+        });
+    }
+}
+// show password of signup
+function showPasswordLetters() {
+    var valueInserted = $("#SignupPassword").val();
+    if ($("#SignupPassword").attr("type") == "text") {
+        var newInput = '<input type="password" onclick="if(this.value==\'Password\')this.value=\'\'" onblur="if(this.value==\'\')this.value=\'Password\'" id="SignupPassword" name="SignupPassword" value="' + valueInserted + '" style="margin-top: 36px; margin-left: 27px; margin-right: 0; width: 186px; float: none;" />';
+        $("#SignupPassword").remove();
+        $("#SignupUsername").after(newInput);
+        $("#showPasswordLetters").html("Show Letters");
+    }
+    else {
+        var newInput = '<input type="text" onclick="if(this.value==\'Password\')this.value=\'\'" onblur="if(this.value==\'\')this.value=\'Password\'" id="SignupPassword" name="SignupPassword" value="' + valueInserted + '" style="margin-top: 36px; margin-left: 27px; margin-right: 0; width: 186px; float: none;" />';
+        $("#SignupPassword").remove();
+        $("#SignupUsername").after(newInput);
+        $("#showPasswordLetters").html("Hide Letters");
+    }
+}
+
+// Check if linkedin user exists in our databases
+function checkIfUserExists(result) {
+    var routeUrl = location.protocol + '//' + location.host;
+    var jsonData = $.parseJSON(result);
+
+    var mailAddress = jsonData.values[0].emailAddress;
+    var poststr = "EmailAdress=" + mailAddress;
+
+    $.ajax({
+        url: routeUrl + '/home/checkExistence',
+        type: 'POST',
+        data: '' + poststr,
+        success: function (data) {
+            if (data == "1") {
+                location.reload();
+            }
+            else if (data == "2") {
+                sendLinkedInValue(jsonData)
+            }
+        }
+    });
+}
+
+// get values from linkedin
+var dateToAdd           = "";
+var emailToAdd          = "";
+var firstNameToAdd      = "";
+var lastNameToAdd       = "";
+var jobTitleToAdd       = "";
+var cityOfBirthToAdd    = "";
+var numberToAdd         = "";
+var educationsArray;
+var skillsArray;
+var experiencesArray;
+
+function sendLinkedInValue(result) {
+    var data = result;
+
+    // Initialize and fill education
+    var numberOfEducations = parseInt(data.values[0].educations._total.toString());
+    educationsArray = createArray(numberOfEducations, 6);
+    for (var i = 0; i < numberOfEducations; i++) {
+        educationsArray[i][0] = typeof (data.values[0].educations.values[i].schoolName) != "undefined" ? data.values[0].educations.values[i].schoolName : "Name of School / College / University";
+        educationsArray[i][1] = typeof(data.values[0].educations.values[i].fieldOfStudy) != "undefined" ? data.values[0].educations.values[i].fieldOfStudy : "";
+        educationsArray[i][2] = typeof (data.values[0].educations.values[i].degree) != 'undefined' ? data.values[0].educations.values[i].degree : "";
+        educationsArray[i][3] = typeof (data.values[0].educations.values[i].notes) != "undefined" ? data.values[0].educations.values[i].notes : "Describe your studying experience in a couple of sentences.";
+        educationsArray[i][4] = "";
+        educationsArray[i][5] = "";
+
+        // Add education element - start
+        var numberOfCurrentElements = $(".wrapper .secondBigWrapper .thirdWrapper .form2").find(".eduContainer").length + 1;
+
+        var htmlToAdd = "<div class=\"eduContainer\">";
+        htmlToAdd += "<div class='arrows'><div class='arrowsUp'></div><div class='arrowsDown'></div></div>";
+        htmlToAdd += "<input type='text' value='" + educationsArray[i][0] + "' name='universityName" + numberOfCurrentElements + "' id='universityName" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Name of School / College / University'\" onclick=\"if(this.value=='Name of School / College / University')this.value=''\" style=\"width: 510px;\">";
+        htmlToAdd += "<input type='text' value=\"City or Location\" name='location" + numberOfCurrentElements + "' id='location" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='City or Location'\" onclick=\"if(this.value=='City or Location')this.value=''\">";
+        htmlToAdd += "<input type='text' style=\"margin-left: 27px; margin-right: 0;\" value='" + educationsArray[i][1] +  "/" + educationsArray[i][2] + "' name='classCourse" + numberOfCurrentElements + "' id='classCourse" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Class / Course / Major'\" onclick=\"if(this.value=='Class / Course / Major')this.value=''\">";
+        htmlToAdd += "<input type='text' value=\"Start Date:     eg. Jan 2010\" name='startDate" + numberOfCurrentElements + "' id='startDate1" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Start Date:     eg. Jan 2010'\" onclick=\"if(this.value=='Start Date:     eg. Jan 2010')this.value=''\">";
+        htmlToAdd += "<input type='text' style=\"margin-left: 27px; margin-right: 0;\" value=\"End Date:     eg. July 2015\" id='endDate" + numberOfCurrentElements + "' name='endDate" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='End Date:     eg. July 2015'\" onclick=\"if(this.value=='End Date:     eg. July 2015')this.value=''\">";
+        htmlToAdd += "<textarea name='description" + numberOfCurrentElements + "' id='description" + numberOfCurrentElements + "' onblur=\"if($.trim($(this).text()) == '')$(this).text('Describe your studying experience in a couple of sentences.')\" onclick=\"if($.trim($(this).text()) == 'Describe your studying experience in a couple of sentences.')$(this).text('')\">" + educationsArray[i][3] + "</textarea><div onclick=\"deleteEducation(this)\" class=\"delete\"></div></div>";
+
+        minimalizeEducation();
+        $(".wrapper .secondBigWrapper .thirdWrapper .form2").append(htmlToAdd);
+
+        $(".eduContainer").each(function () {
+            $(this).click(function () {
+                if (parseInt($(this).css('height')) == 49) {
+                    minimalizeEducation();
+                    maximizeEducation($(this));
+                }
+            });
+        });
+        // Add education element - end
+    }
+    $(".wrapper .secondBigWrapper .thirdWrapper .form2").find(".eduContainer").first().find(".delete").click(); // delete first element
+
+    // Initialize and fill education
+    var numberOfExperiences = parseInt(data.values[0].positions._total.toString());
+    experiencesArray = createArray(numberOfExperiences, 6);
+    for (var i = 0; i < numberOfExperiences; i++) {
+        experiencesArray[i][0] = typeof (data.values[0].positions.values[i].company.name) != "undefined" ? data.values[0].positions.values[i].company.name : "Company Name";
+        experiencesArray[i][1] = typeof (data.values[0].positions.values[i].title) != "undefined" ? data.values[0].positions.values[i].title : "Position";
+        experiencesArray[i][2] = typeof (data.values[0].positions.values[i].startDate) != 'undefined' ? data.values[0].positions.values[i].startDate.month + "/" + data.values[0].positions.values[i].startDate.year : "Start Date:     eg. Jan 2010";
+        experiencesArray[i][3] = typeof (data.values[0].positions.values[i].endDate) != "undefined" ? (data.values[0].positions.values[i].isCurrent == false) ? data.values[0].positions.values[i].endDate.month + "/" + data.values[0].positions.values[i].endDate.year : "Current" : ((data.values[0].positions.values[i].isCurrent == false) ? "End Date:     eg. July 2015" : "Current");
+        experiencesArray[i][4] = "";
+        experiencesArray[i][5] = "";
+
+        // Add education element - start
+        var numberOfCurrentElements = $(".wrapper .secondBigWrapper .fourthWrapper .form3").find(".expContainer").length + 1;
+
+        var htmlToAdd = "<div class=\"expContainer\">";
+        htmlToAdd += "<div class='arrows'><div class='arrowsUp'></div><div class='arrowsDown'></div></div>";
+        htmlToAdd += "<input type='text' value='" + experiencesArray[i][0] + "' name='companyName" + numberOfCurrentElements + "' id='companyName" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Company Name'\" onclick=\"if(this.value=='Company Name')this.value=''\" style=\"width: 510px;\">";
+        htmlToAdd += "<input type='text' value=\"City or Location\" name='companyLocation" + numberOfCurrentElements + "' id='companyLocation" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='City or Location'\" onclick=\"if(this.value=='City or Location')this.value=''\">";
+        htmlToAdd += "<input type='text' style=\"margin-left: 27px; margin-right: 0;\" value='" + experiencesArray[i][1] + "' name='Position" + numberOfCurrentElements + "' id='Position" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Position'\" onclick=\"if(this.value=='Position')this.value=''\">";
+        htmlToAdd += "<input type='text' value='" + experiencesArray[i][2] + "' name='companyStart" + numberOfCurrentElements + "' id='companyStart" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='Start Date:     eg. Jan 2010'\" onclick=\"if(this.value=='Start Date:     eg. Jan 2010')this.value=''\">";
+        htmlToAdd += "<input type='text' style=\"margin-left: 27px; margin-right: 0;\" value='" + experiencesArray[i][3] + "' name='companyEnd" + numberOfCurrentElements + "' id='companyEnd" + numberOfCurrentElements + "' onblur=\"if(this.value=='')this.value='End Date:     eg. July 2015'\" onclick=\"if(this.value=='End Date:     eg. July 2015')this.value=''\">";
+        htmlToAdd += "<textarea name='workDescription" + numberOfCurrentElements + "' id='workDescription" + numberOfCurrentElements + "' onblur=\"if($.trim($(this).text()) == '')$(this).text('Describe your working experience in a couple of sentences.')\" onclick=\"if($.trim($(this).text()) == 'Describe your working experience in a couple of sentences.')$(this).text('')\">Describe your working experience in a couple of sentences.</textarea><div onclick=\"deleteExperience(this)\" class=\"delete\"></div></div>";
+
+        minimalizeExperience();
+        $(".wrapper .secondBigWrapper .fourthWrapper .form3").append(htmlToAdd);
+
+        // onclick on expContainer expand element if small
+        $(".expContainer").each(function () {
+            $(this).click(function () {
+                if (parseInt($(this).css('height')) == 49) {
+                    minimalizeExperience();
+                    maximizeExperience($(this));
+                }
+            });
+        });
+        // Add education element - end
+    }
+    $(".wrapper .secondBigWrapper .thirdWrapper .form3").find(".expContainer").first().find(".delete").click(); // delete first element
+
+    // Initialize and fill skills 
+    var numberOfSkills = parseInt(data.values[0].skills._total.toString());
+    skillsArray = createArray(numberOfSkills, 1);
+    for (var i = 0; i < numberOfSkills; i++) {
+        skillsArray[i][0] = typeof (data.values[0].skills.values[i].skill.name) != "undefined" ? data.values[0].skills.values[i].skill.name : "";
+
+        // Add education skill - start
+        var count = $(".form4").find(".languageContainer2").length + 1;
+        var html = '<div class="languageContainer2"><input type="text" style="width: 510px;" onclick="if(this.value==\'Insert a Technical Skill  e.g. Leading a work group\')this.value=\'\'" onblur="if(this.value==\'\')this.value=\'Insert a Technical Skill  e.g. Leading a work group\'" name="technicalSkill' + count + '" id="technicalSkill' + count + '" value="' + skillsArray[i][0] + '" /><div class="delete" onclick="deleteSkillsPart(this)"></div></div>';
+        $(html).insertAfter($(".languageContainer2").last());
+        // Add education skill - end
+    }
+
+    $.each(data, function (key, val) { recursiveFunction(key, val) });
+
+    // Fill in the blanks ;)
+    $("#firstName").val(firstNameToAdd);
+    $("#lastName").val(lastNameToAdd);
+    $("#title").val(jobTitleToAdd);
+    $("#birthdate").val(dateToAdd);
+    $("#email").val(emailToAdd);
+    $("#number").val(numberToAdd);
+
+    // save and reload
+    save();
+}
+function recursiveFunction(key, val) {
+    //actualFunction(key, val);
+    var value = val;
+    if (value instanceof Object) {
+        $.each(value, function (key, val) {
+            recursiveFunction(key, val);
+        });
+    }
+    else {
+        switch (key) {
+            case "day":
+            if (dateToAdd.toString().length < 10) {
+                dateToAdd += val + "/";
+                }
+                break;
+            case "month":
+                if (dateToAdd.toString().length < 10) {
+                    dateToAdd += val + "/";
+                }
+                break;
+            case "year":
+                if (dateToAdd.toString().length < 10) {
+                    dateToAdd += val;
+                }
+                break;
+            case "emailAddress":
+                emailToAdd += val;
+                break;
+            case "firstName":
+                firstNameToAdd += val;
+                break;
+            case "lastName":
+                lastNameToAdd += val;
+                break;
+            case "mainAddress":
+                cityOfBirthToAdd += val;
+                break;
+            case "headline":
+                jobTitleToAdd += val;
+                break;
+            case "phoneNumber":
+                if (numberToAdd == "") {
+                    numberToAdd += val;
+                }
+                break;
+            default:
+
+        }
+    }
+}
+
+// Arrow up and down click
+$(document).ready(function () {
+    sortOutInformation();
+});
+
+function sortOutInformation() {
+    $(".arrowsUp").each(function () {
+        $(this).click(function () {
+            var position = $(this).parent().parent().index();
+            var htmlToChange = $(this).parent().parent().clone();
+            var className = $(this).parent().parent().attr("class");
+            if (position > 0) {
+                $(this).parent().parent().remove();
+                $($("." + className)[position - 1]).before(htmlToChange);
+                sortOutInformation();
+                save();
+            }
+        });
+    });
+    $(".arrowsDown").each(function () {
+        $(this).click(function () {
+            var position = $(this).parent().parent().index();
+            var htmlToChange = $(this).parent().parent().clone();
+            var className = $(this).parent().parent().attr("class");
+            if (position < ($("." + className).length - 1)) {
+                $(this).parent().parent().remove();
+                $($("." + className)[position]).after(htmlToChange);
+                sortOutInformation();
+                save();
+            } 
+        });
+    });
+}
+
+
+// suggestion popup
+$(document).ready(function () {
+    $(".suggestionClick").find(".close").click(function (objEvent) {
+        objEvent.preventDefault();
+        $(".suggestionClick").hide();
+        isclickOrNot = 1;
+    });
+    $(".suggestionClick").click(function () {
+        if (isclickOrNot == 0) {
+            $(".suggestionPopup").show();
+            $(".suggestionClick").hide();
+        }
+    });
+    $(".suggestionPopup").find(".close").click(function () {
+        $(".suggestionPopup").hide();
+        $(".suggestionClick").show();
+        $("#suggestionTextArea").text('Write your suggestions here...');
+        $("#suggestionTextArea").val('Write your suggestions here...');
+    });
+    $(".suggestionPopup").find(".submit").click(function () {
+        var routeUrl = location.protocol + '//' + location.host;
+        // a little security
+        var isSet = 0;
+
+        if (isSet == 0) {
+            if ($("#suggestionTextArea").val() != "Write your suggestions here..." && $("#suggestionTextArea").val() != "") {
+                $("#suggestionTextArea").css({ color: "#6D6E70" });
+                isSet = 1;
+                var poststr = "message=" + $("#suggestionTextArea").val() + "&userId=" + $(".suggestionPopup").find(".submit").attr("usefulid");
+                $.ajax({
+                    url: routeUrl + '/home/suggestionMessage',
+                    type: 'POST',
+                    data: '' + poststr,
+                    success: function (data) {
+                        if (data != "2") {
+                            $(".suggestionPopup").hide();
+                            $(".suggestionClick").hide();
+                            $("#alertMessages").freeow("Success", "Your suggestion has been successfully sent.", {
+                                classes: ["gray", "notice"],
+                                autoHide: true
+                            });
+                            isSet = 0;
+                        }
+                        else if (data == "2") {
+                            $("#alertMessages").freeow("Error", "Something went wrong, please try again.", {
+                                classes: ["gray", "error"],
+                                autoHide: true
+                            });
+                            isSet = 0;
+                        }
+                    }
+                });
+            }
+            else {
+                $("#suggestionTextArea").css({ color: "red" });
+            }
+        }
+    });
+});
+
+
+
+
+// on load for banner impressions
+$(document).ready(function () {
+    _gaq.push(['_trackEvent', 'Banner', 'Impression', '728x90', 0, true]);
+    _gaq.push(['_trackEvent', 'LiveCareer-Banner', 'Impression', '160x600', 0, true]);
+});
+
+function CountBannerclicks() {
+    _gaq.push(['_trackEvent', 'Banner', 'Click', '728x90', 0, true]);
+    window.open('http://www.yourcvbuilder.com/Advertise');
+}
+
+
+// Right advertisementDesign
+function rightDesignInitiate() {
+    _gaq.push(['_trackEvent', 'LiveCareer-Banner', 'Click', '160x600', 0, true]);
+    window.open('http://www.cover-letter-now.com/c/11203');
+}
+
+
+
+
+
+// Create multidimentional array
+function createArray(length) {
+    var arr = new Array(length || 0),
+        i = length;
+
+    if (arguments.length > 1) {
+        var args = Array.prototype.slice.call(arguments, 1);
+        while(i--) arr[length-1 - i] = createArray.apply(this, args);
+    }
+
+    return arr;
+
+    /*createArray();     // [] or new Array()
+
+    createArray(2);    // new Array(2)
+
+    createArray(3, 2); // [new Array(2),
+    //  new Array(2),
+    //  new Array(2)]*/
+}
+
+// vertically align any div
+(function ($) {
+    $.fn.vAlign = function () {
+        return this.each(function (i) {
+            var ah = $(this).height();
+            var ph = $(this).parent().height();
+            var mh = Math.ceil((ph - ah) / 2);
+            $(this).css('margin-top', mh);
+        });
+    };
+})(jQuery);
+
+//////////////////////////////////// Allow only numeric ///////////////////////////////////////////////
+// Numeric only control handler
+jQuery.fn.ForceNumericOnly =
+function () {
+    return this.each(function () {
+        $(this).keydown(function (e) {
+            var key = e.charCode || e.keyCode || 0;
+            // allow backspace, tab, delete, arrows, numbers and keypad numbers ONLY
+            return (
+    key == 8 ||
+    key == 9 ||
+    key == 46 ||
+    (key >= 37 && key <= 40) ||
+    (key >= 48 && key <= 57) ||
+    (key >= 96 && key <= 105));
+        })
+    })
+};
+$(document).ready(function () {
+    //$("#number").ForceNumericOnly();
+});
+//////////////////////////////////// Allow only numeric ///////////////////////////////////////////////

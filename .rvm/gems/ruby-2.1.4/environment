@@ -1,0 +1,8 @@
+export PATH="/Users/CloudFactory/.rvm/gems/ruby-2.1.4/bin:/Users/CloudFactory/.rvm/gems/ruby-2.1.4@global/bin:/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin:$PATH"
+export GEM_HOME='/Users/CloudFactory/.rvm/gems/ruby-2.1.4'
+export GEM_PATH='/Users/CloudFactory/.rvm/gems/ruby-2.1.4:/Users/CloudFactory/.rvm/gems/ruby-2.1.4@global'
+export MY_RUBY_HOME='/Users/CloudFactory/.rvm/rubies/ruby-2.1.4'
+export IRBRC='/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT
+export RUBY_VERSION='ruby-2.1.4'

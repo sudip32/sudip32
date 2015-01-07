@@ -1,0 +1,16 @@
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/erb
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/erb ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/gem
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/gem ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/irb
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/irb ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/rake
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/rake ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/rdoc
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/rdoc ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ri
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ri ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/testrb
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/testrb ]]

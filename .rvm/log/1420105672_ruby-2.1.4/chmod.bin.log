@@ -1,0 +1,16 @@
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/erb
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/erb ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/gem
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/gem ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/irb
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/irb ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/rake
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/rake ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/rdoc
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/rdoc ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ri
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ri ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ruby
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ruby ]]
++__rvm_set_executable:2> __file=/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/testrb
++__rvm_set_executable:3> [[ -x /Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/testrb ]]

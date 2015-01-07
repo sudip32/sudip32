@@ -1,0 +1,3 @@
+export PATH="/Users/CloudFactory/.rvm/gems/ruby-2.1.4@global/bin:/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin:/Users/CloudFactory/.rvm/bin:/usr/local/opt/pkg-config/bin:$PATH"
+export GEM_PATH="/Users/CloudFactory/.gem/ruby/2.1.0:/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/lib/ruby/gems/2.1.0:/Users/CloudFactory/.rvm/gems/ruby-2.1.4@global"
+export GEM_HOME="/Users/CloudFactory/.rvm/gems/ruby-2.1.4@global"

@@ -1,0 +1,32 @@
++__rvm_package_extract:2> rvm_debug __rvm_package_extract:2: /Users/CloudFactory/.rvm/archives/ruby-2.1.4.tar.bz2 /Users/CloudFactory/.rvm/tmp/rvm_src_1412
++rvm_debug:2> ((  0  ))
++rvm_debug:2> return 0
++__rvm_package_extract:3> typeset __tempdir __path __file __return
++__rvm_package_extract:4> __return=0 
++__rvm_package_extract:5> __tempdir=+__rvm_package_extract:5> TMPDIR=/Users/CloudFactory/.rvm/tmp mktemp -d -t rvm-tmp.XXXXXXXXX
++__rvm_package_extract:5> __tempdir=/Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ 
++__rvm_package_extract:6> __rvm_package_extract_run /Users/CloudFactory/.rvm/archives/ruby-2.1.4.tar.bz2 /Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ
++__rvm_package_extract_run:3> [[ '  ' != *\ --no-same-owner\ * ]]
++__rvm_package_extract_run:4> __rvm_tar --help
++__rvm_package_extract_run:4> __rvm_grep -- --no-same-owner
++__rvm_grep:0> GREP_OPTIONS='' grep -- --no-same-owner
++__rvm_grep:0> return 1
++__rvm_package_extract_run:9> [[ -d /Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ ]]
++__rvm_package_extract_run:10> case /Users/CloudFactory/.rvm/archives/ruby-2.1.4.tar.bz2 (*.zip)
++__rvm_package_extract_run:10> case /Users/CloudFactory/.rvm/archives/ruby-2.1.4.tar.bz2 (*.tar.bz2)
++__rvm_package_extract_run:15> [[ -n 5.0.5 ]]
++__rvm_package_extract_run:16> __rvm_tar xjf /Users/CloudFactory/.rvm/archives/ruby-2.1.4.tar.bz2 -C /Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ
++__rvm_tar:0> tar xjf /Users/CloudFactory/.rvm/archives/ruby-2.1.4.tar.bz2 -C /Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ
++__rvm_package_extract_run:30> __rvm_fix_group_permissions /Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ/ruby-2.1.4
++__rvm_fix_group_permissions:3> umask -S
++__rvm_fix_group_permissions:3> __rvm_grep 'g=rw'
++__rvm_grep:0> GREP_OPTIONS='' grep 'g=rw'
++__rvm_grep:0> return 1
++__rvm_package_extract:8> ((  __return == 0  ))
++__rvm_package_extract:10> __path=/Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ/ruby-2.1.4
++__rvm_package_extract:12> __file=ruby-2.1.4 
++__rvm_package_extract:14> [[ -n ruby-2.1.4 && -e /Users/CloudFactory/.rvm/tmp/rvm_src_1412/ruby-2.1.4 ]]
++__rvm_package_extract:18> mv -f /Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ/ruby-2.1.4 /Users/CloudFactory/.rvm/tmp/rvm_src_1412/
++__rvm_package_extract:21> [[ -n /Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ ]]
++__rvm_package_extract:22> rm -rf /Users/CloudFactory/.rvm/tmp/rvm-tmp.XXXXXXXXX.TaWY4lSZ
++__rvm_package_extract:24> return 0

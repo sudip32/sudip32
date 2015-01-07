@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if
+  [[ -s "/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/environment" ]]
+then
+  source "/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/environment"
+  exec ri "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/environment'" >&2
+  exit 1
+fi

@@ -1,0 +1,129 @@
+<title>Bio-Data</title>
+02
+ 
+03
+<marquee bgcolor="CYAN"><h1> CHARLES Bio-Data</h1></marquee>
+04
+<center><table border="10" color="cyan">
+05
+<tbody><tr>
+06
+<th colspan="2">Name
+07
+</th><td colspan="2">charles
+08
+</td></tr>
+09
+<tr>
+10
+<th colspan="2">Date Of Birth
+11
+</th><td colspan="2">04-01-1985
+12
+</td></tr>
+13
+<tr>
+14
+<th colspan="2">Community
+15
+</th><td colspan="2">bc
+16
+</td></tr>
+17
+<tr>
+18
+<th colspan="2">Religion
+19
+</th><td colspan="2">CHRISTIAN
+20
+</td></tr>
+21
+<tr>
+22
+<th colspan="2">Nationality
+23
+</th><td colspan="2">Indian
+24
+</td></tr>
+25
+<tr>
+26
+<th rowspan="3" colspan="2">Address
+27
+</th><th>Street
+28
+</th><td>Mother Mary chruch
+29
+</td></tr>
+30
+ 
+31
+<tr>
+32
+<th>Town
+33
+</th><td>Kallakkurichi
+34
+</td></tr>
+35
+<tr>
+36
+<th>District
+37
+</th><td>Villuppuram
+38
+</td></tr>
+39
+<tr>
+40
+<th rowspan="2" colspan="2">Phone
+41
+</th><th>Office
+42
+</th><td>04371242081
+43
+</td></tr>
+44
+<tr>
+45
+<th>Mobile
+46
+</th><td>9345755409
+47
+</td></tr>
+48
+<tr>
+49
+<th colspan="5">Educational Qualification
+50
+</th></tr>
+51
+<tr>
+52
+<th>Degree
+53
+</th><th>Univercity/Institute
+54
+</th><th>Month&Year
+55
+</th><th>Grade
+56
+</th></tr>
+57
+<tr>
+58
+<td>Bsc
+59
+</td><td>Bharatidhasan Univercity
+60
+</td><td>MAY 2008
+61
+</td><td>A+
+62
+</td></tr>
+63
+</tbody></table>
+64
+ 
+65
+</center>

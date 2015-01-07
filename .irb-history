@@ -1,0 +1,100 @@
+5.times {puts 'hello'}
+5.times {puts "hello world"}
+a={1,2.2,15,'ruby',nil}
+a = {1,2.2,15,'ruby',nil}
+clear
+a = [2, 3, 4, 5.6, 'rby', 'nil', 45]
+a.class
+prices={'cofee' =50, :tea=>43.43}
+prices={'cofee' =>50, :tea=>43.43}
+prices['cofee']
+prices[:tea]
+a<<3
+prices.key
+prices.each do |price|
+puts price
+puts key
+prices.each do |first, last|
+prices.each do |first , last |
+puts first
+prices.each do|first,last|
+puts last
+prices = {'potato' =>50.6 'guitar' =>4599}
+prices = {'potato' =>50.6, 'guitar' =>4599}
+prices.each do |list|
+cofee=50
+puts"price of cofeeis"#{cofee}
+puts"price of cofeeis #{cofee}"
+puts "Price of Coffee is " +cofee
+str =50
+str ='50'
+puts "Price of Coffee is " + str
+puts"price of cofee is #{cofee}"
+prices
+prices.value
+prices.values
+prices.keys
+puts "price of #{key} is #{value}"
+prices.each do|key,value|
+puts "price of #{key} is #{value*2}"
+a=sabi
+a="sabi"
+a.to_arrary
+a.to_array
+a={s,a,b,i}
+a=[s,a,b,i]
+a={'s','a','b','i'}
+a=['s','a','b','i']
+a.to_string
+def calculate(a,b,c)
+(a+b)*c
+puts calculate(1,2,3)
+puts calculate('a',0,3)
+puts calculate('a',0,'3')
+puts calculate('a','b',3)
+puts calculate('a','0','c')
+puts calculate('a','b','c')
+puts calculate('a','b','4')
+puts calculate('a','b',4)
+puts calculate(1,2,4)
+printf hello
+printf "hello"
+print "hello"
+touch animal.rb
+sum a
+b + = list
+a = [21,3,43,5454,23,1233]
+a.add
+a.sum
+puts list
+a.each do[list]
+puts 
+a.each do |list|
+b =b+list
+a.each { |a| sum+=a }
+b=0
+a.each do|list|
+b=b+list
+end
+puts b
+temp {'a' => 13223, 'b'=>23232}
+temp ('a'=2,'b'=3)
+temp ('a'=>2, :'b'=>3)
+temp ['a'=>2, :'b'=>3]
+temp {'a'=>'13232', 'b'=>'2323'}
+'a'=2
+temp={a=>2,b=>3}
+temp={c=>'2',d=>'3'}
+temp = {'a' =>12323, 'b' => 23242}
+puts "The sum is #{a+b}"
+puts "The sum is #{a}"
+a
+temp = {'m' => 1323 , 'n' => 2323}
+puts "The sum is #{m+n}"
+puts "The sum is #{m}"
+temp |keys, values|
+puts "the sum is #{m}"
+puts "the sum is #{keys}"
+ruby sum_hash
+ruby sum_hash.rb
+exit

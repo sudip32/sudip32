@@ -1,0 +1,85 @@
+<html> 
+<head> 
+<title> 
+BIO-DATA 
+</title> 
+<body> 
+<table border="1" width="600" align="center" bgcolor="yellow"> 
+<caption align="center">BIO-DATA</caption> 
+<tr> 
+<td colspan="2" align="center"><img src="Photo-2128.jpg" height="350" width="300"> 
+</td> 
+</tr> 
+</table> 
+<table border="1" width="600" align="center" bgcolor="green"> 
+<tr> <font face="verdana" color="red"> 
+<td>NAME:</td> 
+<td><font color="white">Ashis&nbsp;Kumar&nbsp;Sharma</font></td> 
+</font> 
+</tr> 
+<tr> <font face="verdana"> 
+<td colspan="2" align="center" height="40" bgcolor="yellow"><font color="green"><b>ADDRESS</b></font></td> 
+
+</font> 
+</tr> 
+<tr> 
+<font face="verdana"> 
+<td>CITY:</td> 
+<td><font color="white">Chakradharpur</font></td> 
+</font> 
+</tr> 
+<tr>k 
+<font face="verdana"> 
+<td>STATE:</td> 
+<td><font color="white">Jharkhand</font></td> 
+</font> 
+</tr> 
+<tr> 
+<font face="verdana"> 
+<td>PIN-CODE</td> 
+<td><font color="white">833102</font></td> 
+</font> 
+</tr> 
+<tr> 
+<font face="verdana"> 
+<td>EMAIL:</td> 
+<td><font color="white">xxxxxxx@gmail.com</font></td> 
+</font> 
+</tr> 
+
+<tr> 
+<font face="verdana"> 
+<td>PHONE:</td> 
+<td><font color="white">95465768878</font></td> 
+</font> 
+</tr> 
+<tr> 
+<font face="verdana"> 
+<td>MOBILE NO.:</td> 
+<td><font color="white">9876543210</font></td> 
+</font> 
+</tr> 
+<tr> 
+<font face="verdana"> 
+<td>D.O.B:</td> 
+<td><font color="white">18/6/1991</font></td> 
+</font> 
+</tr> 
+<tr> 
+<font face="verdana"> 
+<td>GENDER:</td> 
+<td><font color="white">Male</font></td> 
+</font> 
+</tr> 
+<tr> 
+<font face="verdana"> 
+<td>COLLEGE:</td> 
+k<td><font color="white">Kiit University</font></td> 
+</font> 
+</tr> 
+<tr> 
+<font face="verdana"> 
+<td>DEPARTMENT:</td> 
+<td><font color="white">MCA</font></td> 
+</font> 
+</tr> 

@@ -1,0 +1,8 @@
+export PATH="/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551/bin:/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/bin:/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin:$PATH"
+export GEM_HOME='/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551'
+export GEM_PATH='/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551:/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global'
+export MY_RUBY_HOME='/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551'
+export IRBRC='/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT
+export RUBY_VERSION='ruby-1.9.3-p551'

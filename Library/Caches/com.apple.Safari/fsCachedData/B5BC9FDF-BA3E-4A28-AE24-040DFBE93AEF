@@ -1,0 +1,45 @@
+<html>
+  <head>
+  <title>Google Accounts</title>
+  <meta http-equiv="refresh" content="4;url=https://mail.google.com/mail/?auth=DQAAAKkAAAAvzirSh0JPAHfI9y_PWfIHpy2RqKBBEe0PzfS6P3NGws5Qn6TBBpf1FMDoTxf5G8b7Y-sFdJH1UiFkSA4Nd-6uDWM11FLWbZv9DGi9VBuX0Ciwwq3q1iYseqyG8dz7uJTfYwlXUjsmWHmkEC9j7G_WlD8wffn7dc2M0jlEZ1QyO6dbWbph--fLNJ_ftX0MKYZEQY6Y1Dy6RDeR6bI4fKk24E8fkX_DyOszbH80B4elhw"></meta>
+  </head>
+  <body>
+  <p>Loading, please wait ...</p>
+  <script type="text/javascript"> <!--
+      var Ga,G=G||{};G.d={m:"cookie_missing",h:"cookie_found",n:"gaia_failure"};var Gc=function(a,b){var c=a;a&&"string"==typeof a&&(c=document.getElementById(a));if(b&&!c)throw new Gb(a);return c},Gb=function(a){this.id=a;this.toString=function(){return"No element found for id '"+this.id+"'"}};var Gd={},Gg=function(a,b,c){var d=function(a){var b=c.call(this,a);!1===b&&Ge(a);return b};a=Gc(a,!0);a.addEventListener(b,d,!1);Gf(a,b).push(d);return d},Gh=function(a,b,c){a=Gc(a,!0);var d=function(){var b=window.event,d=c.call(a,b);!1===d&&Ge(b);return d};a.attachEvent("on"+b,d);Gf(a,b).push(d);return d},Gi;Gi=window.addEventListener?Gg:window.attachEvent?Gh:void 0;var Ge=function(a){a.preventDefault?a.preventDefault():a.returnValue=!1;return!1};
+var Gf=function(a,b){Gd[a]=Gd[a]||{};Gd[a][b]=Gd[a][b]||[];return Gd[a][b]};var Gj=function(){try{return new XMLHttpRequest}catch(a){for(var b=["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],c=0;c<b.length;c++)try{return new ActiveXObject(b[c])}catch(d){}}return null},Gk=function(){this.l=Gj();this.parameters={}};
+Gk.prototype.send=function(a,b){var c=[],d;for(d in this.parameters){var f=this.parameters[d];c.push(d+"="+encodeURIComponent(f))}var c=c.join("&"),e=this.l;e.open("POST",a,!0);e.setRequestHeader("Content-type","application/x-www-form-urlencoded");e.onreadystatechange=function(){4==e.readyState&&b({status:e.status,text:e.responseText})};e.send(c)};
+Gk.prototype.get=function(a,b){var c=this.l;c.open("GET",a,!0);c.onreadystatechange=function(){4==c.readyState&&b({status:c.status,text:c.responseText})};c.send()};var Gm=function(a){this.k=a;this.v=this.B();if(null==this.k)throw new Gl("Empty module name");};Ga=Gm.prototype;Ga.B=function(){var a=window.location.pathname;return a&&0==a.indexOf("/accounts")?"/accounts/JsRemoteLog":"/JsRemoteLog"};
+Ga.C=function(a,b,c){var d=this.v,f=this.k||"",d=d+"?module="+encodeURIComponent(f);a=a||"";d=d+"&type="+encodeURIComponent(a);b=b||"";d=d+"&msg="+encodeURIComponent(b);c=c||[];for(a=0;a<c.length;a++)d=d+"&arg="+encodeURIComponent(c[a]);try{var e=Math.floor(1E4*Math.random()),d=d+"&r="+String(e)}catch(g){}return d};Ga.send=function(a,b,c){var d=new Gk;d.parameters={};try{var f=this.C(a,b,c);d.get(f,function(){})}catch(e){}};Ga.error=function(a,b){this.send("ERROR",a,b)};
+Ga.warn=function(a,b){this.send("WARN",a,b)};Ga.info=function(a,b){this.send("INFO",a,b)};Ga.F=function(a){var b=this;return function(){try{return a.apply(null,arguments)}catch(c){throw b.error("Uncatched exception: "+c),c;}}};var Gl=function(){};G=G||{};G.a=G.a||new Gm("iframe_set_sid");G.u=function(){return window.__TIMEOUT};G.D=function(){return window.__CONTINUE_URL};G.e=function(){return window.__FALLBACK_URL};G.b=function(){return window.__DOMAIN_SETTINGS};G.t=function(){var a=G.b(),b;for(b in a){var c=a[b];if("continue"==c.type)return c}return null};G.g=function(){var a=G.b(),b;for(b in a){var c=a[b];if(null==c.status)return!1}return!0};G.G=function(a){window.location.replace(a)};G_redirect=G.G;G.i=function(){var a=G.D();G_redirect(a)};
+G.c=function(){var a=G.e();G_redirect(a)};G.f=null;G.w=function(){G.j("Setting SID timeout")};G.j=function(a){var b=G.t();null!=b&&b.status==G.d.h?G.i():(G.a.info(a),G.c())};G.r=function(){var a=G.u();G.f=window.setTimeout(G.w,a)};G.o=function(){null!=G.f&&window.clearTimeout(G.f)};G.q=function(a){var b=a.origin;a=a.data;var c=G.b(),b=c[b.toLowerCase()];null!=b&&(a!=G.d.m&&a!=G.d.h&&a!=G.d.n?G.a.warn("Received unexpected Message",["Message: "+a]):(b.status=a,G.g()&&(G.o(),G.j("Iframe error on setting SID"))))};
+G.A=function(a,b){var c=window.document.createElement("iframe"),d=c.style;d.visibility="hidden";d.width="1px";d.height="1px";d.position="absolute";d.top="-100px";c.src=a;null!=b&&(c.id=b);document.body.appendChild(c)};G.p=function(){var a=G.b(),b;for(b in a){var c=a[b];G.A(c.uri,c.name)}};
+G.s=function(){if(null==G.e())return G.a.error("Continue URL is empty"),!1;if(null==G.e())return G.a.error("Fallback URL is empty"),!1;var a=G.b();if(null==a)return G.a.error("No domain is configured"),G.c(),!1;for(var b in a){var c=a[b],d=null,f=[];null==c.name?d="Invalid domain configuration: name is empty":null==c.uri?(d="Invalid domain configuration: URL is empty",f.push("domain name: "+c.name)):null==c.type&&(d="Invalid domain configuration: domain type is empty",f.push("domain name: "+c.name));
+if(null!=d)return G.a.error(d,f),G.c(),!1}return!0};G.H=function(){G.s()&&(G.g()?(G.a.error("Zero domain is configured"),G.i()):window.postMessage?(G.r(),Gi(window,"message",G.q),G.p()):G.c())};G_startSetSid=G.a.F(G.H);
+
+
+      window.__TIMEOUT = '2000';
+      window.__FALLBACK_URL = 'https:\x2F\x2Fmail.google.com\x2Fmail\x2F?auth=DQAAAKkAAAAvzirSh0JPAHfI9y_PWfIHpy2RqKBBEe0PzfS6P3NGws5Qn6TBBpf1FMDoTxf5G8b7Y-sFdJH1UiFkSA4Nd-6uDWM11FLWbZv9DGi9VBuX0Ciwwq3q1iYseqyG8dz7uJTfYwlXUjsmWHmkEC9j7G_WlD8wffn7dc2M0jlEZ1QyO6dbWbph--fLNJ_ftX0MKYZEQY6Y1Dy6RDeR6bI4fKk24E8fkX_DyOszbH80B4elhw';
+      window.__CONTINUE_URL = 'https:\x2F\x2Fmail.google.com\x2Fmail\x2F?auth=DQAAAKkAAAAvzirSh0JPAHfI9y_PWfIHpy2RqKBBEe0PzfS6P3NGws5Qn6TBBpf1FMDoTxf5G8b7Y-sFdJH1UiFkSA4Nd-6uDWM11FLWbZv9DGi9VBuX0Ciwwq3q1iYseqyG8dz7uJTfYwlXUjsmWHmkEC9j7G_WlD8wffn7dc2M0jlEZ1QyO6dbWbph--fLNJ_ftX0MKYZEQY6Y1Dy6RDeR6bI4fKk24E8fkX_DyOszbH80B4elhw';
+      window.__DOMAIN_SETTINGS = {};
+
+      
+        window.__DOMAIN_SETTINGS['https:\x2F\x2Faccounts.youtube.com']
+            = { uri: 'https:\x2F\x2Faccounts.youtube.com\x2Faccounts\x2FSetSID?ssdc=1\x26sidt=ALWU2cs0yOZsxhr4Pkl6Wr6ii9G7t6WDJzFWn38Kju3GkjCCupwUHBJlK4T4ACcb%2Bq4lBUkO77IZyXqRmT7cH5w2cBtjhSrvIzxkfR%2BviET6UBn%2BzWd8aHjcTJsQyGj%2FAGZlg8nLs4yUFlb0z4T%2BwzFguauaHqTvBz47qbz7VfG5uKYUeNwegwC6x%2Bg7KmavbC%2BwhGGq8O%2F18s0MqD6BlJLAzfe2ynh9wE%2Bic73Be9BFIHHSLLinPkTfHhUBh3XchqBJPxHlWnDGRDrFyLII026eY2J6Pa4bgM4vV7AitWd1%2BeziY%2FgS7z8M8rUMirVpKDx1BhtiLOzLMkhODZd5MGJ7rbeFHk2TlL%2Bn%2FnwfKrUUdIU3ig%2FtLQlyJ%2BXUMtoFUWoDD5BJy1knJugsRxunN9RmUW%2BVlMf2Z3Zwf31rNETM0mRhVWk9dHU%3D\x26pmpo=https%3A%2F%2Faccounts.google.com',
+                origin: 'https:\x2F\x2Faccounts.youtube.com',
+                name: 'youtube',
+                type: 'other'
+              };
+      
+        window.__DOMAIN_SETTINGS['https:\x2F\x2Faccounts.google.com.np']
+            = { uri: 'https:\x2F\x2Faccounts.google.com.np\x2Faccounts\x2FSetSID?ssdc=1\x26sidt=ALWU2ct0on%2FOLcZW7dL154ll628BDFPL5XwHk8gn14oKLzI5r4IEFuz5g4hTViKaRErACpz5k59VQ2CpY93NGT5yW%2FzMIJY1OlL2xOl%2Bjoi5S1yCk0Z8Fh%2FvbdoSoK9JdGaCNzF9KfNIX8d%2FFzqdyFGlQxSoTo6W9UoXx0mrVlKvwnhvLrM65y1cpI2dAY8iv%2FXMZd4EY4drINUUayheUBkqqXTHlugkNg%2FjdyiUrdYN5OR7xXVdMX7MyqZZRhEi8UQun%2B7hv96sYhxQFB4wn%2FuC1RbAq6ozW8%2BwVVGYHD67w2uZ4KDM7cu42%2FIypmVUbb3hM%2BRMMApwmlfcCinveP6ceD3LWuOgmvy7bXHvpeN%2FNdXMrOzCCnkQCwKWMsYLP5PhaRb1UuKP8VY367Wm8NLTZFfCOHHHR1NkXJMoKJGbDt9qrs0HkxQ%3D\x26pmpo=https%3A%2F%2Faccounts.google.com',
+                origin: 'https:\x2F\x2Faccounts.google.com.np',
+                name: 'NP',
+                type: 'other'
+              };
+      
+
+      G_startSetSid();
+    --> </script>
+  </body>
+</html>

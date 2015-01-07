@@ -1,0 +1,16 @@
+.heading{
+	font-family:'Callibri','Times New Roman';
+	font-size:25px; 
+	
+	}
+
+#main{
+	margin:5% 10% 5% 10%;
+	padding: 30px 15px;
+	background-color: #F6F0FF;
+	border-radius: 7px;
+	
+	}
+h2{
+	font-size:20px;
+	}

@@ -1,0 +1,691 @@
++gemset_import_list:2> typeset line
++gemset_import_list:3> line=gem-wrappers
++gemset_import_list:4> gem_install gem-wrappers
++gem_install:2> typeset gem_name gem_version version_check
++gem_install:4> gem_version='' 
++gem_install:5> __rvm_parse_gems_args gem-wrappers
++__rvm_parse_gems_args:2> typeset 'gem=gem-wrappers'
++__rvm_parse_gems_args:4> __rvm_string_match gem-wrappers '*.gem$'
++__rvm_string_match:2> typeset _string _search
++__rvm_string_match:3> _string=gem-wrappers 
++__rvm_string_match:4> shift
++__rvm_string_match:5> ((  1  ))
++__rvm_string_match:7> _search='*.gem$' 
++__rvm_string_match:8> _search='*.gem$' 
++__rvm_string_match:9> _search='*.gem$' 
++__rvm_string_match:10> eval '      case "${_string}" in        (*.gem$) return 0 ;;      esac      '
++(eval):1> case gem-wrappers (*.gem\$)
++__rvm_string_match:15> shift
++__rvm_string_match:5> ((  0  ))
++__rvm_string_match:17> return 1
++__rvm_parse_gems_args:9> gem_name=gem-wrappers 
++__rvm_parse_gems_args:10> case gem-wrappers (*--version*)
++__rvm_parse_gems_args:10> case gem-wrappers (*-v*)
++gem_install:7> [[ -z '' ]]
++gem_install:8> __rvm_db gem_gem-wrappers_version gem_version
++__rvm_db:2> typeset value key variable
++__rvm_db:3> key=gem_gem-wrappers_version 
++__rvm_db:4> key=gem_gem-wrappers_version 
++__rvm_db:5> variable=gem_version 
++__rvm_db:6> value='' 
++__rvm_db:8> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db:9> value=+__rvm_db:9> __rvm_db_ /Users/CloudFactory/.rvm/user/db gem_gem-wrappers_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/user/db 
++__rvm_db_:4> __key=gem_gem-wrappers_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/user/db gem_gem-wrappers_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++__rvm_db:9> value='' 
++__rvm_db:11> [[ -z '' && -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db:12> value=+__rvm_db:12> __rvm_db_ /Users/CloudFactory/.rvm/config/db gem_gem-wrappers_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/config/db 
++__rvm_db_:4> __key=gem_gem-wrappers_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/config/db gem_gem-wrappers_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++__rvm_db:12> value='>=1.2.7' 
++__rvm_db:14> [[ -n '>=1.2.7' ]]
++__rvm_db:15> [[ -n gem_version ]]
++__rvm_db:16> eval 'gem_version=''>=1.2.7'''
++(eval):1> gem_version='>=1.2.7' 
++__rvm_db:19> true
++gem_install:12> ((  0 == 0  ))
++gem_install:12> is_gem_installed
++is_gem_installed:2> typeset gem_spec
++is_gem_installed:3> gem_spec='gem ''gem-wrappers''' 
++is_gem_installed:5> [[ -n '>=1.2.7' ]]
++is_gem_installed:7> gem_spec+=', ''>=1.2.7''' 
++is_gem_installed:8> version_check=1.2.7 
++is_gem_installed:12> ls -Gh -ld /Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/gems/gem-wrappers-1.2.7
++is_gem_installed:13> /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -rrubygems -e 'gem ''gem-wrappers'', ''>=1.2.7'''
++is_gem_installed:14> return 1
++gem_install:17> gem_install_force
++gem_install_force:2> typeset __available_gem
++gem_install_force:3> typeset -a install_params
++gem_install_force:5> install_params=( ) 
++gem_install_force:6> __available_gem=+gem_install_force:6> ls -Gh -v1 /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem
++gem_install_force:6> __available_gem=+gem_install_force:6> tail -n 1
++gem_install_force:6> __available_gem=/Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem 
++gem_install_force:8> [[ -n /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem ]]
++gem_install_force:9> install_params+=( --local ) 
++gem_install_force:14> install_params+=( --no-ri --no-rdoc ) 
++gem_install_force:16> __rvm_log_command 'gem.install.gem-wrappers->=1.2.7' 'installing gem /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc' command gem install /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
++__rvm_log_command:2> typeset name message _command_start _command_name
++__rvm_log_command:3> typeset -a _command
++__rvm_log_command:5> name='gem.install.gem-wrappers->=1.2.7' 
++__rvm_log_command:6> message='installing gem /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc' 
++__rvm_log_command:7> shift 2
++__rvm_log_command:8> _command=( command gem install /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc ) 
++__rvm_log_command:9> _command_start=command 
++__rvm_log_command:10> ((  7  ))
++__rvm_log_command:10> [[ command == *=* ]]
++__rvm_log_command:13> _command_name=command 
++__rvm_log_command:15> [[ command != *=* ]]
++__rvm_log_command:16> __function_on_stack __rvm_log_command_internal
++__function_on_stack:2> __rvm_string_includes '' __rvm_log_command_internal
++__rvm_string_includes:2> typeset __search '__text='
++__rvm_string_includes:3> shift
++__rvm_string_includes:4> __search=__rvm_log_command_internal
++__rvm_string_includes:6> [[ '  ' == *\ __rvm_log_command_internal\ * ]]
++__rvm_string_includes:10> return 1
++__function_on_stack:2> return 1
++__rvm_log_command:18> __rvm_log_command_internal command gem install /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
++__rvm_log_command_internal:2> typeset _log
++__rvm_log_command_internal:4> ((  0 == 0  ))
++__rvm_log_command_internal:6> __rvm_log_command_caclulate_log_file_name
++__rvm_log_command_caclulate_log_file_name:2> [[ -n 1420454050 ]]
++__rvm_log_command_caclulate_log_file_name:3> [[ -n local, ]]
++__rvm_log_command_caclulate_log_file_name:4> [[ -n 250 ]]
++__rvm_log_command_caclulate_log_file_name:5> name='gem.install.gem-wrappers->=1.2.7' 
++__rvm_log_command_caclulate_log_file_name:6> _log='/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.gem-wrappers->=1.2.7' 
++__rvm_log_command_caclulate_log_file_name:7> [[ -n 5.0.5 ]]
++__rvm_log_command_caclulate_log_file_name:8> _log='/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.gem-wrappers->=1.2.7.log' 
++__rvm_log_command_internal:7> rvm_debug 'Log file: /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.gem-wrappers->=1.2.7.log'
++rvm_debug:2> ((  0  ))
++rvm_debug:2> return 0
++__rvm_log_command_internal:9> [[ -d /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551 ]]
++__rvm_log_command_internal:10> [[ -f '/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.gem-wrappers->=1.2.7.log' ]]
++__rvm_log_command_internal:10> rm -f '/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.gem-wrappers->=1.2.7.log'
++__rvm_log_command_internal:12> __rvm_log_command_debug
++__rvm_log_command_internal:12> rvm_debug_stream
++rvm_debug_stream:2> ((  0 == 0 && 0 == 0  ))
++__rvm_log_command_internal:12> tee '/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.gem-wrappers->=1.2.7.log'
++__rvm_log_command_debug:2> __rvm_date '+%Y-%m-%d %H:%M:%S'
++rvm_debug_stream:3> cat -
++__rvm_date:0> date '+%Y-%m-%d %H:%M:%S'
++__rvm_log_command_debug:2> printf %b '[2015-01-05 16:23:24] command\n'
++__rvm_log_command_debug:3> is_a_function command
++is_a_function:2> typeset -f command
++is_a_function:2> return 1
++__rvm_log_command_debug:6> printf %b 'current path: /Users/CloudFactory/.rvm/src/ruby-1.9.3-p551\n'
++__rvm_log_command_debug:7> __rvm_grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
++__rvm_log_command_debug:7> env
++__rvm_grep:0> GREP_OPTIONS='' grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
++__rvm_log_command_debug:8> printf %b 'command(7): command gem install /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc\n'
++__rvm_log_command_internal:14> __rvm_log_dotted '/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.gem-wrappers->=1.2.7.log' 'installing gem /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc' command gem install /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc
++__rvm_log_dotted:2> typeset __log_file __message __iterator __result __local_rvm_trace_flag
++__rvm_log_dotted:3> __log_file='/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.gem-wrappers->=1.2.7.log' 
++__rvm_log_dotted:4> __message='installing gem /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc' 
++__rvm_log_dotted:5> shift 2
++__rvm_log_dotted:6> __result=0 
++__rvm_log_dotted:7> __local_rvm_trace_flag=0 
++__rvm_log_dotted:9> ((  0  ))
++__rvm_log_dotted:18> [[ -n 5.0.5 ]]
++__rvm_log_dotted:20> rvm_log 'installing gem /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc - please wait'
++rvm_log:2> rvm_pretty_print stdout
++rvm_pretty_print:2> case auto (0|no)
++rvm_pretty_print:2> case auto (1|auto)
++rvm_pretty_print:7> case xterm-256color (dumb|unknown)
++rvm_pretty_print:10> case stdout (stdout)
++rvm_pretty_print:11> [[ -t 1 ]]
++rvm_pretty_print:11> return 1
++rvm_log:4> printf %b 'installing gem /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc - please wait\n'
+installing gem /Users/CloudFactory/.rvm/gem-cache/gem-wrappers-1.2.7.gem --local --no-ri --no-rdoc - please wait
++gem_install:19> true
++gemset_import_list:3> line=rubygems-bundler
++gemset_import_list:4> gem_install rubygems-bundler
++gem_install:2> typeset gem_name gem_version version_check
++gem_install:4> gem_version='' 
++gem_install:5> __rvm_parse_gems_args rubygems-bundler
++__rvm_parse_gems_args:2> typeset 'gem=rubygems-bundler'
++__rvm_parse_gems_args:4> __rvm_string_match rubygems-bundler '*.gem$'
++__rvm_string_match:2> typeset _string _search
++__rvm_string_match:3> _string=rubygems-bundler 
++__rvm_string_match:4> shift
++__rvm_string_match:5> ((  1  ))
++__rvm_string_match:7> _search='*.gem$' 
++__rvm_string_match:8> _search='*.gem$' 
++__rvm_string_match:9> _search='*.gem$' 
++__rvm_string_match:10> eval '      case "${_string}" in        (*.gem$) return 0 ;;      esac      '
++(eval):1> case rubygems-bundler (*.gem\$)
++__rvm_string_match:15> shift
++__rvm_string_match:5> ((  0  ))
++__rvm_string_match:17> return 1
++__rvm_parse_gems_args:9> gem_name=rubygems-bundler 
++__rvm_parse_gems_args:10> case rubygems-bundler (*--version*)
++__rvm_parse_gems_args:10> case rubygems-bundler (*-v*)
++gem_install:7> [[ -z '' ]]
++gem_install:8> __rvm_db gem_rubygems-bundler_version gem_version
++__rvm_db:2> typeset value key variable
++__rvm_db:3> key=gem_rubygems-bundler_version 
++__rvm_db:4> key=gem_rubygems-bundler_version 
++__rvm_db:5> variable=gem_version 
++__rvm_db:6> value='' 
++__rvm_db:8> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db:9> value=+__rvm_db:9> __rvm_db_ /Users/CloudFactory/.rvm/user/db gem_rubygems-bundler_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/user/db 
++__rvm_db_:4> __key=gem_rubygems-bundler_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/user/db gem_rubygems-bundler_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
++__rvm_db:9> value='' 
++__rvm_db:11> [[ -z '' && -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db:12> value=+__rvm_db:12> __rvm_db_ /Users/CloudFactory/.rvm/config/db gem_rubygems-bundler_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/config/db 
++__rvm_db_:4> __key=gem_rubygems-bundler_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/config/db gem_rubygems-bundler_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_rubygems-bundler_version=# { s#^gem_rubygems-bundler_version=##;; p; }' -e '/^$/d'
++__rvm_db:12> value='' 
++__rvm_db:14> [[ -n '' ]]
++__rvm_db:14> return 1
++gem_install:12> ((  0 == 0  ))
++gem_install:12> is_gem_installed
++is_gem_installed:2> typeset gem_spec
++is_gem_installed:3> gem_spec='gem ''rubygems-bundler''' 
++is_gem_installed:5> [[ -n '' ]]
++is_gem_installed:10> version_check='*([[:digit:]\.])' 
++is_gem_installed:12> ls -Gh -ld '/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/gems/rubygems-bundler-*([[:digit:]\.])'
++is_gem_installed:13> /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -rrubygems -e 'gem ''rubygems-bundler'''
++is_gem_installed:14> return 1
++gem_install:17> gem_install_force
++gem_install_force:2> typeset __available_gem
++gem_install_force:3> typeset -a install_params
++gem_install_force:5> install_params=( ) 
++gem_install_force:6> __available_gem=+gem_install_force:6> ls -Gh -v1 '/Users/CloudFactory/.rvm/gem-cache/rubygems-bundler-*([[:digit:]\.]).gem'
++gem_install_force:6> __available_gem=+gem_install_force:6> tail -n 1
++gem_install_force:6> __available_gem='' 
++gem_install_force:8> [[ -n '' ]]
++gem_install_force:10> [[ -n '' ]]
++gem_install_force:14> install_params+=( --no-ri --no-rdoc ) 
++gem_install_force:16> __rvm_log_command gem.install.rubygems-bundler 'installing gem rubygems-bundler --no-ri --no-rdoc' command gem install rubygems-bundler --no-ri --no-rdoc
++__rvm_log_command:2> typeset name message _command_start _command_name
++__rvm_log_command:3> typeset -a _command
++__rvm_log_command:5> name=gem.install.rubygems-bundler 
++__rvm_log_command:6> message='installing gem rubygems-bundler --no-ri --no-rdoc' 
++__rvm_log_command:7> shift 2
++__rvm_log_command:8> _command=( command gem install rubygems-bundler --no-ri --no-rdoc ) 
++__rvm_log_command:9> _command_start=command 
++__rvm_log_command:10> ((  6  ))
++__rvm_log_command:10> [[ command == *=* ]]
++__rvm_log_command:13> _command_name=command 
++__rvm_log_command:15> [[ command != *=* ]]
++__rvm_log_command:16> __function_on_stack __rvm_log_command_internal
++__function_on_stack:2> __rvm_string_includes '' __rvm_log_command_internal
++__rvm_string_includes:2> typeset __search '__text='
++__rvm_string_includes:3> shift
++__rvm_string_includes:4> __search=__rvm_log_command_internal
++__rvm_string_includes:6> [[ '  ' == *\ __rvm_log_command_internal\ * ]]
++__rvm_string_includes:10> return 1
++__function_on_stack:2> return 1
++__rvm_log_command:18> __rvm_log_command_internal command gem install rubygems-bundler --no-ri --no-rdoc
++__rvm_log_command_internal:2> typeset _log
++__rvm_log_command_internal:4> ((  0 == 0  ))
++__rvm_log_command_internal:6> __rvm_log_command_caclulate_log_file_name
++__rvm_log_command_caclulate_log_file_name:2> [[ -n 1420454050 ]]
++__rvm_log_command_caclulate_log_file_name:3> [[ -n local, ]]
++__rvm_log_command_caclulate_log_file_name:4> [[ -n 250 ]]
++__rvm_log_command_caclulate_log_file_name:5> name=gem.install.rubygems-bundler 
++__rvm_log_command_caclulate_log_file_name:6> _log=/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rubygems-bundler 
++__rvm_log_command_caclulate_log_file_name:7> [[ -n 5.0.5 ]]
++__rvm_log_command_caclulate_log_file_name:8> _log=/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rubygems-bundler.log 
++__rvm_log_command_internal:7> rvm_debug 'Log file: /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rubygems-bundler.log'
++rvm_debug:2> ((  0  ))
++rvm_debug:2> return 0
++__rvm_log_command_internal:9> [[ -d /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551 ]]
++__rvm_log_command_internal:10> [[ -f /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rubygems-bundler.log ]]
++__rvm_log_command_internal:10> rm -f /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rubygems-bundler.log
++__rvm_log_command_internal:12> __rvm_log_command_debug
++__rvm_log_command_internal:12> rvm_debug_stream
++rvm_debug_stream:2> ((  0 == 0 && 0 == 0  ))
++__rvm_log_command_internal:12> tee /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rubygems-bundler.log
++__rvm_log_command_debug:2> __rvm_date '+%Y-%m-%d %H:%M:%S'
++rvm_debug_stream:3> cat -
++__rvm_date:0> date '+%Y-%m-%d %H:%M:%S'
++__rvm_log_command_debug:2> printf %b '[2015-01-05 16:23:25] command\n'
++__rvm_log_command_debug:3> is_a_function command
++is_a_function:2> typeset -f command
++is_a_function:2> return 1
++__rvm_log_command_debug:6> printf %b 'current path: /Users/CloudFactory/.rvm/src/ruby-1.9.3-p551\n'
++__rvm_log_command_debug:7> __rvm_grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
++__rvm_log_command_debug:7> env
++__rvm_grep:0> GREP_OPTIONS='' grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
++__rvm_log_command_debug:8> printf %b 'command(6): command gem install rubygems-bundler --no-ri --no-rdoc\n'
++__rvm_log_command_internal:14> __rvm_log_dotted /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rubygems-bundler.log 'installing gem rubygems-bundler --no-ri --no-rdoc' command gem install rubygems-bundler --no-ri --no-rdoc
++__rvm_log_dotted:2> typeset __log_file __message __iterator __result __local_rvm_trace_flag
++__rvm_log_dotted:3> __log_file=/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rubygems-bundler.log 
++__rvm_log_dotted:4> __message='installing gem rubygems-bundler --no-ri --no-rdoc' 
++__rvm_log_dotted:5> shift 2
++__rvm_log_dotted:6> __result=0 
++__rvm_log_dotted:7> __local_rvm_trace_flag=0 
++__rvm_log_dotted:9> ((  0  ))
++__rvm_log_dotted:18> [[ -n 5.0.5 ]]
++__rvm_log_dotted:20> rvm_log 'installing gem rubygems-bundler --no-ri --no-rdoc - please wait'
++rvm_log:2> rvm_pretty_print stdout
++rvm_pretty_print:2> case auto (0|no)
++rvm_pretty_print:2> case auto (1|auto)
++rvm_pretty_print:7> case xterm-256color (dumb|unknown)
++rvm_pretty_print:10> case stdout (stdout)
++rvm_pretty_print:11> [[ -t 1 ]]
++rvm_pretty_print:11> return 1
++rvm_log:4> printf %b 'installing gem rubygems-bundler --no-ri --no-rdoc - please wait\n'
+installing gem rubygems-bundler --no-ri --no-rdoc - please wait
++gem_install:19> true
++gemset_import_list:3> line=bundler
++gemset_import_list:4> gem_install bundler
++gem_install:2> typeset gem_name gem_version version_check
++gem_install:4> gem_version='' 
++gem_install:5> __rvm_parse_gems_args bundler
++__rvm_parse_gems_args:2> typeset 'gem=bundler'
++__rvm_parse_gems_args:4> __rvm_string_match bundler '*.gem$'
++__rvm_string_match:2> typeset _string _search
++__rvm_string_match:3> _string=bundler 
++__rvm_string_match:4> shift
++__rvm_string_match:5> ((  1  ))
++__rvm_string_match:7> _search='*.gem$' 
++__rvm_string_match:8> _search='*.gem$' 
++__rvm_string_match:9> _search='*.gem$' 
++__rvm_string_match:10> eval '      case "${_string}" in        (*.gem$) return 0 ;;      esac      '
++(eval):1> case bundler (*.gem\$)
++__rvm_string_match:15> shift
++__rvm_string_match:5> ((  0  ))
++__rvm_string_match:17> return 1
++__rvm_parse_gems_args:9> gem_name=bundler 
++__rvm_parse_gems_args:10> case bundler (*--version*)
++__rvm_parse_gems_args:10> case bundler (*-v*)
++gem_install:7> [[ -z '' ]]
++gem_install:8> __rvm_db gem_bundler_version gem_version
++__rvm_db:2> typeset value key variable
++__rvm_db:3> key=gem_bundler_version 
++__rvm_db:4> key=gem_bundler_version 
++__rvm_db:5> variable=gem_version 
++__rvm_db:6> value='' 
++__rvm_db:8> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db:9> value=+__rvm_db:9> __rvm_db_ /Users/CloudFactory/.rvm/user/db gem_bundler_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/user/db 
++__rvm_db_:4> __key=gem_bundler_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/user/db gem_bundler_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_bundler_version=# { s#^gem_bundler_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_bundler_version=# { s#^gem_bundler_version=##;; p; }' -e '/^$/d'
++__rvm_db:9> value='' 
++__rvm_db:11> [[ -z '' && -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db:12> value=+__rvm_db:12> __rvm_db_ /Users/CloudFactory/.rvm/config/db gem_bundler_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/config/db 
++__rvm_db_:4> __key=gem_bundler_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/config/db gem_bundler_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_bundler_version=# { s#^gem_bundler_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_bundler_version=# { s#^gem_bundler_version=##;; p; }' -e '/^$/d'
++__rvm_db:12> value='' 
++__rvm_db:14> [[ -n '' ]]
++__rvm_db:14> return 1
++gem_install:12> ((  0 == 0  ))
++gem_install:12> is_gem_installed
++is_gem_installed:2> typeset gem_spec
++is_gem_installed:3> gem_spec='gem ''bundler''' 
++is_gem_installed:5> [[ -n '' ]]
++is_gem_installed:10> version_check='*([[:digit:]\.])' 
++is_gem_installed:12> ls -Gh -ld '/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/gems/bundler-*([[:digit:]\.])'
++is_gem_installed:13> /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -rrubygems -e 'gem ''bundler'''
++is_gem_installed:14> return 1
++gem_install:17> gem_install_force
++gem_install_force:2> typeset __available_gem
++gem_install_force:3> typeset -a install_params
++gem_install_force:5> install_params=( ) 
++gem_install_force:6> __available_gem=+gem_install_force:6> ls -Gh -v1 '/Users/CloudFactory/.rvm/gem-cache/bundler-*([[:digit:]\.]).gem'
++gem_install_force:6> __available_gem=+gem_install_force:6> tail -n 1
++gem_install_force:6> __available_gem='' 
++gem_install_force:8> [[ -n '' ]]
++gem_install_force:10> [[ -n '' ]]
++gem_install_force:14> install_params+=( --no-ri --no-rdoc ) 
++gem_install_force:16> __rvm_log_command gem.install.bundler 'installing gem bundler --no-ri --no-rdoc' command gem install bundler --no-ri --no-rdoc
++__rvm_log_command:2> typeset name message _command_start _command_name
++__rvm_log_command:3> typeset -a _command
++__rvm_log_command:5> name=gem.install.bundler 
++__rvm_log_command:6> message='installing gem bundler --no-ri --no-rdoc' 
++__rvm_log_command:7> shift 2
++__rvm_log_command:8> _command=( command gem install bundler --no-ri --no-rdoc ) 
++__rvm_log_command:9> _command_start=command 
++__rvm_log_command:10> ((  6  ))
++__rvm_log_command:10> [[ command == *=* ]]
++__rvm_log_command:13> _command_name=command 
++__rvm_log_command:15> [[ command != *=* ]]
++__rvm_log_command:16> __function_on_stack __rvm_log_command_internal
++__function_on_stack:2> __rvm_string_includes '' __rvm_log_command_internal
++__rvm_string_includes:2> typeset __search '__text='
++__rvm_string_includes:3> shift
++__rvm_string_includes:4> __search=__rvm_log_command_internal
++__rvm_string_includes:6> [[ '  ' == *\ __rvm_log_command_internal\ * ]]
++__rvm_string_includes:10> return 1
++__function_on_stack:2> return 1
++__rvm_log_command:18> __rvm_log_command_internal command gem install bundler --no-ri --no-rdoc
++__rvm_log_command_internal:2> typeset _log
++__rvm_log_command_internal:4> ((  0 == 0  ))
++__rvm_log_command_internal:6> __rvm_log_command_caclulate_log_file_name
++__rvm_log_command_caclulate_log_file_name:2> [[ -n 1420454050 ]]
++__rvm_log_command_caclulate_log_file_name:3> [[ -n local, ]]
++__rvm_log_command_caclulate_log_file_name:4> [[ -n 250 ]]
++__rvm_log_command_caclulate_log_file_name:5> name=gem.install.bundler 
++__rvm_log_command_caclulate_log_file_name:6> _log=/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.bundler 
++__rvm_log_command_caclulate_log_file_name:7> [[ -n 5.0.5 ]]
++__rvm_log_command_caclulate_log_file_name:8> _log=/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.bundler.log 
++__rvm_log_command_internal:7> rvm_debug 'Log file: /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.bundler.log'
++rvm_debug:2> ((  0  ))
++rvm_debug:2> return 0
++__rvm_log_command_internal:9> [[ -d /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551 ]]
++__rvm_log_command_internal:10> [[ -f /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.bundler.log ]]
++__rvm_log_command_internal:10> rm -f /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.bundler.log
++__rvm_log_command_internal:12> __rvm_log_command_debug
++__rvm_log_command_internal:12> rvm_debug_stream
++__rvm_log_command_internal:12> tee /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.bundler.log
++rvm_debug_stream:2> ((  0 == 0 && 0 == 0  ))
++__rvm_log_command_debug:2> __rvm_date '+%Y-%m-%d %H:%M:%S'
++rvm_debug_stream:3> cat -
++__rvm_date:0> date '+%Y-%m-%d %H:%M:%S'
++__rvm_log_command_debug:2> printf %b '[2015-01-05 16:23:29] command\n'
++__rvm_log_command_debug:3> is_a_function command
++is_a_function:2> typeset -f command
++is_a_function:2> return 1
++__rvm_log_command_debug:6> printf %b 'current path: /Users/CloudFactory/.rvm/src/ruby-1.9.3-p551\n'
++__rvm_log_command_debug:7> __rvm_grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
++__rvm_log_command_debug:7> env
++__rvm_grep:0> GREP_OPTIONS='' grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
++__rvm_log_command_debug:8> printf %b 'command(6): command gem install bundler --no-ri --no-rdoc\n'
++__rvm_log_command_internal:14> __rvm_log_dotted /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.bundler.log 'installing gem bundler --no-ri --no-rdoc' command gem install bundler --no-ri --no-rdoc
++__rvm_log_dotted:2> typeset __log_file __message __iterator __result __local_rvm_trace_flag
++__rvm_log_dotted:3> __log_file=/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.bundler.log 
++__rvm_log_dotted:4> __message='installing gem bundler --no-ri --no-rdoc' 
++__rvm_log_dotted:5> shift 2
++__rvm_log_dotted:6> __result=0 
++__rvm_log_dotted:7> __local_rvm_trace_flag=0 
++__rvm_log_dotted:9> ((  0  ))
++__rvm_log_dotted:18> [[ -n 5.0.5 ]]
++__rvm_log_dotted:20> rvm_log 'installing gem bundler --no-ri --no-rdoc - please wait'
++rvm_log:2> rvm_pretty_print stdout
++rvm_pretty_print:2> case auto (0|no)
++rvm_pretty_print:2> case auto (1|auto)
++rvm_pretty_print:7> case xterm-256color (dumb|unknown)
++rvm_pretty_print:10> case stdout (stdout)
++rvm_pretty_print:11> [[ -t 1 ]]
++rvm_pretty_print:11> return 1
++rvm_log:4> printf %b 'installing gem bundler --no-ri --no-rdoc - please wait\n'
+installing gem bundler --no-ri --no-rdoc - please wait
++gem_install:19> true
++gemset_import_list:3> line=rake
++gemset_import_list:4> gem_install rake
++gem_install:2> typeset gem_name gem_version version_check
++gem_install:4> gem_version='' 
++gem_install:5> __rvm_parse_gems_args rake
++__rvm_parse_gems_args:2> typeset 'gem=rake'
++__rvm_parse_gems_args:4> __rvm_string_match rake '*.gem$'
++__rvm_string_match:2> typeset _string _search
++__rvm_string_match:3> _string=rake 
++__rvm_string_match:4> shift
++__rvm_string_match:5> ((  1  ))
++__rvm_string_match:7> _search='*.gem$' 
++__rvm_string_match:8> _search='*.gem$' 
++__rvm_string_match:9> _search='*.gem$' 
++__rvm_string_match:10> eval '      case "${_string}" in        (*.gem$) return 0 ;;      esac      '
++(eval):1> case rake (*.gem\$)
++__rvm_string_match:15> shift
++__rvm_string_match:5> ((  0  ))
++__rvm_string_match:17> return 1
++__rvm_parse_gems_args:9> gem_name=rake 
++__rvm_parse_gems_args:10> case rake (*--version*)
++__rvm_parse_gems_args:10> case rake (*-v*)
++gem_install:7> [[ -z '' ]]
++gem_install:8> __rvm_db gem_rake_version gem_version
++__rvm_db:2> typeset value key variable
++__rvm_db:3> key=gem_rake_version 
++__rvm_db:4> key=gem_rake_version 
++__rvm_db:5> variable=gem_version 
++__rvm_db:6> value='' 
++__rvm_db:8> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db:9> value=+__rvm_db:9> __rvm_db_ /Users/CloudFactory/.rvm/user/db gem_rake_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/user/db 
++__rvm_db_:4> __key=gem_rake_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/user/db gem_rake_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
++__rvm_db:9> value='' 
++__rvm_db:11> [[ -z '' && -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db:12> value=+__rvm_db:12> __rvm_db_ /Users/CloudFactory/.rvm/config/db gem_rake_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/config/db 
++__rvm_db_:4> __key=gem_rake_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/config/db gem_rake_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_rake_version=# { s#^gem_rake_version=##;; p; }' -e '/^$/d'
++__rvm_db:12> value='' 
++__rvm_db:14> [[ -n '' ]]
++__rvm_db:14> return 1
++gem_install:12> ((  0 == 0  ))
++gem_install:12> is_gem_installed
++is_gem_installed:2> typeset gem_spec
++is_gem_installed:3> gem_spec='gem ''rake''' 
++is_gem_installed:5> [[ -n '' ]]
++is_gem_installed:10> version_check='*([[:digit:]\.])' 
++is_gem_installed:12> ls -Gh -ld '/Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/gems/rake-*([[:digit:]\.])'
++is_gem_installed:13> /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -rrubygems -e 'gem ''rake'''
++gem_install:14> rvm_log 'gem rake  is already installed'
++rvm_log:2> rvm_pretty_print stdout
++rvm_pretty_print:2> case auto (0|no)
++rvm_pretty_print:2> case auto (1|auto)
++rvm_pretty_print:7> case xterm-256color (dumb|unknown)
++rvm_pretty_print:10> case stdout (stdout)
++rvm_pretty_print:11> [[ -t 1 ]]
++rvm_pretty_print:11> return 1
++rvm_log:4> printf %b 'gem rake  is already installed\n'
+gem rake  is already installed
++gem_install:15> return 0
++gemset_import_list:3> line=rvm
++gemset_import_list:4> gem_install rvm
++gem_install:2> typeset gem_name gem_version version_check
++gem_install:4> gem_version='' 
++gem_install:5> __rvm_parse_gems_args rvm
++__rvm_parse_gems_args:2> typeset 'gem=rvm'
++__rvm_parse_gems_args:4> __rvm_string_match rvm '*.gem$'
++__rvm_string_match:2> typeset _string _search
++__rvm_string_match:3> _string=rvm 
++__rvm_string_match:4> shift
++__rvm_string_match:5> ((  1  ))
++__rvm_string_match:7> _search='*.gem$' 
++__rvm_string_match:8> _search='*.gem$' 
++__rvm_string_match:9> _search='*.gem$' 
++__rvm_string_match:10> eval '      case "${_string}" in        (*.gem$) return 0 ;;      esac      '
++(eval):1> case rvm (*.gem\$)
++__rvm_string_match:15> shift
++__rvm_string_match:5> ((  0  ))
++__rvm_string_match:17> return 1
++__rvm_parse_gems_args:9> gem_name=rvm 
++__rvm_parse_gems_args:10> case rvm (*--version*)
++__rvm_parse_gems_args:10> case rvm (*-v*)
++gem_install:7> [[ -z '' ]]
++gem_install:8> __rvm_db gem_rvm_version gem_version
++__rvm_db:2> typeset value key variable
++__rvm_db:3> key=gem_rvm_version 
++__rvm_db:4> key=gem_rvm_version 
++__rvm_db:5> variable=gem_version 
++__rvm_db:6> value='' 
++__rvm_db:8> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db:9> value=+__rvm_db:9> __rvm_db_ /Users/CloudFactory/.rvm/user/db gem_rvm_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/user/db 
++__rvm_db_:4> __key=gem_rvm_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/user/db gem_rvm_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
++__rvm_db:9> value='' 
++__rvm_db:11> [[ -z '' && -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db:12> value=+__rvm_db:12> __rvm_db_ /Users/CloudFactory/.rvm/config/db gem_rvm_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/config/db 
++__rvm_db_:4> __key=gem_rvm_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/config/db gem_rvm_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_rvm_version=# { s#^gem_rvm_version=##;; p; }' -e '/^$/d'
++__rvm_db:12> value='>=1.11.3.9' 
++__rvm_db:14> [[ -n '>=1.11.3.9' ]]
++__rvm_db:15> [[ -n gem_version ]]
++__rvm_db:16> eval 'gem_version=''>=1.11.3.9'''
++(eval):1> gem_version='>=1.11.3.9' 
++__rvm_db:19> true
++gem_install:12> ((  0 == 0  ))
++gem_install:12> is_gem_installed
++is_gem_installed:2> typeset gem_spec
++is_gem_installed:3> gem_spec='gem ''rvm''' 
++is_gem_installed:5> [[ -n '>=1.11.3.9' ]]
++is_gem_installed:7> gem_spec+=', ''>=1.11.3.9''' 
++is_gem_installed:8> version_check=1.11.3.9 
++is_gem_installed:12> ls -Gh -ld /Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551@global/gems/rvm-1.11.3.9
++is_gem_installed:13> /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -rrubygems -e 'gem ''rvm'', ''>=1.11.3.9'''
++is_gem_installed:14> return 1
++gem_install:17> gem_install_force
++gem_install_force:2> typeset __available_gem
++gem_install_force:3> typeset -a install_params
++gem_install_force:5> install_params=( ) 
++gem_install_force:6> __available_gem=+gem_install_force:6> ls -Gh -v1 /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem
++gem_install_force:6> __available_gem=+gem_install_force:6> tail -n 1
++gem_install_force:6> __available_gem=/Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem 
++gem_install_force:8> [[ -n /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem ]]
++gem_install_force:9> install_params+=( --local ) 
++gem_install_force:14> install_params+=( --no-ri --no-rdoc ) 
++gem_install_force:16> __rvm_log_command 'gem.install.rvm->=1.11.3.9' 'installing gem /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc' command gem install /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
++__rvm_log_command:2> typeset name message _command_start _command_name
++__rvm_log_command:3> typeset -a _command
++__rvm_log_command:5> name='gem.install.rvm->=1.11.3.9' 
++__rvm_log_command:6> message='installing gem /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc' 
++__rvm_log_command:7> shift 2
++__rvm_log_command:8> _command=( command gem install /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc ) 
++__rvm_log_command:9> _command_start=command 
++__rvm_log_command:10> ((  7  ))
++__rvm_log_command:10> [[ command == *=* ]]
++__rvm_log_command:13> _command_name=command 
++__rvm_log_command:15> [[ command != *=* ]]
++__rvm_log_command:16> __function_on_stack __rvm_log_command_internal
++__function_on_stack:2> __rvm_string_includes '' __rvm_log_command_internal
++__rvm_string_includes:2> typeset __search '__text='
++__rvm_string_includes:3> shift
++__rvm_string_includes:4> __search=__rvm_log_command_internal
++__rvm_string_includes:6> [[ '  ' == *\ __rvm_log_command_internal\ * ]]
++__rvm_string_includes:10> return 1
++__function_on_stack:2> return 1
++__rvm_log_command:18> __rvm_log_command_internal command gem install /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
++__rvm_log_command_internal:2> typeset _log
++__rvm_log_command_internal:4> ((  0 == 0  ))
++__rvm_log_command_internal:6> __rvm_log_command_caclulate_log_file_name
++__rvm_log_command_caclulate_log_file_name:2> [[ -n 1420454050 ]]
++__rvm_log_command_caclulate_log_file_name:3> [[ -n local, ]]
++__rvm_log_command_caclulate_log_file_name:4> [[ -n 250 ]]
++__rvm_log_command_caclulate_log_file_name:5> name='gem.install.rvm->=1.11.3.9' 
++__rvm_log_command_caclulate_log_file_name:6> _log='/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rvm->=1.11.3.9' 
++__rvm_log_command_caclulate_log_file_name:7> [[ -n 5.0.5 ]]
++__rvm_log_command_caclulate_log_file_name:8> _log='/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rvm->=1.11.3.9.log' 
++__rvm_log_command_internal:7> rvm_debug 'Log file: /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rvm->=1.11.3.9.log'
++rvm_debug:2> ((  0  ))
++rvm_debug:2> return 0
++__rvm_log_command_internal:9> [[ -d /Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551 ]]
++__rvm_log_command_internal:10> [[ -f '/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rvm->=1.11.3.9.log' ]]
++__rvm_log_command_internal:10> rm -f '/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rvm->=1.11.3.9.log'
++__rvm_log_command_internal:12> __rvm_log_command_debug
++__rvm_log_command_internal:12> rvm_debug_stream
++__rvm_log_command_internal:12> tee '/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rvm->=1.11.3.9.log'
++rvm_debug_stream:2> ((  0 == 0 && 0 == 0  ))
++__rvm_log_command_debug:2> __rvm_date '+%Y-%m-%d %H:%M:%S'
++__rvm_date:0> date '+%Y-%m-%d %H:%M:%S'
++rvm_debug_stream:3> cat -
++__rvm_log_command_debug:2> printf %b '[2015-01-05 16:23:37] command\n'
++__rvm_log_command_debug:3> is_a_function command
++is_a_function:2> typeset -f command
++is_a_function:2> return 1
++__rvm_log_command_debug:6> printf %b 'current path: /Users/CloudFactory/.rvm/src/ruby-1.9.3-p551\n'
++__rvm_log_command_debug:7> __rvm_grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
++__rvm_log_command_debug:7> env
++__rvm_grep:0> GREP_OPTIONS='' grep -E '^GEM_HOME=|^GEM_PATH=|^PATH='
++__rvm_log_command_debug:8> printf %b 'command(7): command gem install /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc\n'
++__rvm_log_command_internal:14> __rvm_log_dotted '/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rvm->=1.11.3.9.log' 'installing gem /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc' command gem install /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc
++__rvm_log_dotted:2> typeset __log_file __message __iterator __result __local_rvm_trace_flag
++__rvm_log_dotted:3> __log_file='/Users/CloudFactory/.rvm/log/1420454050_ruby-1.9.3-p551/gem.install.rvm->=1.11.3.9.log' 
++__rvm_log_dotted:4> __message='installing gem /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc' 
++__rvm_log_dotted:5> shift 2
++__rvm_log_dotted:6> __result=0 
++__rvm_log_dotted:7> __local_rvm_trace_flag=0 
++__rvm_log_dotted:9> ((  0  ))
++__rvm_log_dotted:18> [[ -n 5.0.5 ]]
++__rvm_log_dotted:20> rvm_log 'installing gem /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc - please wait'
++rvm_log:2> rvm_pretty_print stdout
++rvm_pretty_print:2> case auto (0|no)
++rvm_pretty_print:2> case auto (1|auto)
++rvm_pretty_print:7> case xterm-256color (dumb|unknown)
++rvm_pretty_print:10> case stdout (stdout)
++rvm_pretty_print:11> [[ -t 1 ]]
++rvm_pretty_print:11> return 1
++rvm_log:4> printf %b 'installing gem /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc - please wait\n'
+installing gem /Users/CloudFactory/.rvm/gem-cache/rvm-1.11.3.9.gem --local --no-ri --no-rdoc - please wait
++gem_install:19> true

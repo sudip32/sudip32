@@ -1,0 +1,3 @@
++__rvm_patch:0> patch -F 25 -p1 -N -f -i /Users/CloudFactory/.rvm/patches/ruby/GH-488.patch
+patching file ext/openssl/ossl_ssl.c
+Hunk #1 succeeded at 1985 (offset -244 lines).

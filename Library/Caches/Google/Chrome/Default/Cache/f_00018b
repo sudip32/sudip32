@@ -1,0 +1,1185 @@
+body, html
+{
+    background-image: url("images/bodyBackground.png");
+    margin: 0;
+    min-width:1101px;
+}
+
+body
+{
+	position:relative;
+}
+
+body input, body textarea
+{
+	outline:none;
+}
+
+.topHeader
+{
+	background-image:url(images/topHeaderBackground.png);
+	height:45px;
+	width:100%;
+	position: relative;
+}
+
+.topHeader .likers
+{
+	margin-left: 34px;
+    padding-top: 13px;
+    width: 450px;
+}
+
+.topHeader .aboutContactHelp
+{
+	position: absolute;
+    right: 25px;
+    top: 14px;
+}
+
+.topHeader .aboutContactHelp .link, .topHeader .aboutContactHelp .separator
+{
+	float:left;
+	font-family:Arial;
+	font-size:12px;
+	color:#9A9A9A;
+	text-decoration:none;
+	display:block;
+}
+
+.topHeader .aboutContactHelp .link:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.topHeader .aboutContactHelp .separator
+{
+	background-image: url("images/topHeaderSeparator.png");
+    height: 11px;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: 3px;
+    width: 1px;
+}
+
+.lowerHeader
+{
+	background-image: url("images/lowerHeaderBackground.png");
+	height:114px;
+	width:100%;
+	position:relative;
+}
+
+.lowerHeader .logo
+{
+	background-image: url("images/logo2.png");
+    background-position: 0 80px;
+    background-repeat: no-repeat;
+    border: medium none;
+    position: absolute;
+    height: 80px;
+    margin-left: 36px;
+    margin-top: 12px;
+    outline: medium none;
+    width: 79px;
+    z-index:1;
+}
+
+.lowerHeader .logo img
+{ 
+	border:0 none;
+}
+
+.lowerHeader .logo:hover
+{
+	background-position:0px 0px;
+}
+
+.lowerHeader .socialMedia
+{
+	position: absolute;
+    right: 19px;
+    top: 37px;
+}
+
+.lowerHeader .socialMedia .twitter
+{
+	background-image: url("images/twitter.png");
+    background-position: 0 -27px;
+    background-repeat: no-repeat;
+    float: left;
+    height: 27px;
+    width: 36px;
+    border:none;
+    outline:none;
+}
+
+.lowerHeader .socialMedia .facebook
+{
+	background-image: url("images/facebook.png");
+    background-position: 0 -27px;
+    background-repeat: no-repeat;
+    float: left;
+    height: 27px;
+    width: 36px;
+    border:none;
+    outline:none;
+}
+
+.lowerHeader .socialMedia .skype
+{
+	background-image: url("images/skype.png");
+    background-position: 0 -27px;
+    background-repeat: no-repeat;
+    float: left;
+    height: 27px;
+    width: 36px;
+    border:none;
+    outline:none;
+}
+
+.lowerHeader .socialMedia .twitter:hover, .lowerHeader .socialMedia .facebook:hover, .lowerHeader .socialMedia .skype:hover
+{
+	background-position: 0 0;
+}
+
+.leftColumn
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:160px;
+	height:110%;
+	min-height: 717px;
+}
+.leftColumn:after
+{
+	content:"";
+    position:absolute;
+    top:45px;
+    left:0;
+    right:0;
+    bottom:0;
+    background:url(images/leftRightColumns.jpg) repeat;
+}
+
+.rightColumn
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:160px;
+	height:110%;
+	min-height: 717px;
+}
+.rightColumn:after
+{ 
+	content:"";
+    position:absolute;
+    top:45px;
+    left:0;
+    right:0;
+    bottom:0;
+    background:url(images/leftRightColumns.jpg) repeat;
+}
+
+.leftColumn .shadow
+{
+	background-image: url("images/shadowLeft.png");
+    height: 550px;
+    left: 160px;
+    position: absolute;
+    top: 147px;
+    width: 20px;
+}
+
+.rightColumn .shadow
+{
+	background-image: url("images/shadowRight.png");
+    height: 550px;
+    right: 160px;
+    position: absolute;
+    top: 147px;
+    width: 20px;
+}
+
+.leftColumn .leftArrow
+{
+	background-image: url("images/leftArrow.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 183px;
+    position: absolute;
+    right: -60px;
+    top: 358px;
+    width: 64px;
+    z-index: 1;
+    display:none;
+}
+
+.rightColumn .rightArrow
+{
+	position:absolute;
+	left: -60px;
+    top: 358px;
+	width:64px;
+	height:183px;
+	background-image: url("images/rightArrow.png");
+	background-repeat:no-repeat;
+	cursor:pointer;
+	z-index: 1;
+	display:none;
+}
+
+.rightColumn .rightArrow:hover, .leftColumn .leftArrow:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.leftColumn .advertisementContainer
+{
+	/*background-image: url("images/leftbar.png");*/
+    background-repeat: no-repeat;
+    height: 324px;
+    left: 2px;
+    position: absolute;
+    top: 169px;
+    width: 52px;
+    z-index: 100;
+}
+
+.rightColumn .advertisementContainer
+{
+	background-image: url("images/rightbar.png");
+    background-repeat: no-repeat;
+    height: 324px;
+   /* right: 36px;
+    position: absolute;
+    top: 254px;*/
+    width: 52px;
+    z-index: 100;
+    
+    position: absolute;
+    right: 109px;
+    top: 152px;
+}
+
+.wrapper
+{
+    height: 483px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 990px;
+    overflow:hidden;
+}
+
+.wrapper .firstWrapper
+{
+	height:auto;
+	width:auto;
+	position:relative;
+}
+
+.wrapper .bigLogo
+{
+	background-image: url("images/bigLogo.png");
+    height: 257px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+    width: 339px;
+}
+
+.wrapper .description
+{
+	color: #9A9A9A;
+    font-family: Arial;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+    width: 663px;
+    text-align:center;
+}
+
+.wrapper .start
+{
+	background-image: url("images/start.png");
+	width:452px;
+	height:111px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    position: relative;
+    cursor:pointer;
+}
+
+.wrapper .start:hover, .wrapper .description b:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.footer
+{
+	height: 69px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+    /*width: 695px;*/
+    width: 396px;
+}
+
+.footer #loadingLink
+{
+	color: rgb(155, 155, 155);
+	font-family: arial;
+	/*left: 250px;*/
+	left: 112px;
+	position: absolute;
+	font-size: 12px;
+	bottom: 5px;
+	text-decoration:none;
+}
+
+.footer #loadingLink:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.footer .footerItem
+{
+	float: left;
+    margin-right: 15px;
+    border:none;
+    outline:none;
+}
+
+.footer .footerItem img
+{
+	border:0 none;
+}
+
+.footer .footerItem:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.wrapper .secondBigWrapper
+{
+	position:relative;
+	height:auto;
+	margin-top:100px;
+	width: 50000px;
+	margin-left:0px;
+}
+
+.lowerHeader .lowerTopMenu
+{
+	background-image: url("images/secondPartMenu.png");
+	background-position:0px -1px;
+	background-repeat:no-repeat;
+    bottom: -43px;
+    height: 53px;
+    max-width: 664px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.lowerHeader .lowerTopMenu .lowerTopMenuItem
+{
+	color: #6D6E70;
+    cursor: pointer;
+    float: left;
+    font-family: arial;
+    font-size: 18px;
+    height: 54px;
+    width: 145px;
+    letter-spacing: 1px;
+}
+
+.lowerHeader .lowerTopMenu .lowerTopMenuItem:hover
+{
+	color:White !important;
+}
+.lowerHeader .lowerTopMenu .lowerTopMenuItem:first-child
+{
+	color:White;
+	font-weight: bold;
+}
+
+.wrapper .secondBigWrapper .title
+{
+	background-image: url("images/repeatBorder.png");
+	background-repeat:repeat-x;
+	background-position:0px bottom;
+    color: White;
+    font-family: tahoma;
+    font-size: 26px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 664px;
+}
+
+.wrapper .secondBigWrapper .secondWrapper .form1
+{
+	background-image: url("images/form1Background.png");
+	background-repeat:no-repeat;
+	position:relative;
+	width:552px;
+	height:355px;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.wrapper .secondBigWrapper .secondWrapper .form1 input, .wrapper .secondBigWrapper .thirdWrapper .form2 input, .wrapper .secondBigWrapper .fourthWrapper .form3 input
+{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #9B9B9B;
+    float: left;
+    margin: 13px 24px 31px 17px;
+    width: 234px;
+}
+
+.wrapper .secondBigWrapper .secondWrapper .form1 #uploadPhoto
+{
+    float: right;
+    height: 159px;
+    margin-right: 12px;
+    margin-top: 2px;
+    width: 242px;
+    background-image:url("images/uploadPhoto.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    position: relative;
+}
+
+.preview img
+{
+	margin-left: 6px;
+    width: 229px;
+}
+
+.preview
+{
+	height: 139px;
+    margin-top: 11px;
+    overflow: hidden;
+}
+
+.deletePic
+{
+	background-image: url("images/removeimage.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-family: arial;
+    height: 109px;
+    padding-top: 2px;
+    position: absolute;
+    right: -11px;
+    text-align: center;
+    top: 22px;
+    width: 40px;
+}
+
+.deletePic:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.wrapper .secondBigWrapper .secondWrapper, .wrapper .secondBigWrapper .thirdWrapper, .wrapper .secondBigWrapper .fourthWrapper, .wrapper .secondBigWrapper .fifthWrapper, .wrapper .secondBigWrapper .sixthWrapper, .wrapper .secondBigWrapper .seventhWrapper, .wrapper .secondBigWrapper .eighthWrapper, .wrapper .secondBigWrapper .ninethWrapper
+{
+	float: left;
+    width: 990px;
+    position:relative;
+}
+
+.wrapper .secondBigWrapper .thirdWrapper .form2, .wrapper .secondBigWrapper .fourthWrapper .form3, .wrapper .secondBigWrapper .fifthWrapper .form4, .wrapper .secondBigWrapper .sixthWrapper .form5, .wrapper .secondBigWrapper .seventhWrapper .form6, .wrapper .secondBigWrapper .eighthWrapper .form7, .wrapper .secondBigWrapper .ninethWrapper .form8
+{
+	height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 552px;
+    padding-bottom: 40px;
+}
+
+.wrapper .secondBigWrapper .fifthWrapper .form4
+{
+	padding-bottom: 0px;
+}
+
+.wrapper .secondBigWrapper .thirdWrapper .form2 .eduContainer, .wrapper .secondBigWrapper .fourthWrapper .form3 .expContainer
+{
+	position:relative;
+	background-image: url("images/form2Background.png");
+	background-repeat:no-repeat;
+	width:552px;
+	height:305px;
+	margin-bottom:6px;
+	overflow: hidden;
+	opacity:1;
+	filter: alpha(opacity=100);
+}
+
+.wrapper .secondBigWrapper .thirdWrapper .form2 .eduContainer, .wrapper .secondBigWrapper .fourthWrapper .form3 .expContainer
+{
+	width: 600px;
+}
+
+.wrapper .secondBigWrapper .thirdWrapper .form2 .eduContainer textarea, .wrapper .secondBigWrapper .fourthWrapper .form3 .expContainer textarea, .wrapper .secondBigWrapper .fifthWrapper .form4 .skillContainer textarea
+{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    height: 94px;
+    margin-left: 18px;
+    margin-top: 10px;
+    overflow: auto;
+    width: 517px;
+    color: #9B9B9B;
+}
+
+.wrapper .secondBigWrapper .thirdWrapper .addMore, .wrapper .secondBigWrapper .fourthWrapper .addMore, .wrapper .secondBigWrapper .fifthWrapper  .addMore
+{
+	background-image: url("images/addAnother.png");
+    background-repeat: no-repeat;
+    bottom: 14px;
+    cursor: pointer;
+    height: 22px;
+    left: 239px;
+    position: absolute;
+    width: 137px;
+}
+
+.wrapper .saveNow
+{
+	background-image: url("images/save2.png");
+    background-repeat: no-repeat;
+    bottom: -4px;
+    cursor: pointer;
+    height: 50px;
+    position: absolute;
+    right: 212px;
+    width: 149px;
+}
+
+.form4 .saveNow
+{
+	right: -5px;
+	bottom: -30px;
+}
+
+.secondWrapper .saveNow
+{
+	bottom: -42px;
+}
+
+.secondWrapper .saveNow:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.wrapper .secondBigWrapper .fifthWrapper  .addMore
+{
+	position:relative;
+    left: 30px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+	bottom:auto;
+}
+
+.wrapper .secondBigWrapper .thirdWrapper .addMore:hover, .wrapper .secondBigWrapper .fourthWrapper .addMore:hover
+{
+	opacity:0.9;
+	filter: alpha(opacity=90);
+}
+
+.wrapper .secondBigWrapper .fifthWrapper .form4 .objectiveContainer, .wrapper .secondBigWrapper .fifthWrapper .form4 .languageContainer, .wrapper .secondBigWrapper .fifthWrapper .form4 .languageContainer2, .wrapper .secondBigWrapper .fifthWrapper .form4 .languageContainer3, .wrapper .secondBigWrapper .fifthWrapper .form4 .languageContainer4
+{
+	background-image: url("images/inputBackground.png");
+    background-repeat: no-repeat;
+	width:552px;
+	height:49px;
+	position:relative;
+	margin-top: 5px;
+}
+
+.wrapper .secondBigWrapper .fifthWrapper .form4 .objectiveContainer input, .wrapper .secondBigWrapper .fifthWrapper .form4 .languageContainer input, .wrapper .secondBigWrapper .fifthWrapper .form4 .languageContainer2 input, .wrapper .secondBigWrapper .fifthWrapper .form4 .languageContainer3 input, .wrapper .secondBigWrapper .fifthWrapper .form4 .languageContainer4 input, .wrapper .secondBigWrapper .eighthWrapper .form7 input, .wrapper .secondBigWrapper .ninethWrapper .form8 input
+{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #9B9B9B;
+    float: left;
+    margin: 13px 24px 0px 17px;
+    width:510px;
+}
+
+.delete
+{
+	background-image: url("images/delete.png");
+    cursor: pointer;
+    height: 9px;
+    position: absolute;
+    right: 57px;
+    top: 18px;
+    width: 9px;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .moveTemplateUp
+{
+	background-image: url("images/upArrowTemplate.png");
+	background-position: 0 0px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 12px;
+    left: 275px;
+    position: absolute;
+    top: -30px;
+    width: 48px;
+    display:none;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .moveTemplateDown
+{
+	background-image: url("images/downArrowTemplate.png");
+    background-position: 0 -19px;
+	bottom: 13px;
+    height: 12px;
+    left: 275px;
+    position: absolute;
+    width: 48px;
+    cursor:pointer;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .moveTemplateUp:hover
+{
+	background-position: 0 -19px;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .moveTemplateDown:hover
+{
+	background-position: 0 0px;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .templateWrapper
+{
+	height: 511px; /* 202px;*/
+    margin-top: 55px;
+    overflow: hidden;
+    position: relative;
+    width: 606px;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .templateWrapper .templateContainer
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .templateWrapper .templateContainer .template
+{
+	background-image:url("images/templateBackground.png");
+	width:150px;
+	height:202px;
+	float:left;
+	cursor:pointer;
+	text-align: center;
+	position:relative;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .bigTemplate
+{
+	background-image:url("images/templateBackgroundBig.png");
+	background-repeat:no-repeat;
+	position:absolute;
+	bottom:171px;
+	width:0px;
+	height:0px;
+	overflow: hidden;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .bigTemplate img
+{
+	height: 327px;
+    margin-left: 14px;
+    margin-top: 9px;
+    position: relative;
+    width: 236px;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .templateWrapper .templateContainer .selected, .wrapper .secondBigWrapper .sixthWrapper .form5 .templateWrapper .templateContainer .template:hover
+{
+	opacity:0.3;
+	filter: alpha(opacity=30);
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .templateWrapper .templateContainer .template img
+{
+	height: 175px;
+    margin-top: 11px;
+    width: 121px;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .finish
+{
+	background-image: url("images/finish.png");
+    bottom: 30px; /*-105px;*/
+    cursor: pointer;
+    height: 94px;
+    left: 73px;
+    position: absolute;
+    width: 452px;
+}
+
+.wrapper .secondBigWrapper .sixthWrapper .form5 .finish:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.seventhWrapper .title div
+{
+	background-image: url("images/goodToGo.png");
+    background-repeat: no-repeat;
+    height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 436px;
+}
+
+.wrapper .secondBigWrapper .seventhWrapper .form6 .save
+{
+	background-image: url("images/loginsave.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 92px;
+    margin: 0 auto 5px;
+    position: relative;
+    width: 452px;
+}
+
+.wrapper .secondBigWrapper .seventhWrapper .form6 .downloadpdf, .wrapper .secondBigWrapper .seventhWrapper .form6 .goToOnlineLink
+{
+	background-image: url("images/download.png");
+    background-repeat: no-repeat;
+    width:452px;
+    height:92px;
+	position:relative;
+	cursor:pointer;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.wrapper .secondBigWrapper .seventhWrapper .form6 .goToOnlineLink
+{
+	background-image: url("images/orangeButton.png");
+	display:block;
+}
+
+.wrapper .secondBigWrapper .seventhWrapper .form6 .print
+{
+	background-image: url("images/print.png");
+    background-repeat: no-repeat;
+    width:452px;
+    height:92px;
+	position:relative;
+	cursor:pointer; 
+	margin-left: auto;
+    margin-right: auto;
+	margin-bottom: 5px;
+}
+
+.wrapper .secondBigWrapper .seventhWrapper .form6 .print:hover, .wrapper .secondBigWrapper .seventhWrapper .form6 .downloadpdf:hover, .wrapper .secondBigWrapper .seventhWrapper .form6 .save:hover, .goToOnlineLink:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.form7
+{
+	background-image: url("images/signInSignUp.png");
+    background-repeat: no-repeat;
+    height: 320px !important;
+    margin-top: 33px;
+    width: 530px !important;
+}
+
+.form7 .loginContainer
+{
+	height: 345px;
+    width: 261px;
+    float: left;
+    position:relative;
+}
+
+.loader
+{
+	background-image: url("images/ajax-loader.gif");
+    background-repeat: no-repeat;
+    width:16px;
+    height:11px;
+    position:absolute;
+}
+
+.form7 .loginContainer .loader
+{
+	right: 137px;
+    top: 147px;
+    display:none;
+}
+
+.form7 .signupContainer
+{
+	float: left;
+    padding-left: 31px;
+    width: 235px;
+    position:relative;
+    height: 208px;
+}
+
+.form7 .signupContainer .loader {
+    right: 108px;
+    top: 259px;
+    display:none;
+    
+}
+
+.form7 .forgotPassword
+{
+	color: #9A9A9A;
+    font-family: Arial;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 94px;
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+.form7 .login
+{
+	background-image: url("images/leugin.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 64px;
+    left: -3px;
+    position: absolute;
+    top: 121px;
+    width: 241px;
+}
+
+.form7 .signup
+{
+	background-image: url("images/signeup.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 64px;
+    position: absolute;
+    right: -5px;
+    top: 236px;
+    width: 241px;
+}
+
+.form7 .login:hover, .form7 .signup:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.form8 .forgotPasswordContainer
+{
+	background-image: url("images/passwordBackground.png");
+    background-repeat: no-repeat;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 101px;
+    width: 421px;
+}
+
+.form8 .forgotPasswordContainer .sendforgot
+{
+	background-image: url("images/submit.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 59px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    position: relative;
+    width: 236px;
+}
+
+.form8 .forgotPasswordContainer .sendforgot:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.aboutUsPic
+{
+	background-image: url("images/aboutuspic.png");
+    background-repeat: no-repeat;
+    height: 419px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 629px;
+    font-family:Arial;
+    color:#9A9A9A;
+    font-size:12px;
+}
+
+.aboutUsPic a
+{
+	color: #9A9A9A;
+    font-family: arial;
+    font-size: 12px;
+}
+
+.aboutUsPic .loadingPic
+{
+	background-image: url("images/loadingLogoBig.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 206px;
+    position: absolute;
+    right: 70px;
+    top: 0;
+    width: 135px;
+    border:none;
+}
+
+.aboutUsPic .loadingPic:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.aboutUsPic .website
+{
+	bottom: 27px;
+    font-weight: bold;
+    position: absolute;
+    right: 188px;
+    text-decoration: none;
+}
+
+.aboutUsPic .mail
+{
+	bottom: 13px;
+    left: 245px;
+    position: absolute;
+}
+
+.aboutUsPic .phoneNumber
+{
+	bottom: 12px;
+    position: absolute;
+    right: 128px;
+    text-decoration:none;
+}
+
+.aboutUsPic .website:hover, .aboutUsPic .mail:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+#showPasswordLetters
+{
+	bottom: 6px;
+    color: #9B9B9B;
+    cursor: pointer;
+    font-family: arial;
+    font-size: 10px;
+    position: absolute;
+    right: -65px;
+}
+
+#hideShowOnDownload
+{
+	visibility:hidden;
+}
+
+.IN-widget
+{
+    position: absolute;
+    right: 394px;
+    top: -3px;
+    z-index: 1;
+}
+
+#___plusone_0
+{
+	float:left !important;
+	width:82px !important;
+}
+
+.onlineCvPopup
+{
+	display:block;
+	background-image: url("images/onlineCvPopup.png");
+    background-repeat: no-repeat;
+    height: 366px;
+    left: 248px;
+    position: absolute;
+    top: 116px;
+    width: 494px;
+}
+
+.onlineCvPopup.hideForever
+{
+	display:none !important;
+}
+
+.onlineCvPopup .link
+{
+	color: #F05A28;
+    font-family: calibri;
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    right: 60px;
+    text-decoration: none;
+    top: 119px;
+}
+
+.onlineCvPopup .close
+{
+	background-image: url("images/closeOnlineLinkPopup.png");
+    background-repeat: no-repeat;
+    bottom: 13px;
+    cursor: pointer;
+    height: 64px;
+    left: 140px;
+    position: absolute;
+    width: 216px;
+}
+.onlineCvPopup .close:hover
+{
+	background-position: -2px -71px;
+}
+
+.arrows
+{
+	background-image: url("images/arrowBackground.png");
+    height: 37px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 37px;
+}
+
+.arrows .arrowsUp
+{
+	background-image: url("images/arrowBackgroundItem.png");
+    height: 12px;
+    position: absolute;
+    right: 11px;
+    top: 6px;
+    width: 13px;
+    cursor: pointer;
+}
+
+.arrows .arrowsDown
+{
+	background-image: url("images/arrowBackgroundItem.png");
+    background-position: 0 12px;
+    height: 12px;
+    position: absolute;
+    right: 11px;
+    top: 19px;
+    width: 13px;
+    cursor: pointer;
+}
+
+.arrows .arrowsUp:hover, .arrows .arrowsDown:hover
+{
+	opacity:0.7;
+	filter: alpha(opacity=70);
+}
+
+.suggestionClick
+{
+	background-image: url("images/suggestion.png");
+	background-repeat:no-repeat;
+    bottom: 0;
+    cursor: pointer;
+    height: 142px;
+    position: fixed;
+    right: 115px;
+    width: 221px;
+    z-index: 2147483647;
+}
+
+.suggestionPopup
+{
+	background-image: url("images/suggestionPopup.png");
+    background-repeat: no-repeat;
+    bottom: -2px;
+    display: none;
+    height: 347px;
+    position: fixed;
+    right: 10px;
+    width: 251px;
+    z-index: 2147483647;
+}
+
+.suggestionPopup .close, .suggestionClick .close
+{
+	color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Comic Sans MS';
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute;
+    right: 24px;
+    top: 10px;
+}
+.suggestionClick .close
+{
+	right:32px;
+}
+.suggestionPopup textarea
+{
+	background:transparent;
+	border: 0 none;
+    bottom: 72px;
+    color: #6D6E70;
+    font-family: arial;
+    font-size: 12px;
+    height: 140px;
+    left: 36px;
+    overflow: auto;
+    position: absolute;
+    width: 188px;
+}
+.suggestionPopup .submit
+{
+	bottom: 41px;
+    color: #DC1C55;
+    cursor: pointer;
+    font-family: calibri;
+    font-size: 20px;
+    font-weight: bold;
+    left: 103px;
+    position: absolute;
+    text-align: center;
+}

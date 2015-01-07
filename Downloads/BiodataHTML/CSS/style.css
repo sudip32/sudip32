@@ -1,0 +1,40 @@
+﻿/* File Created: January 5, 2015 */
+div
+{
+    height: 800px;
+    width: 800px;
+    background-color: silver;
+    margin: 0 auto;
+}
+h1
+{
+    margin-left: 300px;
+    
+}
+img {
+    height: 100px;
+    width: 106px;
+}
+ img:hover {
+    height: auto;
+    width: auto;
+}
+span {
+     font: 12px sans-serif;
+}
+.mainData
+{
+    font: 18px sans-serif;
+    height: 500px;
+    width: 700px;
+    margin: 0 auto;
+}
+.acedemic {
+    width: 100%;
+       font: 14px sans-serif;
+}
+.technicalSkills {
+           font: 14px sans-serif;
+}
+
+    

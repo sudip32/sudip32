@@ -1,0 +1,63 @@
+[[https://secure.travis-ci.org/portertech/carrot-top.png]]
+
+* Install
+
+  : gem install carrot-top
+
+* Usage
+
+  : require "carrot-top"
+  : 
+  : carrot_top = CarrotTop.new(
+  :   :host => "localhost",
+  :   :port => 55672,
+  :   :user => "user",
+  :   :password => "password"
+  : )
+
+  Use SSL if the management API supports it (optional)
+
+  : :ssl => true
+
+  Various random bits of information that describe the whole system.
+
+  : carrot_top.overview
+
+  A list of all open connections.
+
+  : carrot_top.connections
+
+  A list of all open channels.
+
+  : carrot_top.channels
+
+  A list of all exchanges.
+
+  : carrot_top.exchanges
+
+  A list of all queues.
+
+  : carrot_top.queues
+
+  A list of all bindings.
+
+  : carrot_top.bindings
+
+  A list of all vhosts.
+
+  : carrot_top.vhosts
+
+  A list of all users.
+
+  : carrot_top.users
+
+  A list of all permissions for all users.
+
+  : carrot_top.permissions
+
+* License
+  Carrot-Top is released under the [[https://raw.github.com/portertech/carrot-top/master/MIT-LICENSE.txt][MIT license]].
+
+* Nothing to do with this guy
+
+  [[https://github.com/portertech/carrot-top/raw/master/carrot-top.jpg]]

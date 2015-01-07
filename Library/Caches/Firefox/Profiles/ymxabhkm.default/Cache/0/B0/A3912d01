@@ -1,0 +1,412 @@
+<div class="snippet_set" id="snippet_set" data-locale="en-US">
+  <style type="text/css">
+#snippetContainer div.snippet {
+  display: none;
+}
+
+#snippetContainer div.snippet img.icon {
+  margin: -0.75em 1em 0 0;
+  float: left;
+}
+
+  .snippet {
+    position: relative;
+  }
+
+  .snippet .icon {
+    position: absolute;
+    right: 400px;
+    top: 5px;
+  }
+
+  .snippet p {
+    display: table-cell;
+    height: 40px;
+    padding-left: 80px;
+    vertical-align: middle;
+    width: 400px;
+  }
+</style>      <div data-snippet-id="4818" data-weight="100" class="snippet-metadata"><div class="snippet">
+  <a href="http://mzl.la/1wis9Pf"><img class="icon" src="data:image/png;base64,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" /></a>
+  <p>Firefox for Android has all the features you love and the privacy you trust. <a href="http://mzl.la/1wis9Pf"> Install it on your Android device.</a></p>
+</div></div>
+      <div data-snippet-id="4859" data-weight="100" class="snippet-metadata"><div class="snippet">
+  <a href="https://mozilla.org/about/manifesto/?utm_source=desktop-snippet&amp;utm_medium=snippet&amp;utm_content=principle4-en&amp;utm_term=4859&amp;utm_campaign=ongoing-mission"><img class="icon" src="data:image/png;base64,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" /></a>
+  <p><strong>Mozilla principle #4:</strong> Individuals’ security and privacy on the Internet are fundamental and must not be treated as optional. <a href="https://mozilla.org/about/manifesto/?utm_source=desktop-snippet&amp;utm_medium=snippet&amp;utm_content=principle4-en&amp;utm_term=4859&amp;utm_campaign=ongoing-mission"> Read more.</a></p>
+</div></div>
+      <div data-snippet-id="4852" data-weight="100" class="snippet-metadata"><div class="snippet">
+  <a href="https://support.mozilla.org/kb/use-master-password-protect-stored-logins?utm_source=desktop-snippet&amp;utm_medium=snippet&amp;utm_content=master-pass-en&amp;utm_term=4852&amp;utm_campaign=ongoing-usage"><img class="icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDQwIDUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0MCA1MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJCgkJPHJhZGlhbEdyYWRpZW50IGlkPSJTVkdJRF8xXyIgY3g9IjYwLjkyMzgiIGN5PSItOTMuMDQ2OSIgcj0iNTguNDMwOCIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgwLjMzMzYgMCAwIDAuMDI4MSAtMC4zMjQ1IDQzLjA5ODIpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CgkJPHN0b3Agb2Zmc2V0PSIwLjQ2NjQiIHN0eWxlPSJzdG9wLWNvbG9yOiMwMDAwMDA7c3RvcC1vcGFjaXR5OjAuOCI+PC9zdG9wPgoJCTxzdG9wIG9mZnNldD0iMC41MDgzIiBzdHlsZT0ic3RvcC1jb2xvcjojMDAwMDAwO3N0b3Atb3BhY2l0eTowLjczMjYiPjwvc3RvcD4KCQk8c3RvcCBvZmZzZXQ9IjAuOTY0IiBzdHlsZT0ic3RvcC1jb2xvcjojMDAwMDAwO3N0b3Atb3BhY2l0eTowIj48L3N0b3A+Cgk8L3JhZGlhbEdyYWRpZW50PgoJPGVsbGlwc2UgZmlsbD0idXJsKCNTVkdJRF8xXykiIGN4PSIyMCIgY3k9IjQwLjQ4MyIgcng9IjIwIiByeT0iMS42ODQiPjwvZWxsaXBzZT4KCTxwYXRoIGZpbGw9IiM3MzdBODQiIGQ9Ik0yNy4wODUsMTIuMTc2Yy0xLjk3NC0xLjk3NC00LjMzNS0yLjk2LTcuMDg1LTIuOTZzLTUuMTExLDAuOTg2LTcuMDg1LDIuOTYgICBjLTEuOTczLDEuOTczLTIuOTU5LDQuMzM1LTIuOTU5LDcuMDg1djAuODEydjMuNDkyaDQuMzA1di00LjMwNWMwLTEuNTg0LDAuNTYxLTIuOTM4LDEuNjgyLTQuMDU5czIuNDc0LTEuNjgyLDQuMDU4LTEuNjgyICAgczIuOTM4LDAuNTYxLDQuMDU4LDEuNjgyYzEuMTIxLDEuMTIxLDEuNjgyLDIuNDc1LDEuNjgyLDQuMDU5djQuMzA1aDQuMzA1di0zLjQ5MnYtMC44MTIgICBDMzAuMDQ0LDE2LjUxMSwyOS4wNTgsMTQuMTQ4LDI3LjA4NSwxMi4xNzZ6Ij48L3BhdGg+Cgk8cmVjdCB4PSI5Ljk1NiIgeT0iMjIuOTM4IiBmaWxsPSIjNjA2NjZEIiB3aWR0aD0iNC4zMDQiIGhlaWdodD0iMC42MjgiPjwvcmVjdD4KCTxyZWN0IHg9IjI1Ljc0IiB5PSIyMi45MzgiIGZpbGw9IiM2MDY2NkQiIHdpZHRoPSI0LjMwNSIgaGVpZ2h0PSIwLjYyOCI+PC9yZWN0PgoJPHBhdGggZmlsbD0iIzI1MjcyOCIgZD0iTTIwLDI4Ljg4NWMtMS40NjgsMC0yLjY1NywxLjE4OS0yLjY1NywyLjY1N2MwLDAuODY4LDAuNDIzLDEuNjMyLDEuMDY3LDIuMTE3ICAgYzAsMC4wMDgtMC4wMDMsMC4wMTUtMC4wMDMsMC4wMjF2MS42NDVjMCwwLjg3OSwwLjcxNCwxLjU5MiwxLjU5MywxLjU5MnMxLjU5My0wLjcxMywxLjU5My0xLjU5MnYtMS42NDUgICBjMC0wLjAwNy0wLjAwMi0wLjAxNS0wLjAwMy0wLjAyMWMwLjY0NS0wLjQ4NSwxLjA2Ny0xLjI0OSwxLjA2Ny0yLjExN0MyMi42NTcsMzAuMDc0LDIxLjQ2OCwyOC44ODUsMjAsMjguODg1eiI+PC9wYXRoPgoJPHBhdGggZmlsbD0iIzc3OEZBQSIgZD0iTTIwLDM2LjUzMmMtMC44NzksMC0xLjU5My0wLjcxMy0xLjU5My0xLjU5MnYwLjM4NWMwLDAuODc5LDAuNzE0LDEuNTkyLDEuNTkzLDEuNTkyICAgczEuNTkzLTAuNzEzLDEuNTkzLTEuNTkyVjM0Ljk0QzIxLjU5MywzNS44MTksMjAuODc5LDM2LjUzMiwyMCwzNi41MzJ6Ij48L3BhdGg+Cgk8cGF0aCBmaWxsPSIjNzc4RkFBIiBkPSJNMzAuNzYyLDIzLjU2NWgtMC43MThoLTQuMzA1SDE0LjI2SDkuOTU2SDkuMjM4Yy0wLjU5OCwwLTEuMTA2LDAuMjA5LTEuNTI0LDAuNjI3ICAgYy0wLjA2NSwwLjA2NS0wLjExNiwwLjEzNy0wLjE3MiwwLjIwN2gyNC45MTZjLTAuMDU2LTAuMDctMC4xMDYtMC4xNDItMC4xNzItMC4yMDdDMzEuODY4LDIzLjc3NCwzMS4zNTksMjMuNTY1LDMwLjc2MiwyMy41NjV6Ij48L3BhdGg+Cgk8cGF0aCBmaWxsPSIjNzM3QTg0IiBkPSJNMzIuOTE0LDM4LjYzMlYyNS43MThjMC0wLjUwMy0wLjE1OC0wLjk0MS0wLjQ1Ni0xLjMxOEg3LjU0MmMtMC4yOTgsMC4zNzctMC40NTYsMC44MTUtMC40NTYsMS4zMTh2MTIuOTE0ICAgYzAsMC41MDcsMC4xNTgsMC45NDQsMC40NTYsMS4zMThoMjQuOTE3QzMyLjc1NiwzOS41NzYsMzIuOTE0LDM5LjEzOSwzMi45MTQsMzguNjMyeiBNMjEuNTksMzMuNjU5ICAgYzAuMDAxLDAuMDA3LDAuMDAzLDAuMDE1LDAuMDAzLDAuMDIxdjEuNjQ1YzAsMC44NzktMC43MTQsMS41OTItMS41OTMsMS41OTJzLTEuNTkzLTAuNzEzLTEuNTkzLTEuNTkydi0xLjY0NSAgIGMwLTAuMDA3LDAuMDAzLTAuMDE0LDAuMDAzLTAuMDIxYy0wLjY0NS0wLjQ4NS0xLjA2Ny0xLjI0OS0xLjA2Ny0yLjExN2MwLTEuNDY4LDEuMTg5LTIuNjU3LDIuNjU3LTIuNjU3czIuNjU3LDEuMTg5LDIuNjU3LDIuNjU3ICAgQzIyLjY1NywzMi40MSwyMi4yMzQsMzMuMTc0LDIxLjU5LDMzLjY1OXoiPjwvcGF0aD4KCTxwYXRoIGZpbGw9IiM2MDY2NkQiIGQ9Ik0zMi40NTgsMzkuOTVINy41NDJjMC4wNTYsMC4wNjksMC4xMDcsMC4xNDEsMC4xNzIsMC4yMDZjMC40MTgsMC40MjIsMC45MjcsMC42MjgsMS41MjQsMC42MjhoMjEuNTIzICAgYzAuNTk4LDAsMS4xMDYtMC4yMDYsMS41MjQtMC42MjhDMzIuMzUyLDQwLjA5MSwzMi40MDMsNDAuMDIsMzIuNDU4LDM5Ljk1eiI+PC9wYXRoPgoJPHBhdGggZmlsbD0iIzM4M0IzRCIgZD0iTTIwLDI4LjkxNGMxLjM5LDAsMi41MTgsMS4wNywyLjYzNCwyLjQzYzAuMDA1LTAuMDYzLDAuMDIyLTAuMTIzLDAuMDIyLTAuMTg4ICAgYzAtMS40NjgtMS4xODktMi42NTctMi42NTctMi42NTdjLTEuNDY4LDAtMi42NTcsMS4xODktMi42NTcsMi42NTdjMCwwLjA2NSwwLjAxOCwwLjEyNSwwLjAyMywwLjE4OCAgIEMxNy40ODIsMjkuOTg0LDE4LjYwOSwyOC45MTQsMjAsMjguOTE0eiI+PC9wYXRoPgoJPHBhdGggZmlsbD0iIzYwNjY2RCIgZD0iTTI1Ljg0NywxNC40OTVjLTAuMTYxLTAuMTkzLTAuMzMzLTAuMzgyLTAuNTE2LTAuNTY1Yy0xLjQ2NS0xLjQ2Ni0zLjI1OS0yLjIwOS01LjMzMS0yLjIwOSAgIGMtMi4wNzEsMC0zLjg2NSwwLjc0My01LjMzMSwyLjIwOGMtMC41NDksMC41NS0wLjk5OCwxLjE0Ni0xLjM0MywxLjc4NWMtMC4xNDQsMC4yNjctMC4yNywwLjU0MS0wLjM3OCwwLjgyMiAgIGMtMC4zMjQsMC44NDQtMC40ODgsMS43NTQtMC40ODgsMi43MjZ2Mi4xODl2MC4zMTV2MHYwLjl2MC45aDAuOTAxaDAuODk5di00LjMwNWMwLTEuNTg0LDAuNTYxLTIuOTM4LDEuNjgyLTQuMDU5ICAgczIuNDc0LTEuNjgyLDQuMDU4LTEuNjgyczIuOTM4LDAuNTYxLDQuMDU4LDEuNjgyYzEuMTIxLDEuMTIxLDEuNjgyLDIuNDc1LDEuNjgyLDQuMDU5djQuMzA1aDAuODk5aDAuMzkzaDAuNDYzaDAuMDQ1di0wLjl2LTAuMzIyICAgdi0wLjU3OHYwVjIxLjQ1di0yLjE4OUMyNy41MzksMTcuNDQ4LDI2Ljk3MSwxNS44NDgsMjUuODQ3LDE0LjQ5NXoiPjwvcGF0aD4KPC9nPgo8cGF0aCBmaWxsPSJub25lIiBkPSJNLTUxLjc5NCwxOC4wMTZMLTUxLjc5NCwxOC4wMTZ2LTAuMVYxNy43di0wLjEwNnYtMC4wODNjMC0wLjAzNC0wLjAwOC0wLjA2Ni0wLjAwOC0wLjEgIGMwLDAuMDM0LDAuMDA4LDMuOTExLDAuMDA4LDMuOTExdi0yLjUwNlYxOC4wMTZ6Ij48L3BhdGg+Cjwvc3ZnPg==" /></a>
+  <p>Firefox master password works across your devices. <a href="https://support.mozilla.org/kb/use-master-password-protect-stored-logins?utm_source=desktop-snippet&amp;utm_medium=snippet&amp;utm_content=master-pass-en&amp;utm_term=4852&amp;utm_campaign=ongoing-usage">Set your master password today.</a></p>
+</div></div>
+      <div data-snippet-id="4853" data-weight="100" class="snippet-metadata"><div class="snippet">
+  <a href="about:accounts"><img class="icon" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnPz4KPHN2ZyB2ZXJzaW9uPSIxLjAiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjQwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDQwIDUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0MCA1MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNUQ3NDg5IiBkPSJNMzguOSwyMmMwLjEtMS4yLTAuNSw5LTguMiwxMy40YzEuMSwxLDMuNiwyLjcsMy42LDIuNyAgYy0wLjItMC4xLTEuMiwwLjEtMS40LDAuMWMtMSwwLjEtMiwwLjMtMi45LDAuNEMyOCwzOC44LDI2LjEsMzksMjQuMiwzOWMtMy40LDAtNi40LTAuNi05LjYtMS44YzIuMi0xLjYsMy44LTMuOCw0LjktNi4zICBjMC41LTEuMiwwLjktMi41LDEuMS0zLjljMC4xLTAuNywwLjItMS4zLDAuMy0yYzAtMC4yLDAuMi0wLjgsMC4xLTEuMWMwLDAsMi4yLDMuNywzLjUsNS4xYzMuNC0xLjksNi40LTQuOSw2LjMtOS4xICBjMC0yLTAuNy0zLjktMi01LjRjLTEuNC0xLjctMy4zLTIuNi01LjMtMy41Yy0wLjEsMCwxLjQtMi44LDEuNS0zLjFjMS0xLjYsMi4yLTMuMiwzLjktNC4xQzM1LjIsNy42LDM5LjcsMTQuNCwzOC45LDIyeiBNMjAsMTcgIGMwLDAtMi43LTQuNS00LTZjLTAuMy0wLjMtMy4yLDIuNi0zLjQsMi45Yy0xLDEuMi0xLjcsMi42LTIuMSw0LjFjLTAuNiwyLjItMC41LDUuMSwwLjgsNy4xYzEuMiwxLjksMywzLjIsNS4xLDQgIGMtMS45LDMuNi0zLjcsNS4yLTYuMyw3LjJjLTYuMS0zLjctOS44LTEwLjQtOS0xNy45QzIuNCw2LjcsOSw1LDksNUM3LjksNCw0LDMsNCwzczcuMi0zLDE4LjYtMS43QzE5LjQsNi42LDIwLDE3LDIwLDE3eiI+PC9wYXRoPgo8L3N2Zz4=" /></a>
+  <p>Use Sync on Firefox to keep your settings, bookmarks and passwords organized. <a href="about:accounts">Set it up now.</a></p>
+</div></div>
+      <div data-snippet-id="4841" data-weight="100" class="snippet-metadata"><div class="snippet">
+  <a href="https://addons.mozilla.org/firefox/collections/mozilla/featured-personas/?src=mozsnippet&amp;utm_source=desktop-snippet&amp;utm_medium=snippet&amp;utm_content=addon-jan-theme-en&amp;utm_term=4841&amp;utm_campaign=ongoing-fun"><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAyCAYAAAAus5mQAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAADrBJREFUeNrsmXtwXOV5xn/nsveLpJVW97vvlvDdODYYE0OIzSW2U0IoAQyJCaFpmks7TdqkIQ1NSKCETDJNaEJuNBSKgcSOCbaxg42MLWPJsmVblrSSdd/V7mp3pb2fPXvO6R+sGJmQppNJppkp38wzZ+ebb7995nnf73nf861gGAZ/zkPkz3y8S/Bdgv/XQ84kOi+bMACzpRxZToORB9GEqqQYGR7D1zdAOplCNskAmExmUqkEbxzZiyiAJMvwDq6QUzUs5nz1Ldve/+X3bHlUPL7/60/u3/vMG5FpA8MAURT+NAoahoHVYiGdzhKJRRBNArqo/xZEEyg57csnT/TdHxx99b7y0vzTDqfrVl3//RYnpOMdf7CCmm5Q5HJSVizws+//OwO9AcoqvOi6dtmeJrNILBofzeS8dWabRGO9TH2jm8HB4IcNneeEP0hBQSjAQBRBEN5hqa6TSqdZvnY1f3n7vaSDGTKhJLlo7i2oUZXQQKi+1F3r3vnx+9ANM9/5jw4OHfLhdJrvlWQR0NH1NIaR/S3IvzN8uoaAKmKYvq4oRoWmqY9JknReFEVEsUBWFhAEGOk5z9qbb+Omth5+s/vH1DTNI5dTEWURWTIwWxxP3Hz7XUVmRzHxyBi1DgnDAN0wvpfNprBYbLhcC1HzGgLG/6zgm2rpzMQyxGf0v87lyj6fzVjuyaazZxOp9Ac1XUPT3oSqqoii/GZIdZHbHvgixfWVqGaN0kYPstXCyCX/+qZFrVvr5y3m+KGXmI5OYTLb8HgsG+028VcWq43S0lZcrsWYzfVYrI2XQTRZHJgsDsxWJyaLHU0zPi0IthU250JUvTIYnZoiOnkJu5gTHRb5haHR8epx/wQTAT+9/Rdxub14vTWkwqPUNDbTsGIxeWue4lo3TS1VGLL1+4LZw6G9ezjd/hoWmxO70/zrrq7xY6NDGXZsvxurtYK8mkBAQSB3GcTA6EUCoxcZH+pmKjDyISj99mQg9FgmHcdutf0XerZdURUC/ks0Vlgo8xT9zcj4BKFIhFAogCSKSJKMKJvJ5fKE/ROYRBNT/plSyTSz//Fnnlz+F/fupKt9D6Pj0+iiCUPLfT6dMrj1tlupra0km03VCqL4QQNAuBzy0LnDb+WcrmvbGhddh2ap2+wPjLcY+fSFivLqrSbZMp5VBUcoEqFlflWzyyaBlsHznitZtmI9M8ET2IuLsMgSrcvWsW/PM5SWln967eoN71/SspiQ/xzbbl+Jsvsi7e3+3ePpzPkHP3UDN965lRMvn2kNxpKvnOnuyWRzuRdN8uXHQjZmvcgAwxBWBQMDrLz6Wqam2n/08q9+cGd5efWiK9dea1htLvyBSTaubdSuvKYFEjHwvJdcWiCWyyBl07hFgU/943eYjviZmR6sv+O+r4K1kuGeHzM8GmPBohICE5M/3bpmI/d95sMkxybvLCqr+VH/4IAZPbl7YWMZeVW/nKBgchVMV0cWZdUQrCQSEaorvOtKiz39FZXNgiiZyGQVNGRcDkcMkxmoRMnayStBDD2PbHE5gOUIWsOuXbukzq7Xb1bydhL9h4nEIowMx0ilsixfUan80+P3U2x3fubicd/jM4kk71vjocTdmHC57Gja2wgiWGdNDUOQDssW17JQcJzahpV85KMPC4l4CP/YBdLZHN5SD51nzx5OnUiz6cbPYhV1Mtno/SXV6+/A0Ftjfbs9NiNGpQNu3rSKTPQY/X2neflgB1lFR88re7KK+VWvd7l7JjL2uO9iFwH/NLJoIZnOJRPpdCH55tqMIPMmJMD0sCHYps0WF2reQDNE0qk46XQKTTdT5PbSduL4bS8fbkMW8lZdiRx1lCx8wlGy6BojdNIjJvvpjVrY11vOs21ZXj9ygLWt9Vx3/XUEQ1NH85qxfdfndukSC/9Z0FIsbVUxW+zoqh+3I/gbk5TGLCcug+x0WAoh1kAwhU1W61WSbPuZzWZdE5+ZJp3JIMlWHJYEiqIyf9G62xprR78n69FPis7l14iSCWX8FVRNUXps2zN9Ga9jMpU1jYTmMXZe55W2p/nGg9vIZrYNPPHUYWoXXlUEyqdi/gMsbmnGP3KGSWHyrN3p2eMtEXHZL1dQDk3F5xCUaCqZ19M0f8VaNZfdomvaTofNdntkbIJYZJho2EF101omhmJHYvFpvCUmlNApEpNd+Q7zjemUrcVZ4wmZyqwilU4r5RV3cPCXVv72H77Fv3zljo8d7zr3lXPnjQ9UF3dIVmmGkSEHybCP2mrv5/M6nOz2c34wdXnFtdvMl00su2IxN2zZTltbG2azyBPffnDc199WE45MoqoG3spWgsEQCxvcXLV+HcHzLzMirUi5Fuyw1DlUeSqlcMoXIZnUiUbijCTq6Xjhq3x89X423HK3r2zJvfbk8EM1RXYH50+eJeIf6Hrk59FV/SMpwjH1t0qupOY15mJ8IsjRo0cZHh4WBweHjIGRyYFrr2j6kJyZFp02G+QzuMqXMDTgo8EVI66ZNc21UriivspkEgVSqo5/Jo2a08hrAmo2SZI6Amef5SMf/WypwzHtTgUPk027Cfne4Ed7QncfaJ+5lM7qYqGZetspfoc+prDQAmT8o33HfSclteP1LtlT5qbEZabxagPV0cCpC320LF1guExmOZnNkMgoBDM6ZpOESc4jimCVFESLA1PjHVicHvyDT+Ipm8+5owfZc6D/+Rde5dBbNvIOQ3qH9suoqXTisMn5ZFrlka/c843aevOGF/dfyJqLzKbhoVFKa2tpat1A78AwFbas4C1tErK6ISRzeVKaSE6DnKKRyWqoqk7/UJjbbt1Ba00nKGeZGIwycDGI1HDPqffddOfS966vnl/isva5nO78RCDMXK+R36acANgfe3DLT/r88qkHH3r2p+mYb/OCq7fx6+5vijZZYd/TDxHPuckmk+CYh+9Cp7Csso9LqkZCdJIzeZBlGUkSkGWReEpnUWMpN63PocSPM9Y3w8WeCq574DQl7tBOY+R5MspC7J9Y9bXBMfnA5h1fvm90PDCrpiHNIScC2s7tC77zpX/9q53VRbVXL6jTd3xwx9aW6sYbBbOtSB7t3s/ff+5RFjUXs3DpEgIRmWA4SoMURHR7iGgWNJMLQTahKBpKNo9vNMOOzTUsqTnGUNdR9jwbZOOOe6hrsjHQ9nMeOzLP+OEvo8JU7z7X9dfWrfAUO9l7oPvV2WjKcwhqgKuiurrkwNMnwlOBIe9dt29Zane2Eh85yEx8jH0vtTM6GkVkmtbaMXouqvRkPLw04GfbAhXZ6kA1O8koBoqiEAwnqCgy2LxihlToJIf2BVAMG5WlMfpeeQKlZru+8Yb1+aglIP3ipQGp6vk9lJfNf8Akyw/lVDUPvNXHC8BqYOsj3zv6rZ0PfPc5kTwuRx3p2AAD42G04ptYtO5+brx5Ja3rtnC6swch0YGNLPvPZXnNl0A2soR6jxEfO0MwFOVMf4Tr15ch6x30dA/Q3hVDMxSyM2GGYhLzFq4QNy+G1iVWtWbJRkJTeYqdVq8kSxsL6WdIc8IrAQuAxVctL7ll170fqiwtq6Cj6zT1Kz9BQ/MSxvr2gWHB55viW4/8hIWLvHT6UtRXlGCbOs3UhSNcsWA+y5praLAHqS9WWb1EZaj7RcZGVSw5J7KYp6quDG95CYNqixHWHfroRFJMBUekW1bFeeZXffuOdwz9zDCMzCxBETABUWAYaJ5Xbf34jVs2YZBkJlfB0hXvZfjMD/naF79AR9cgnrISqhpqiatZFnhtLHdECY77uPmT36Dlyg+gBE5A+DAraqdJhn30D+XwHR9lajJM+8kBXKVFrL3CRtv5FMeG5wlT41F5RfEputoPvPb1J9rvMgwjULA5XSp4ngS4gDzwxtRMrre+rnRTSbHJMRnO4y2t49jh3Tz3fDvlNTUsXbWGsWCQJeVWWopMHDl5kRs+dgerrtqOMbqXUxf7eHFwA7vbHfR1HGbTlY0cf2OI/c93Ep9UCE6HWb2pFUd6WOi74BNzweOcefXJL/3bf/Z+FMgAHkAF8tIc/xMAK1CiqMaJo+2+52LT8fpYZHxJf58PR1EzNY0lCGYnR0+eY12zlQaHjQNHevAuKGXrLTcgTfUzHgrSa72LpK2ZrFxHW2cCR/oIa9bM4xfPdRPEYHo6w6WRAMUlJQx3vXhq7wsv3X7y/MzTQBngLpC8jKAx5w1PAqrUvBY7d3HyqZGJyGQwNHFNODxpsVpddPeP0FIls7zcTkf3MB1nBpm/tJo1q1ro6OxAr9vB+9csxlNhJpuNoRhVKIEz1LoD7DkbIxDPMp2HC4MzHH6t5+ET5+L3J7KMAk2FavIWubk2YwC5AkmlMFcKeMcDyR+PB5Ltw2PTX3MX+W7yFplZ5Knj9Y4+RiYibNi8gXXrlzEdieCtqidmriEJZLM5dAN0I09zcw2GpDAdT88WhbPAF1IKB4FaoAKIF35bLUB7e6kz3lYPZz9XAsF4Uvl5eCrlL7JbN0ZCUUtvb4B165bzze/+Hfv3H8JstbK40c7pYBW9SjXp6Sn6hkSExCUWW49y7PQkR04MAzwKPAAMAPMLSiULAimFZ/531WJjTkehF5AvHKAi4GAwmtoXTSgNzfXlC2qq3EyPjvLrvSdIGDprVtYSHOzkZH8Zw347mcgwTcpTjPpO8+Tu7u501vgI8AOgpBCheCGks+SUWeV+F8FZklqB3KyqucKzAhhPq8ZPpzO5icFL45tMGNYqbyXHT1+gpLaSIilDeuQooaFOqpR95OIjPLVv6JsTIeVuwAc0F/ZPANk5qinv1G4Jv+/2q+DoUsEr5cJJ14CQAM3zvNZvb7tu+S2y286eg51cuXoZ86oNwsEBhvx0nh3SPzs+EW4DnIUozD0Es7lm/LFuY00FA3UWQvRmkhY7dlW5XTOzKeK2m43qCs/Dc75bVEgTS2GPP/nN7mx5NM95PWzyFJe0Af3ANXPWWv8XkfqTk8VmteJ0uZsQhDV/zDtw4d1/mt4l+C7Bdwn+Pyf43wMAnY0aUgAohDQAAAAASUVORK5CYII=" /></a>
+  <p><a href="https://addons.mozilla.org/firefox/collections/mozilla/featured-personas/?src=mozsnippet&amp;utm_source=desktop-snippet&amp;utm_medium=snippet&amp;utm_content=addon-jan-theme-en&amp;utm_term=4841&amp;utm_campaign=ongoing-fun">Add some bling to your browser with one of our featured themes.</a></p>
+</div></div>
+    <script type="text/javascript">
+//<![CDATA[
+/*!
+  * $script.js Async loader & dependency manager
+  * https://github.com/ded/script.js
+  * (c) Dustin Diaz, Jacob Thornton 2011
+  * License: MIT
+  */
+(function(a,b,c){typeof c["module"]!="undefined"&&c.module.exports?c.module.exports=b():typeof c["define"]!="undefined"&&c["define"]=="function"&&c.define.amd?define(a,b):c[a]=b()})("$script",function(){function p(a,b){for(var c=0,d=a.length;c<d;++c)if(!b(a[c]))return j;return 1}function q(a,b){p(a,function(a){return!b(a)})}function r(a,b,i){function o(a){return a.call?a():d[a]}function t(){if(!--n){d[m]=1,l&&l();for(var a in f)p(a.split("|"),o)&&!q(f[a],o)&&(f[a]=[])}}a=a[k]?a:[a];var j=b&&b.call,l=j?b:i,m=j?a.join(""):b,n=a.length;return setTimeout(function(){q(a,function(a){if(h[a])return m&&(e[m]=1),h[a]==2&&t();h[a]=1,m&&(e[m]=1),s(!c.test(a)&&g?g+a+".js":a,t)})},0),r}function s(c,d){var e=a.createElement("script"),f=j;e.onload=e.onerror=e[o]=function(){if(e[m]&&!/^c|loade/.test(e[m])||f)return;e.onload=e[o]=null,f=1,h[c]=2,d()},e.async=1,e.src=c,b.insertBefore(e,b.firstChild)}var a=document,b=a.getElementsByTagName("head")[0],c=/^https?:\/\//,d={},e={},f={},g,h={},i="string",j=!1,k="push",l="DOMContentLoaded",m="readyState",n="addEventListener",o="onreadystatechange";return!a[m]&&a[n]&&(a[n](l,function t(){a.removeEventListener(l,t,j),a[m]="complete"},j),a[m]="loading"),r.get=s,r.order=function(a,b,c){(function d(e){e=a.shift(),a.length?r(e,d):r(e,b,c)})()},r.path=function(a){g=a},r.ready=function(a,b,c){a=a[k]?a:[a];var e=[];return!q(a,function(a){d[a]||e[k](a)})&&p(a,function(a){return d[a]})?b():!function(a){f[a]=f[a]||[],f[a][k](b),c&&c(e)}(a.join("|")),r},r},this);
+
+var SNIPPET_METRICS_SAMPLE_RATE = 0.1;
+
+(function(showDefaultSnippets) {
+    'use strict';
+
+    var GEO_URL = 'https://geo.mozilla.org/country.js';
+    var GEO_CACHE_DURATION = 1000 * 60 * 60 * 24 * 30; // 30 days
+
+    // showDefaultSnippets polyfill, available in about:home v4
+    if (typeof showDefaultSnippets !== 'function') {
+        showDefaultSnippets = function() {
+            localStorage.snippets = '';
+            showSnippets();
+        };
+    }
+
+    // gSnippetsMap polyfill, available in Firefox 22 and above.
+    var gSnippetsMap = null;
+    if (supportsLocalStorage()) {
+        // localStorage is available, so we wrap it with gSnippetsMap.
+        gSnippetsMap = {
+            set: function(key, value) {
+                localStorage[key] = value;
+            },
+            get: function(key) {
+                return localStorage[key];
+            }
+        };
+    } else {
+        // localStorage isn't available, use gSnippetsMap (backed by IndexedDB).
+        gSnippetsMap = window.gSnippetsMap;
+    }
+
+    var snippets = (document.getElementById('snippetContainer')
+                    .getElementsByClassName('snippet'));
+    var show_snippet = null;
+    if (snippets.length > 0) {
+        show_snippet = chooseSnippet(snippets);
+    }
+
+    if (show_snippet) {
+        show_snippet.style.display = 'block';
+
+        try {
+            activateSnippetsButtonClick(show_snippet);
+        } catch (err) {
+            // Do nothing, most likely a newer version of Firefox w/o
+            // activateSnippetsButtonClick
+        }
+
+        // Determine snippet ID.
+        var metaParent = show_snippet.parentNode;
+        while (metaParent && metaParent.classList &&
+               !metaParent.classList.contains('snippet-metadata')) {
+            metaParent = metaParent.parentNode;
+        }
+
+        var show_snippet_id = 'unknown';
+        if (metaParent) {
+            show_snippet_id = metaParent.dataset.snippetId || 'unknown';
+        }
+        document.getElementById('snippet_set').setAttribute('data-snippet-id', show_snippet_id);
+        sendImpression();
+
+        // Trigger show_snippet event on snippet node.
+        var evt = document.createEvent('Event');
+        evt.initEvent('show_snippet', true, true);
+        show_snippet.dispatchEvent(evt);
+
+        // Add sample rate and snippet ID to currently displayed links.
+        var parameters = ('sample_rate=' + SNIPPET_METRICS_SAMPLE_RATE + '&snippet_name=' +
+                          show_snippet_id);
+        modifyLinks(show_snippet.getElementsByTagName('a'), parameters);
+    } else {
+        showDefaultSnippets();
+    }
+
+    // Update FxAccount Status
+    updateFxAccountStatus();
+
+    // Update Selected Search Engine
+    updateSelectedSearchEngine();
+
+    // Fetch user country if we don't have it.
+    if (!haveUserCountry()) {
+        downloadUserCountry();
+    }
+
+            // Choose which snippet to display to the user based on various factors,
+    // such as which country they are in.
+    function chooseSnippet(snippets) {
+        // Convert HTMLCollection to Array.
+        snippets = [].slice.call(snippets);
+
+        var userCountry = getUserCountry();
+        if (userCountry) {
+            snippets = snippets.filter(
+                function(snippet) {
+                    var country = snippet.parentNode.dataset.country;
+                    if (country && country !== userCountry) {
+                        return false;
+                    }
+                    return true;
+                }
+            );
+        }
+
+        // FxAccount is already setup skip snippets that link to
+        // about:accounts
+        if (isFxAccountSetup()) {
+            snippets = snippets.filter(
+                function(snippet) {
+                    return !hasAboutAccountsLink(snippet);
+                }
+            );
+        }
+
+        // Exclude snippets from search providers.
+        var searchProvider = gSnippetsMap.get('selectedSearchEngine');
+        if (searchProvider) {
+            snippets = snippets.filter(
+                function(snippet) {
+                    var excludeFromSearchEngines = snippet.parentNode.getAttribute('data-exclude-from-search-engines');
+                    if (excludeFromSearchEngines && excludeFromSearchEngines.split(',').indexOf(searchProvider) !== -1) {
+                        return false;
+                    }
+                    return true;
+                }
+            );
+        }
+
+        // Choose a random snippet from the snippets list.
+        if (snippets && snippets.length) {
+            var sum = 0;
+            for (var k = 0; k < snippets.length; k++) {
+                sum += parseInt(snippets[k].parentNode.dataset.weight, 10) || 100;
+                snippets[k].parentNode.dataset.weight = sum;
+            }
+            var random_number = Math.random() * sum;
+            for (var k = 0; k < snippets.length; k++) {
+                if (random_number < snippets[k].parentNode.dataset.weight) {
+                    return snippets[k];
+                }
+            }
+        } else {
+            return null;
+        }
+    }
+    
+    // Check whether snippet links to about:accounts.
+    function hasAboutAccountsLink(snippet) {
+        var links = snippet.getElementsByTagName('a')
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].href.indexOf('about:accounts') === 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function isFxAccountSetup() {
+        var fxaccount = gSnippetsMap.get('fxaccount');
+        if (fxaccount !== undefined) {
+            return fxaccount;
+        }
+        // If fxaccount === undefined pretend that sync is already
+        // setup, to avoid showing about:accounts snippets to browsers
+        // that do not support mozUITour signal or have accounts
+        // already setup.
+        return true;
+    }
+
+    function updateFxAccountStatus() {
+        var callback = function(result) {
+            gSnippetsMap.set('fxaccount', result.setup);
+        }
+        var event = new CustomEvent(
+            'mozUITour', {
+                bubbles: true,
+                detail: {
+                    action:'getConfiguration',
+                    data: {
+                        configuration: 'sync',
+                        callbackID: _waitForCallback(callback)
+                    }
+                }
+            }
+        );
+        document.dispatchEvent(event);
+    }
+
+    function updateSelectedSearchEngine() {
+        var callback = function(result) {
+            gSnippetsMap.set('selectedSearchEngine', result.searchEngineIdentifier);
+        }
+        var event = new CustomEvent(
+            'mozUITour', {
+                bubbles: true,
+                detail: {
+                    action:'getConfiguration',
+                    data: {
+                        configuration: 'selectedSearchEngine',
+                        callbackID: _waitForCallback(callback)
+                    }
+                }
+            }
+        );
+        document.dispatchEvent(event);
+    }
+
+    // Check whether we have the user's country stored and if it is still valid.
+    function haveUserCountry() {
+        // Check if there's an existing country code to use.
+        if (gSnippetsMap.get('geoCountry')) {
+            // Make sure we have a valid lastUpdated date.
+            var lastUpdated = Date.parse(gSnippetsMap.get('geoLastUpdated'));
+            if (lastUpdated) {
+                // Make sure that it is past the lastUpdated date.
+                var now = new Date();
+                if (now < lastUpdated + GEO_CACHE_DURATION) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    function getUserCountry() {
+        if (haveUserCountry()) {
+            return gSnippetsMap.get('geoCountry').toLowerCase();
+        } else {
+            return null;
+        }
+    }
+
+    // Download the user's country using the geolocation service.
+    function downloadUserCountry() {
+        $script(GEO_URL, 'geo');
+        $script.ready('geo', function() {
+            try {
+                gSnippetsMap.set('geoCountry', geoip_country_code());
+                gSnippetsMap.set('geoLastUpdated', new Date());
+            } catch (e) {
+                // Most likely failed to load JS file. Continue on without us,
+                // we'll try again next time.
+            }
+        });
+    }
+
+    // Notifies stats server that the given snippet ID
+    // was shown. No personally-identifiable information
+    // is sent.
+    function sendImpression() {
+        sendMetric('impression');
+    }
+
+    // Modifies the given links to include the specified GET parameters.
+    function modifyLinks(links, parameters) {
+        for (var k = 0, len = links.length; k < len; k++) {
+            var link = links[k];
+            var delimeter = (link.href.indexOf('?') !== -1 ? '&' : '?');
+
+            // Pull the fragment off of the link
+            var fragment_position = link.href.indexOf('#');
+            if (fragment_position === -1) {
+                fragment_position = link.href.length;
+            }
+
+            var href = link.href.substring(0, fragment_position);
+            var fragment = link.href.substring(fragment_position);
+
+            link.href = href + delimeter + parameters + fragment;
+        }
+    }
+
+    // Check for localStorage support. Copied from Modernizr.
+    function supportsLocalStorage() {
+        var s = 'snippets-test';
+        try {
+            localStorage.setItem(s, s);
+            localStorage.removeItem(s);
+            return true;
+        } catch(e) {
+            return false;
+        }
+    }
+
+    // Listen for clicks on links that point to 'about:accounts' and
+    // convert them showFirefoxAccounts Events.
+    document.addEventListener('click', function(event) {
+        var target = event.target;
+        while (target && target.tagName && target.tagName.toLowerCase() !== 'a') {
+            target = target.parentNode;
+        }
+        if (target && target.href && target.href.indexOf('about:accounts') === 0) {
+            var event = new CustomEvent(
+                'mozUITour',
+                { bubbles: true, detail: { action:'showFirefoxAccounts', data: {}}}
+            );
+            document.dispatchEvent(event);
+        }
+    }, false);
+
+    // UITour Helper. Exact copy from
+    // https://raw.githubusercontent.com/Unfocused/mozilla-uitour/master/src/mozilla-uitour.js
+    function _generateCallbackID() {
+        return Math.random().toString(36).replace(/[^a-z]+/g, '');
+    }
+
+    // UITour Helper. Exact copy from
+    // https://raw.githubusercontent.com/Unfocused/mozilla-uitour/master/src/mozilla-uitour.js
+    function _waitForCallback(callback) {
+        var id = _generateCallbackID();
+
+        function listener(event) {
+            if (typeof event.detail != "object")
+                return;
+            if (event.detail.callbackID != id)
+                return;
+
+            document.removeEventListener("mozUITourResponse", listener);
+            callback(event.detail.data);
+        }
+        document.addEventListener("mozUITourResponse", listener);
+
+        return id;
+    }
+
+})(window.showDefaultSnippets);
+
+// Send impressions and other interactions to the service
+// If no parameter is entered, quit function
+function sendMetric(metric) {
+        
+    if (Math.random() > SNIPPET_METRICS_SAMPLE_RATE) {
+        return;
+    }
+
+    if (!metric) {
+        return;
+    }
+
+    var STATS_URL = 'https://snippets-stats.mozilla.org/foo.html';
+    var snippet_set = document.getElementById('snippet_set');
+    var locale = snippet_set.getAttribute('data-locale');
+    var snippet_id = snippet_set.getAttribute('data-snippet-id');
+    var url = STATS_URL + '?snippet_name=' + snippet_id + '&locale=' + locale + '&metric=' + metric;
+    var r = new XMLHttpRequest();
+    r.open('GET', url);
+    r.send();
+}
+//]]>
+</script></div>

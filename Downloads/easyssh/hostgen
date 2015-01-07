@@ -1,0 +1,11 @@
+#!/bin/bash
+hosts=$(/usr/local/bin/ec2-sshconfig-generate --user deploy --port 2020 --region us-west-1)
+if [ ! -f ~/.ssh/config ]; then
+   touch ~/.ssh/config
+fi
+if ! grep -w -q 'BEGIN GENERATED CONTENT' ~/.ssh/config;then
+  echo "### BEGIN GENERATED CONTENT" >> ~/.ssh/config
+  echo "Initial PlaceHolder" >> ~/.ssh/config
+  echo "### END GENERATED CONTENT" >> ~/.ssh/config
+fi
+perl -0777 -i -pe "s/(### BEGIN GENERATED CONTENT\\n).*(\\n### END GENERATED CONTENT)/\$1$hosts\$2/s" ~/.ssh/config 2> /dev/null

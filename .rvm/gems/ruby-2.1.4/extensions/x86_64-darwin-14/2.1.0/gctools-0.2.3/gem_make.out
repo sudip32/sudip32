@@ -1,0 +1,15 @@
+/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ruby -r ./siteconf20150101-59088-1dl2bqh.rb extconf.rb 
+checking for rb_gc_stat()... yes
+checking for rb_gc_latest_gc_info()... yes
+checking for RUBY_INTERNAL_EVENT_GC_END_MARK... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling oobgc.c
+linking shared-object gctools/oobgc.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 oobgc.bundle ./.gem.20150101-59088-dat9sb/gctools
+installing default oobgc libraries

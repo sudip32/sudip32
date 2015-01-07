@@ -1,0 +1,82 @@
++run_gem_wrappers_regenerate:2> gem_install gem-wrappers
++gem_install:2> typeset gem_name gem_version version_check
++gem_install:4> gem_version='' 
++gem_install:5> __rvm_parse_gems_args gem-wrappers
++__rvm_parse_gems_args:2> typeset 'gem=gem-wrappers'
++__rvm_parse_gems_args:4> __rvm_string_match gem-wrappers '*.gem$'
++__rvm_string_match:2> typeset _string _search
++__rvm_string_match:3> _string=gem-wrappers 
++__rvm_string_match:4> shift
++__rvm_string_match:5> ((  1  ))
++__rvm_string_match:7> _search='*.gem$' 
++__rvm_string_match:8> _search='*.gem$' 
++__rvm_string_match:9> _search='*.gem$' 
++__rvm_string_match:10> eval '      case "${_string}" in        (*.gem$) return 0 ;;      esac      '
++(eval):1> case gem-wrappers (*.gem\$)
++__rvm_string_match:15> shift
++__rvm_string_match:5> ((  0  ))
++__rvm_string_match:17> return 1
++__rvm_parse_gems_args:9> gem_name=gem-wrappers 
++__rvm_parse_gems_args:10> case gem-wrappers (*--version*)
++__rvm_parse_gems_args:10> case gem-wrappers (*-v*)
++gem_install:7> [[ -z '' ]]
++gem_install:8> __rvm_db gem_gem-wrappers_version gem_version
++__rvm_db:2> typeset value key variable
++__rvm_db:3> key=gem_gem-wrappers_version 
++__rvm_db:4> key=gem_gem-wrappers_version 
++__rvm_db:5> variable=gem_version 
++__rvm_db:6> value='' 
++__rvm_db:8> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db:9> value=+__rvm_db:9> __rvm_db_ /Users/CloudFactory/.rvm/user/db gem_gem-wrappers_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/user/db 
++__rvm_db_:4> __key=gem_gem-wrappers_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/user/db gem_gem-wrappers_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/user/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++__rvm_db:9> value='' 
++__rvm_db:11> [[ -z '' && -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db:12> value=+__rvm_db:12> __rvm_db_ /Users/CloudFactory/.rvm/config/db gem_gem-wrappers_version
++__rvm_db_:2> typeset __db __key __value
++__rvm_db_:3> __db=/Users/CloudFactory/.rvm/config/db 
++__rvm_db_:4> __key=gem_gem-wrappers_version 
++__rvm_db_:5> shift 2
++__rvm_db_:6> __value='' 
++__rvm_db_:7> case  (unset|delete)
++__rvm_db_:7> case  ()
++__rvm_db_:12> __rvm_db_get /Users/CloudFactory/.rvm/config/db gem_gem-wrappers_version
++__rvm_db_get:2> [[ -f /Users/CloudFactory/.rvm/config/db ]]
++__rvm_db_get:3> __rvm_sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++__rvm_sed:0> sed -n -e '\#^gem_gem-wrappers_version=# { s#^gem_gem-wrappers_version=##;; p; }' -e '/^$/d'
++__rvm_db:12> value='>=1.2.7' 
++__rvm_db:14> [[ -n '>=1.2.7' ]]
++__rvm_db:15> [[ -n gem_version ]]
++__rvm_db:16> eval 'gem_version=''>=1.2.7'''
++(eval):1> gem_version='>=1.2.7' 
++__rvm_db:19> true
++gem_install:12> ((  0 == 0  ))
++gem_install:12> is_gem_installed
++is_gem_installed:2> typeset gem_spec
++is_gem_installed:3> gem_spec='gem ''gem-wrappers''' 
++is_gem_installed:5> [[ -n '>=1.2.7' ]]
++is_gem_installed:7> gem_spec+=', ''>=1.2.7''' 
++is_gem_installed:8> version_check=1.2.7 
++is_gem_installed:12> ls -Gh -ld /Users/CloudFactory/.rvm/gems/ruby-1.9.3-p551/gems/gem-wrappers-1.2.7
++is_gem_installed:13> /Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -rrubygems -e 'gem ''gem-wrappers'', ''>=1.2.7'''
++gem_install:14> rvm_log 'gem gem-wrappers >=1.2.7 is already installed'
++rvm_log:2> rvm_pretty_print stdout
++rvm_pretty_print:2> case auto (0|no)
++rvm_pretty_print:2> case auto (1|auto)
++rvm_pretty_print:7> case xterm-256color (dumb|unknown)
++rvm_pretty_print:10> case stdout (stdout)
++rvm_pretty_print:11> [[ -t 1 ]]
++rvm_pretty_print:11> return 1
++rvm_log:4> printf %b 'gem gem-wrappers >=1.2.7 is already installed\n'
+gem gem-wrappers >=1.2.7 is already installed
++gem_install:15> return 0
++run_gem_wrappers_regenerate:3> gem wrappers regenerate

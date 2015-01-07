@@ -1,0 +1,10 @@
+/Users/CloudFactory/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -r ./siteconf20150105-32128-12axett.rb extconf.rb
+
+make  clean
+make: *** No rule to make target `clean'.  Stop.
+
+make
+make: Nothing to be done for `all'.
+
+make  install
+make: Nothing to be done for `install'.

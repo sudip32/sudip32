@@ -1,0 +1,5 @@
+2015-01-05 10:21:37.475 GoogleSoftwareUpdateAgent[1090/0xb0219000] [lvl=3] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] Failed to connect to system engine.
+2015-01-05 16:02:46.442 GoogleSoftwareUpdateAgent[11206/0xb0219000] [lvl=3] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] Failed to connect to system engine.
+2015-01-06 08:22:39.821 GoogleSoftwareUpdateAgent[271/0xb029b000] [lvl=3] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] Failed to connect to system engine.
+2015-01-06 13:32:07.606 GoogleSoftwareUpdateAgent[4910/0xb029b000] [lvl=3] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] Failed to connect to system engine.
+2015-01-07 08:24:45.842 GoogleSoftwareUpdateAgent[238/0xb031d000] [lvl=3] -[KSAgentApp(KeystoneThread) runKeystonesInThreadWithArg:] Failed to connect to system engine.

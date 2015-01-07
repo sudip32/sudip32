@@ -1,0 +1,245 @@
+/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ruby -r ./siteconf20150101-59088-cml6u7.rb extconf.rb 
+checking for xmlNewDoc() in -lxml2... yes
+checking for nokogiri.h in /Users/CloudFactory/.rvm/gems/ruby-2.1.4/gems/nokogiri-1.6.3.1/ext/nokogiri... yes
+checking for nokogiri.h in /Users/CloudFactory/.rvm/gems/ruby-2.1.4/gems/nokogiri-1.6.3.1/ext/nokogiri... yes
+checking for gumbo_parse() in -lgumbo... no
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling attribute.c
+attribute.c:30:21: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+  for (int i = 0; i < attributes->length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~
+1 warning generated.
+compiling char_ref.c
+compiling error.c
+error.c:39:45: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+  int remaining_capacity = output->capacity - output->length;
+      ~~~~~~~~~~~~~~~~~~   ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+error.c:45:43: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+    remaining_capacity = output->capacity - output->length;
+                       ~ ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+error.c:58:21: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+  for (int i = 0; i < error->tag_stack.length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~
+error.c:138:57: warning: comparison of integers of different signs: 'unsigned int' and 'int' [-Wsign-compare]
+  if (max_errors >= 0 && parser->_output->errors.length >= max_errors) {
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~
+error.c:254:21: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = 0; i < parser->_output->errors.length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+error.c:30:21: warning: unused variable 'kMessageBufferSize' [-Wunused-const-variable]
+static const size_t kMessageBufferSize = 256;
+                    ^
+6 warnings generated.
+compiling nokogumbo.c
+In file included from nokogumbo.c:28:
+/Users/CloudFactory/.rvm/gems/ruby-2.1.4/gems/nokogiri-1.6.3.1/ext/nokogiri/nokogiri.h:13:9: warning: '_GNU_SOURCE' macro redefined
+#define _GNU_SOURCE
+        ^
+/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/include/ruby-2.1.0/x86_64-darwin14.0/ruby/config.h:17:9: note: previous definition is here
+#define _GNU_SOURCE 1
+        ^
+nokogumbo.c:103:19: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i=0; i < attrs->length; i++) {
+                ~ ^ ~~~~~~~~~~~~~
+nokogumbo.c:110:19: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i=0; i < children->length; i++) {
+                ~ ^ ~~~~~~~~~~~~~~~~
+3 warnings generated.
+compiling parser.c
+parser.c:428:21: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+  for (int i = 0; i < attr1->length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~
+parser.c:621:21: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = 0; i < state->_open_elements.length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:727:36: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+  assert(node->index_within_parent == -1);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+parser.c:746:36: warning: comparison of integers of different signs: 'size_t' (aka 'unsigned long') and 'int' [-Wsign-compare]
+  assert(node->index_within_parent == -1);
+         ~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+parser.c:750:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  assert(index < children->length);
+         ~~~~~ ^ ~~~~~~~~~~~~~~~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+parser.c:755:29: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = index + 1; i < children->length; ++i) {
+                          ~ ^ ~~~~~~~~~~~~~~~~
+parser.c:791:34: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+                  table_element->index_within_parent, node);
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+parser.c:1140:21: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = 0; i < open_elements->length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~~~~
+parser.c:1167:21: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+  for (int i = 0; i < old_attributes->length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~~~~~
+parser.c:1214:11: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for(; i < elements->length; ++i) {
+        ~ ^ ~~~~~~~~~~~~~~~~
+parser.c:1217:14: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    assert(i < elements->length);
+           ~ ^ ~~~~~~~~~~~~~~~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+parser.c:1304:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int j = 0; j < expected->length; ++j) {
+                    ~ ^ ~~~~~~~~~~~~~~~~
+parser.c:1313:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int j = 0; j < tags.length; ++j) {
+                    ~ ^ ~~~~~~~~~~~
+parser.c:1619:21: warning: comparison of integers of different signs: 'int' and 'const unsigned int' [-Wsign-compare]
+  for (int i = 0; i < token_attr->length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~
+parser.c:1644:10: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+       i < sizeof(kSvgTagReplacements) / sizeof(ReplacementEntry); ++i) {
+       ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:1660:10: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+       i < sizeof(kForeignAttributeReplacements) /
+       ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:1680:10: warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+       i < sizeof(kSvgAttributeReplacements) / sizeof(ReplacementEntry); ++i) {
+       ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:1753:25: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = index; i < children->length; ++i) {
+                      ~ ^ ~~~~~~~~~~~~~~~~
+parser.c:1818:12: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+         j < state->_open_elements.length; ++j) {
+         ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:1872:25: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+      assert(node_index < state->_open_elements.capacity);
+             ~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+parser.c:1893:25: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        assert(bookmark <= state->_active_formatting_elements.length);
+               ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+parser.c:1934:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int i = 0; i < temp.length; ++i) {
+                    ~ ^ ~~~~~~~~~~~
+parser.c:1955:21: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    assert(bookmark <= state->_active_formatting_elements.length);
+           ~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+parser.c:1965:22: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    assert(insert_at <= state->_open_elements.length);
+           ~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+parser.c:2265:27: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+        for (int i = 0; i < doc->children.length; ++i) {
+                        ~ ^ ~~~~~~~~~~~~~~~~~~~~
+parser.c:2275:25: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+      for (int i = 0; i < node->v.element.attributes.length; ++i) {
+                      ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:2279:25: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+      for (int i = 0; i < node->v.element.children.length; ++i) {
+                      ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:2366:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int i = 0; i < children->length; ++i) {
+                    ~ ^ ~~~~~~~~~~~~~~~~
+parser.c:2379:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int i = 0; i < state->_open_elements.length; ++i) {
+                    ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:2398:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int i = 0; i < state->_open_elements.length; ++i) {
+                    ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:2736:32: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+      int prompt_attr_length = strlen(prompt_attr->value);
+          ~~~~~~~~~~~~~~~~~~   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:2751:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int i = 0; i < token_attrs->length; ++i) {
+                    ~ ^ ~~~~~~~~~~~~~~~~~~~
+parser.c:3061:23: warning: comparison of integers of different signs: 'int' and 'size_t' (aka 'unsigned long') [-Wsign-compare]
+    for (int i = 0; i < buffer->length; ++i) {
+                    ~ ^ ~~~~~~~~~~~~~~
+parser.c:3237:25: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+      for (int i = 0; i < parser->_parser_state->_open_elements.length; ++i) {
+                      ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parser.c:3912:21: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = 0; i < output->errors.length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~~~~
+35 warnings generated.
+compiling string_buffer.c
+compiling string_piece.c
+compiling tag.c
+compiling tokenizer.c
+tokenizer.c:375:18: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+  int text_len = strlen(text);
+      ~~~~~~~~   ^~~~~~~~~~~~
+tokenizer.c:376:19: warning: comparison of integers of different signs: 'int' and 'size_t' (aka 'unsigned long') [-Wsign-compare]
+  return text_len == buffer->length &&
+         ~~~~~~~~ ^  ~~~~~~~~~~~~~~
+tokenizer.c:543:23: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+    for (int i = 0; i < tag_state->_attributes.length; ++i) {
+                    ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tokenizer.c:566:21: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = 0; i < tag_state->_attributes.length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tokenizer.c:785:21: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = 0; i < attributes->length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~~~~~
+tokenizer.c:2964:25: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+      for (int i = 0; i < token->v.start_tag.attributes.length; ++i) {
+                      ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6 warnings generated.
+compiling utf8.c
+utf8.c:120:31: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+    iter->_width = iter->_end - iter->_start;
+                 ~ ~~~~~~~~~~~^~~~~~~~~~~~~~
+utf8.c:145:49: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+  if (is_bad_char || utf8_is_invalid_code_point(code_point)) {
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~~~~~~~~~
+utf8.c:169:20: warning: implicit conversion loses integer precision: 'uint64_t' (aka 'unsigned long long') to 'int' [-Wshorten-64-to-32]
+  iter->_current = code_point;
+                 ~ ^~~~~~~~~~
+utf8.c:248:23: warning: comparison of integers of different signs: 'int' and 'size_t' (aka 'unsigned long') [-Wsign-compare]
+    for (int i = 0; i < length; ++i) {
+                    ~ ^ ~~~~~~
+4 warnings generated.
+compiling util.c
+compiling vector.c
+vector.c:33:22: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'unsigned int' [-Wshorten-64-to-32]
+  vector->capacity = initial_capacity;
+                   ~ ^~~~~~~~~~~~~~~~
+vector.c:85:21: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for (int i = 0; i < vector->length; ++i) {
+                  ~ ^ ~~~~~~~~~~~~~~
+vector.c:97:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  assert(index <= vector->length);
+         ~~~~~ ^  ~~~~~~~~~~~~~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+vector.c:117:16: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  assert(index < vector->length);
+         ~~~~~ ^ ~~~~~~~~~~~~~~
+/usr/include/assert.h:93:25: note: expanded from macro 'assert'
+    (__builtin_expect(!(e), 0) ? __assert_rtn(__func__, __FILE__, __LINE__, #e) : (void)0)
+                        ^
+4 warnings generated.
+linking shared-object nokogumboc.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nokogumboc.bundle ./.gem.20150101-59088-jlcmto
+installing default nokogumboc libraries

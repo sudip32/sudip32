@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--[if IE ]>      <html lang="en" xmlns:fb="http://ogp.me/ns/fb#" class="ie"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <!--<![endif]-->
+
+<head>
+<meta content='text/html;charset=UTF-8' http-equiv='Content-type'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='app-id=927194858' name='apple-itunes-app'>
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="NqateLM/Vw/vjtuWKTV2J3QQNXxwayY6sqnNs3wH2dU=" name="csrf-token" />
+<!-- Open Graph protocol: -->
+<meta property="og:title" content="Dashboard - Code School" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.codeschool.com/account?__utma=1.624759655.1420427703.1420427703.1420427703.1&__utmb=1.9.10.1420427703&__utmc=1&__utmk=96414236&__utmv=-&__utmx=-&__utmz=1.1420427703.1.1.utmcsr%3Dgoogle%7Cutmgclid%3DCN7FxLHx-8ICFdQXjgod9gMAZQ%7Cutmccn%3Dbran..." />
+<meta property="og:image" content="https://d1tijy5l7mg5kk.cloudfront.net/assets/avatar-3bfb8ddee334d1f3ca20a403708022c7.png" />
+<meta property="og:site_name" content="Code School" />
+<meta property="fb:admins" content="5200953" /><meta property="fb:admins" content="40012883" />
+
+<title>Dashboard - Code School</title>
+<link href='https://d1tijy5l7mg5kk.cloudfront.net/assets/favicon-af883c37bc2ad38b4107ab43ab0dc5bb.ico' rel='shortcut icon' type='image/x-icon'>
+<link href='https://d1tijy5l7mg5kk.cloudfront.net/assets/apple-touch-icons/180x180-a4e905958d660a20bf92eb12676362ed.png' rel='apple-touch-icon'>
+<link href='https://d1tijy5l7mg5kk.cloudfront.net/assets/apple-touch-icons/192x192-839c3c9e8976b7d6b9a29122bf25c3a9.png' rel='icon' sizes='192x192'>
+
+
+<meta content='noindex' name='robots'>
+<meta content='noindex' name='googlebot'>
+
+<link href='' rel='canonical'>
+<link href="https://d1tijy5l7mg5kk.cloudfront.net/assets/application-8762e18973aaacd7b79f430b3301e200.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body class=' accounts accounts-show '>
+<div class='dn db--m'>
+
+</div>
+<ul class='js-notes has-note'></ul>
+<!-- Header -->
+<header class='header row has-dropdown ovh ovv--m'>
+<div class='cell'>
+<div class='g'>
+<div class='g-b g-b--m--1of4'>
+<div class='header-item header-item--brand brand fl' itemscope itemtype='http://schema.org/Organization'>
+<a href="/" class="brand-link" itemprop="url"><img alt="Code School" class="brand-img" height="34" itemprop="logo" src="https://d1tijy5l7mg5kk.cloudfront.net/assets/logo-b358c7d696d96c6c75c366304fa43e2e.svg" width="189" />
+</a></div>
+</div>
+<div class='g-b g-b--m--3of4'>
+<nav class='header-item nav' id='site-navigation'>
+<a href="#" class="nav-menu fr"><div class='nav-box'></div>
+<div class='nav-menu-stack'>
+<b class='srt'>Menu</b>
+</div>
+</a><ol class='nav-list list fr'>
+<li class='nav-item list-item'><a href="https://www.codeschool.com/paths" class="nav-item-link list-item-link">Courses</a></li>
+<li class='nav-item list-item'><a href="https://www.codeschool.com/screencasts" class="nav-item-link list-item-link">Screencasts</a></li>
+<li class='nav-item list-item'><a href="https://www.codeschool.com/support" class="nav-item-link list-item-link">Support</a></li>
+<li class='nav-item list-item'><a href="https://www.codeschool.com/enroll" class="nav-item-link list-item-link">Enroll</a></li>
+<li class='nav-item list-item dn db--m'>
+<div class='dropdown dropdown--nested dropdown--user has-userMenu js-dropdown'>
+<a href="https://www.codeschool.com/account" class="userMenu js-dropdown-btn"><img alt="" class="thumb userMenu-thumb" height="40" src="https://secure.gravatar.com/avatar/216a1a3741b3d0a135e7a3e5f9c3b89b.jpg?s=40&r=pg&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1c02274fedcce55a289172bfb8db25ab.jpg%3Fs%3D40%26r%3Dpg" width="40" />
+<i class='icn userMenu-icn'></i>
+</a><ul class='dropdown-menu'>
+<li class='dropdown-item'><a href="https://www.codeschool.com/account" class="dropdown-item-link">My Dashboard</a></li>
+<li class='dropdown-item'><a href="/account/edit" class="dropdown-item-link">My Profile</a></li>
+<li class='dropdown-item'><a href="/users/1152397" class="dropdown-item-link">My Report Card</a></li>
+<li class='dropdown-item'><a href="/users/sign_out" class="dropdown-item-link">Sign Out</a></li>
+</ul>
+</div>
+</li>
+<span class='db dn--m'>
+<li class='nav-item list-item'><a href="https://www.codeschool.com/account" class="nav-item-link list-item-link">My Dashboard</a></li>
+<li class='nav-item list-item'><a href="/account/edit" class="nav-item-link list-item-link">My Profile</a></li>
+<li class='nav-item list-item'><a href="/users/1152397" class="nav-item-link list-item-link">My Report Card</a></li>
+<li class='nav-item list-item'><a href="/users/sign_out" class="nav-item-link list-item-link">Sign Out</a></li>
+</span>
+</ol>
+</nav>
+
+</div>
+</div>
+</div>
+</header>
+
+<div class='row'>
+<div class='cell mtm'>
+<nav class='nav nav--sub' id='account-navigation'>
+<select class='nav-select'>
+<option selected='selected' value='/account'>Dashboard</option>
+<option value='/account/transactions'>History</option>
+<option value='/account/prizes'>Rewards</option>
+</select>
+<ul class='nav-list list dn db--m'>
+<li class='is-active list-item nav-item'>
+<a href="/account" class="nav-item-link list-item-link">Dashboard</a>
+</li>
+<li class='nav-item list-item'>
+<a href="/account/transactions" class="nav-item-link list-item-link">History</a>
+</li>
+<li class='nav-item list-item'>
+<a href="/account/prizes" class="nav-item-link list-item-link">Rewards</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+
+<div class='modal js-tour' id='tour'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h3 class='modal-title'>Welcome to Code School</h3>
+<a href="#" class="modal-close close" data-dismiss="modal"><b class='srt'>Close</b>
+</a></div>
+<div class='modal-body'>
+<div class='mbm'>
+<div class='video video--backdrop video--sublime'>
+<video class=' cs-video-player' data-player-kit='3' data-settings='autoresize:fit' height='360' id='tour-video' poster='https://d1tijy5l7mg5kk.cloudfront.net/assets/poster-gettingStarted-c25eaf9d882f9377a54e4ecde5941b9e.gif' preload='auto' width='640'>
+<source data-quality='hd' src='//www.viddler.com/file/d/767ea82c.mp4?vfid=708a025a4722d1da965ff7f067c77312' type='video/mp4'>
+<source src='//www.viddler.com/file/d/837dbc6f.mp4?vfid=708505594022d3da16753bde196b41e3' type='video/mp4'>
+</video>
+</div>
+
+</div>
+<div class='tac'>
+<a href="/getting-started" class="btn">Learn More About Getting Started</a>
+</div>
+</div>
+<div class='modal-footer tac'>
+<a href="#" class="js-tour-close">Take Me To My Account &rarr;
+</a></div>
+</div>
+</div>
+</div>
+
+
+<main class='content'><div class='row'>
+<div class='cell well' id='account-status'>
+<div class='card card--b'>
+<div class='g'>
+<div class='g-b g-b--l--1of2'>
+<div class='bucket bucket--flag'>
+<div class='bucket-media dn db--m'>
+<img alt="Official Student Badge" src="https://d1tijy5l7mg5kk.cloudfront.net/assets/badge-student-6896422a2ddecf83280e41a03018f73a.svg" width="125" />
+</div>
+<div class='bucket-content'>
+<h1 class='h2 mbf'>Free Account</h1>
+<p class='mbf'>You are not enrolled in Code School, but you have access to all of our free content.</p>
+</div>
+</div>
+</div>
+<div class='g-b g-b--l--1of2'>
+<div class='mtm tac--m'>
+<p>Enroll now for access to all Code School courses and resources.</p>
+<a href="/enrollment/new" class="btn">Enroll Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class='row'>
+<div class='cell well'>
+<div class='g'>
+<div class='g-b g-b--l--1of2 mbm mbf--l'>
+
+<div class='dropdown fr--m mbs mbf--m mhc mhf--m js-dropdown'>
+<a href="#" class="dropdown-btn btn btn--c js-dropdown-btn">Filter by</a>
+<ul class='dropdown-menu'>
+<li class='dropdown-item is-active'><a href="#recently-played" class="dropdown-item-link js-dashboardFilter-link">Recently Played</a></li>
+<li class='dropdown-item'><a href="#completed-courses" class="dropdown-item-link js-dashboardFilter-link">Completed Courses</a></li>
+<li class='dropdown-item'><a href="#latest-courses" class="dropdown-item-link js-dashboardFilter-link">Latest Courses</a></li>
+</ul>
+</div>
+<div class='js-filterContent' id='recently-played'>
+<div class='group tac tal--m'>
+<h2 class='fl--m mbm'>Recently Played</h2>
+</div>
+<div class='js-limiter'>
+<div class='js-limiter-item'>
+<div class='card card--a course course--mini is-complete'>
+<a href="/courses/try-ruby/goto"><div class='course-badge badge badge--s badge--progress' data-percentage='100'>
+<img alt="Try Ruby Completion Badge" class="badge-img" height="55" itemprop="image" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/24/completed-try-ruby-2ae078b656f393b439d050fc5160d3fb.png" width="55" />
+</div>
+</a><div class='course-content'>
+<h2 class='course-title'><a href="/courses/try-ruby/goto" class="course-title-link">Try Ruby</a></h2>
+</div>
+</div>
+
+</div>
+</div>
+<div class='tac'>
+<a href="#" class="btn btn--c btn--wide js-limiter-toggle">+ Show All Recent</a>
+</div>
+</div>
+<div class='js-filterContent is-hidden' id='completed-courses'>
+<div class='group tac tal--m'>
+<h2 class='fl--m mbm'>Completed Courses</h2>
+</div>
+<div class='js-limiter'>
+<div class='js-limiter-item'>
+<div class='card card--b mbm'>
+<div class='bucket bucket--flag'>
+<div class='bucket-media dn db--m'>
+<div class='badge badge--s'>
+<img alt="Try Ruby Completion Badge" class="badge-img" height="55" itemprop="image" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/24/completed-try-ruby-2ae078b656f393b439d050fc5160d3fb.png" width="55" />
+</div>
+</div>
+<div class='bucket-content'>
+<h3>Try Ruby</h3>
+<ul class='list list--inline tsm'>
+<li class='list-item'><a href="/courses/try-ruby/goto" rel="internal">Replay Course</a></li>
+<li class='list-item'><a href="/account/courses/try-ruby/wrap_up">View Wrap-up</a></li>
+<li class='list-item'><a href="/courses/try-ruby/reviews/new">Review Course</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class='tac'>
+<a href="#" class="btn btn--c btn--wide js-limiter-toggle">+ Show All Completed</a>
+</div>
+</div>
+<div class='js-filterContent is-hidden' id='latest-courses'>
+<div class='group tac tal--m'>
+<h2 class='fl--m mbm'>Latest Courses</h2>
+</div>
+<div class='card card--a course course--mini'>
+<a href="/courses/building-blocks-of-express-js/goto"><div class='course-badge badge badge--s badge--progress' data-percentage='0'>
+<img alt="Building Blocks of Express.js Completion Badge" class="badge-img" height="55" itemprop="image" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/475/completed-building-blocks-of-express-js-51227acf5773414563c2dcd82c14ca10.png" width="55" />
+</div>
+</a><div class='course-content'>
+<h2 class='course-title'><a href="/courses/building-blocks-of-express-js/goto">Building Blocks of Express.js</a></h2>
+</div>
+</div>
+<div class='card card--a course course--mini'>
+<a href="/courses/front-end-foundations/goto"><div class='course-badge badge badge--s badge--progress' data-percentage='0'>
+<img alt="Front-end Foundations Completion Badge" class="badge-img" height="55" itemprop="image" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/448/course-complete-81fb30908f005de5c75e5376d041f05f.png" width="55" />
+</div>
+</a><div class='course-content'>
+<h2 class='course-title'><a href="/courses/front-end-foundations/goto">Front-end Foundations</a></h2>
+</div>
+</div>
+<div class='card card--a course course--mini'>
+<a href="/courses/mastering-github/goto"><div class='course-badge badge badge--s badge--progress' data-percentage='0'>
+<img alt="Mastering GitHub Completion Badge" class="badge-img" height="55" itemprop="image" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/443/complete-mastering-github-429cd6057426b6a76829b4f65adaf6d6.png" width="55" />
+</div>
+</a><div class='course-content'>
+<h2 class='course-title'><a href="/courses/mastering-github/goto">Mastering GitHub</a></h2>
+</div>
+</div>
+<div class='card card--a course course--mini'>
+<a href="/courses/javascript-best-practices/goto"><div class='course-badge badge badge--s badge--progress' data-percentage='0'>
+<img alt="JavaScript Best Practices Completion Badge" class="badge-img" height="55" itemprop="image" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/435/completed-javascript-best-practices-320e73d2694215bc24264e74a2f76528.png" width="55" />
+</div>
+</a><div class='course-content'>
+<h2 class='course-title'><a href="/courses/javascript-best-practices/goto">JavaScript Best Practices</a></h2>
+</div>
+</div>
+<div class='card card--a course course--mini'>
+<a href="/courses/shaping-up-with-angular-js/goto"><div class='course-badge badge badge--s badge--progress' data-percentage='0'>
+<img alt="Shaping up with Angular.js Completion Badge" class="badge-img" height="55" itemprop="image" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/392/completed-shaping-up-with-angular-js-83ceb89bd5255391f25230727ae3f019.png" width="55" />
+</div>
+</a><div class='course-content'>
+<h2 class='course-title'><a href="/courses/shaping-up-with-angular-js/goto">Shaping up with Angular.js</a></h2>
+</div>
+</div>
+
+<div class='tac'>
+<a href="/courses" class="btn btn--c btn--wide">View All Courses</a>
+</div>
+</div>
+</div>
+<div class='g-b g-b--l--1of2'>
+<div class='mbm'>
+<div class='group'>
+<h2 class='fl mbm'>Path Progress</h2>
+<a href="/paths" class="fr mts tss twb">View all Paths</a>
+</div>
+<div class='js-limiter--paths'>
+<div class='card card--a mbm js-limiter-item'>
+<div class='bucket bucket--flag'>
+<div class='bucket-media'>
+<a href="/paths/ruby"><div class='badge badge--progress mbm mbf--m mhc mhf--m' data-complete='1' data-total='10'>
+<img alt="Ruby Path Badge" class="badge-img" height="110" src="https://d1tijy5l7mg5kk.cloudfront.net/assets/paths/badge-ruby-9eb9d53ad33397bd220f03f800f3f26e.svg" width="110" />
+</div>
+</a></div>
+<div class='bucket-content'>
+<div class='mbs tac tal--m'>
+<span class='tag tag--static'>Courses Left</span>
+</div>
+<ol class='list list--object js-limiter--badges'>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/rails-for-zombies-redux" class="bdrn db" rel="tooltip" title="Rails for Zombies Redux"><img alt="Rails for Zombies Redux" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/133/completed-rails-for-zombies-redux-b38672b90d56f64b757add36ea7cb850.png" width="55" />
+</a></div>
+</li>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/rails-for-zombies-2" class="bdrn db" rel="tooltip" title="Rails for Zombies 2"><img alt="Rails for Zombies 2" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/25/completed-rails-for-zombies-2-236c025c9607742fdb29de67f1ff2e4b.png" width="55" />
+</a></div>
+</li>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/rails-4-zombie-outlaws" class="bdrn db" rel="tooltip" title="Rails 4: Zombie Outlaws"><img alt="Rails 4: Zombie Outlaws" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/205/completed-rails-4-zombie-outlaws-d9e08167b0635dfd27f0170f42fe52a3.png" width="55" />
+</a></div>
+</li>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/rails-4-patterns" class="bdrn db" rel="tooltip" title="Rails 4 Patterns"><img alt="Rails 4 Patterns" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/288/completed-rails-4-patterns-5a6b1afee6e76347946ccf30e975eb41.png" width="55" />
+</a></div>
+</li>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/surviving-apis-with-rails" class="bdrn db" rel="tooltip" title="Surviving APIs with Rails"><img alt="Surviving APIs with Rails" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/378/completed-surviving-apis-with-rails-482f87efd9827f52ecaa027f733592cb.png" width="55" />
+</a></div>
+</li>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/rails-testing-for-zombies" class="bdrn db" rel="tooltip" title="Rails Testing for Zombies"><img alt="Rails Testing for Zombies" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/63/completed-rails-testing-for-zombies-5cf31dfe73c2f21c096ce9ab552dd901.png" width="55" />
+</a></div>
+</li>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/testing-with-rspec" class="bdrn db" rel="tooltip" title="Testing with RSpec"><img alt="Testing with RSpec" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/115/completed-testing-with-rspec-b5aa5b93cb3c5317c9409977b3d255bf.png" width="55" />
+</a></div>
+</li>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/ruby-bits" class="bdrn db" rel="tooltip" title="Ruby Bits"><img alt="Ruby Bits" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/139/completed-ruby-bits-1e2c5a6c5e4c69a51e411ad7808b9aa0.png" width="55" />
+</a></div>
+</li>
+<li class='list-item js-limiter-item'>
+<div class='badge badge--s'>
+<a href="/courses/ruby-bits-part-2" class="bdrn db" rel="tooltip" title="Ruby Bits Part 2"><img alt="Ruby Bits Part 2" class="badge-img" height="55" src="https://d1ffx7ull4987f.cloudfront.net/images/achievements/small_badge/155/completed-ruby-bits-part-2-3b6f545f774c1dc17f94f295fc6bca83.png" width="55" />
+</a></div>
+</li>
+</ol>
+</div>
+</div>
+<a href="#" class="dn db--m poa pobm porm tss twb js-limiter-toggle--badges">+ Show All</a>
+</div>
+<div class='tac'>
+<a href="#" class="btn btn--c btn--wide js-limiter-toggle--paths">+ Show All Path Progress</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+<footer class='footer'>
+<div class='row'>
+<div class='cell well'>
+<div class='g'>
+<div class='g-b g-b--m--1of2 g-b--l--2of5'>
+<div class='g'>
+<div class='g-b g-b--s--1of2'>
+<ul class='footer-list list mbl'>
+<li class='list-item'><a href="https://www.codeschool.com/users/sign_up" class="footer-list-link list-item-link twb">Create Free Account</a></li>
+<li class='list-item'><a href="https://www.codeschool.com/courses" class="footer-list-link list-item-link">View Courses</a></li>
+<li class='list-item'><a href="https://www.codeschool.com/courses/suggest" class="footer-list-link list-item-link">Suggest Course</a></li>
+<li class='list-item'><a href="https://www.codeschool.com/suggest/features" class="footer-list-link list-item-link">Suggest Feature</a></li>
+<li class='list-item'><a href="http://discuss.codeschool.com" class="footer-list-link list-item-link">Discuss</a></li>
+<li class='list-item'><a href="/support" class="footer-list-link list-item-link">Support</a></li>
+<li class='list-item'><a href="https://codeschool.getambassador.com/" class="footer-list-link list-item-link">Ambassador Program</a></li>
+</ul>
+</div>
+<div class='g-b g-b--s--1of2'>
+<ul class='footer-list list mbl'>
+<li class='list-item'><a href="https://www.codeschool.com/contact" class="footer-list-link list-item-link twb">Contact Code School</a></li>
+<li class='list-item'><a href="https://www.codeschool.com/about" class="footer-list-link list-item-link">About</a></li>
+<li class='list-item'><a href="https://www.codeschool.com/blog" class="footer-list-link list-item-link">Blog</a></li>
+<li class='list-item'><a href="https://www.codeschool.com/jobs" class="footer-list-link list-item-link">Jobs</a></li>
+<li class='list-item'><a href="http://shop.codeschool.com/" class="footer-list-link list-item-link">Shop</a></li>
+<li class='list-item'><a href="https://www.codeschool.com/terms_of_use" class="footer-list-link list-item-link">Terms of Use</a></li>
+<li class='list-item'><a href="https://www.codeschool.com/privacy_policy" class="footer-list-link list-item-link">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class='g-b g-b--m--1of2 g-b--l--3of5'>
+<div class='footer-about'>
+<img alt="Code School" class="db mbm" src="https://d1tijy5l7mg5kk.cloudfront.net/assets/logo-footer-fe42aac2977c8bc3383ce57b739a6c97.svg" />
+<p class='tsm'>
+<strong>Code School</strong> teaches web technologies in the
+comfort of your browser with video lessons, coding challenges,
+and screencasts. We strive to help you learn by doing.
+</p>
+<a href="https://www.codeschool.com/about" class="mbm tsm">Learn More</a>
+<ul class='list iconList'>
+<li class='iconList-item iconList-item--label'>Follow us on:</li>
+<li class='iconList-item'>
+<a href="https://twitter.com/codeschool" class="iconList-item-link footer-list-link"><b class='srt'>Twitter</b>
+<i class='icn icn--twitter iconList-item-icn'></i>
+</a></li>
+<li class='iconList-item'>
+<a href="https://www.facebook.com/CodeSchool" class="iconList-item-link footer-list-link"><b class='srt'>Facebook</b>
+<i class='icn icn--facebook iconList-item-icn'></i>
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p class='footer-copyright'>&copy; 2014 Code School LLC - Crafted in Orlando.</p>
+</div>
+</footer>
+
+<script src="https://d1tijy5l7mg5kk.cloudfront.net/assets/vendor-615ddc60996a208924cf6f4ab1eb7e2e.js" type="text/javascript"></script>
+<script src="https://d1tijy5l7mg5kk.cloudfront.net/assets/application-ed66927079472828c0dddc8df91b123a.js" type="text/javascript"></script>
+<script src="https://d1tijy5l7mg5kk.cloudfront.net/assets/analytics-382eaec46ddff6cefbf842790c29e76a.js" type="text/javascript"></script>
+<script src="//cdn.sublimevideo.net/js/33r2xa49.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['ua97407499._require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js']);_gaq.push(['ua974074923._require', 'inpage_linkid', '//www.google-analytics.com/plugins/ga/inpage_linkid.js']);
+_gaq.push(['ua97407499._setAccount', 'UA-9740749-9']);_gaq.push(['ua974074923._setAccount', 'UA-9740749-23']);
+_gaq.push(['ua974074923._setDomainName', 'none']);_gaq.push(['ua974074923._setAllowLinker', true]);_gaq.push(['ua974074923._addIgnoredRef', 'codeschool.com']);
+_gaq.push(['ua974074923._addIgnoredRef', 'jqueryair.com']);
+_gaq.push(['ua974074923._addIgnoredRef', 'railsforzombies.org']);
+_gaq.push(['ua974074923._addIgnoredRef', 'superrails.com']);
+_gaq.push(['ua974074923._addIgnoredRef', 'tryruby.org']);
+_gaq.push(['ua974074923._addIgnoredRef', 'railsbest.com']);
+_gaq.push(['ua974074923._addIgnoredRef', 'discover-devtools.codeschool.com']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+var _gaq = _gaq || [];
+_gaq.push(['ua97407499._trackPageview', '/account?__utma=1.624759655.1420427703.1420427703.1420427703.1&__utmb=1.9.10.1420427703&__utmc=1&__utmk=96414236&__utmv=-&__utmx=-&__utmz=1.1420427703.1.1.utmcsr%3Dgoogle%7Cutmgclid%3DCN7FxLHx-8ICFdQXjgod9gMAZQ%7Cutmccn%3Dbranded%7Cutmcmd%3Dcpc%7Cutmcct%3Dhome_page']);
+_gaq.push(['ua974074923._trackPageview', '/codeschool.com/account?__utma=1.624759655.1420427703.1420427703.1420427703.1&__utmb=1.9.10.1420427703&__utmc=1&__utmk=96414236&__utmv=-&__utmx=-&__utmz=1.1420427703.1.1.utmcsr%3Dgoogle%7Cutmgclid%3DCN7FxLHx-8ICFdQXjgod9gMAZQ%7Cutmccn%3Dbranded%7Cutmcmd%3Dcpc%7Cutmcct%3Dhome_page']);/* ]]> */
+</script>
+
+<script type="text/javascript">
+  setTimeout(function(){var a=document.createElement("script");
+  var b=document.getElementsByTagName("script")[0];
+  a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/5212.js?"+Math.floor(new Date().getTime()/3600000);
+  a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+<script src='//cdn.optimizely.com/js/120055048.js'></script>
+
+      <script type="text/javascript">
+        (function() {
+  function async_load() {
+    var s = document.createElement('script');
+    s.type = 'text/javascript'; s.async = true;
+    s.src = '//d3itxuyrq7vzpz.cloudfront.net/assets/reamaze.js';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  }
+  if (window.attachEvent) {
+    window.attachEvent('onload', async_load);
+  } else {
+    window.addEventListener('load', async_load, false);
+  }
+})();
+
+var _support = _support || {}
+_support['account'] = 'codeschool';
+_support['ui'] = { container: '#knowledge-base', trigger: '#talk' };
+_support['id'] = "b05914b0-785f-4df6-b397-c8ae84649ae3";
+_support['authkey'] = "ed3aba98b92f4196abda30e38401cd193e4833fca9b582f0bd83080b5dde9368";
+_support['name'] = "bishubohara";
+_support['email'] = "bishubohara@gmail.com";
+_support['data'] = {"admin":"https://www.codeschool.com/admin/users/bishubohara","impersonate":"http://www.codeschool.com/users/bishubohara/impersonate","billing":"https://billing.envylabs.com/admin/sites/1/customers/1152397","stripe":"","billing_system":"Legacy","subscribed":false,"active_hall_pass":false};
+_support['custom_fields'] = {"current_page":{"type":"hidden","value":"https://www.codeschool.com/account?__utma=1.624759655.1420427703.1420427703.1420427703.1\u0026__utmb=1.9.10.1420427703\u0026__utmc=1\u0026__utmk=96414236\u0026__utmv=-\u0026__utmx=-\u0026__utmz=1.1420427703.1.1.utmcsr%3Dgoogle%7Cutmgclid%3DCN7FxLHx-8ICFdQXjgod9gMAZQ%7Cutmccn%3Dbranded%7Cutmcmd%3Dcpc%7Cutmcct%3Dhome_page"},"referer_page":{"type":"hidden","value":"https://www.codeschool.com/users/sign_in"},"browser":{"type":"hidden","value":"Safari 8 on Mac"},"browser_language":{"type":"hidden","value":"en-us"},"path":{"type":"dropdown","value":["Electives","Git","HTML/CSS","iOS","JavaScript","Ruby"],"placeholder":"Need help with a specific course Path?"}};
+
+      </script>
+
+
+<script>
+  $(function() {
+    $('.js-limiter').each(function() {
+      CS.limiter({
+        elements: $(this).find('> .js-limiter-item'),
+        num: 5,
+        toggle: $(this).next().find('.js-limiter-toggle')
+      });
+    });
+  
+    $('.js-limiter--badges').each(function() {
+      CS.limiter({
+        elements: $(this).find('> .js-limiter-item'),
+        num: 4,
+        toggle: $(this).closest('.js-limiter-item').find('.js-limiter-toggle--badges')
+      });
+    });
+  
+    $('.js-limiter--paths').each(function() {
+      CS.limiter({
+        elements: $(this).find('> .js-limiter-item'),
+        num: 3,
+        toggle: $('.js-limiter-toggle--paths')
+      });
+    });
+  
+    CS.dashboardFilter({
+      el: $('.js-dashboardFilter-link'),
+      content: $('.js-filterContent')
+    });
+  
+    CS.urlPreview({ input: $('.preview-input'), preview: $('.preview-show') });
+  
+    $('.feature-release h3 a').each(function() {
+      CS.fixOrphanWords({ text: $(this) });
+    });
+  
+  });
+</script>
+<script>
+  $(function(){
+    $('#video_player').modal('show');
+  })
+  CS.videoPlayer = {
+    speeds: [1, 1.5, 2, 2.5, 3],
+    init: function() {
+      var video = $("#tour-video");
+      var wrapper = $(video).closest('.video--sublime');
+      CS.videoPlayer.initSublime(video[0]);
+      CS.videoPlayer.initSpeedControls(wrapper);
+    },
+    initSpeedControls: function(element) {
+      var speedControls = $('<select class="video-control video-control--speed"></select>')
+      var speeds = CS.videoPlayer.speeds;
+      for(var i=0, l=speeds.length; i<l; i++){
+        speedControls.append('<option value="'+speeds[i]+'">'+speeds[i]+'</option>')
+      }
+      $(element).append(speedControls);
+  
+      speedControls.on('change', function(evt) {
+        var rate = parseFloat($(evt.target).val());
+        $(element).find('video:first')[0].playbackRate = rate
+        CS.videoPlayer.setCookie('videoPlaybackRate', rate);
+      });
+    },
+    initSublime: function(element) {
+      if (!((element) instanceof HTMLVideoElement)) {
+        console.log("Hey, how 'bout you gimme a video element, my child...");
+        return false;
+      }
+      sublime.ready(function(){
+        sublime.prepare(element, function(player){
+          if ( player ) {
+            var playbackRate = CS.videoPlayer.getCookie('videoPlaybackRate');
+            if(playbackRate) {
+              $(element.parentElement).find('video:first')[0].playbackRate = parseFloat(playbackRate);
+              $(".video-control--speed").val(parseFloat(playbackRate))
+            }
+  
+            player.on({
+              start: function(player) {
+                CS.Segment.track( CS.Event.Video.PLAYED );
+              },
+              end: function(player) {
+                CS.Segment.track( CS.Event.Video.WATCHED );
+              }
+            });
+          }
+        });
+      });
+    },
+  
+    setCookie: function(key, value) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    },
+  
+    getCookie: function(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    }
+  }
+  CS.videoPlayer.init()
+</script>
+
+</body>
+

@@ -1,0 +1,9 @@
+OX_4967178962({
+  "ads":{
+    "medium":"w",
+    "record_tmpl":"http://ox-d.answers.servedbyopenx.com/{medium}/1.0/{rtype}?ts={txn_state}",
+    "pixels":"http://us-u.openx.net/w/1.0/pd?plm=6&ph=36873df9-d446-44b4-a7af-378ca1fb97d2",
+    "adunits" : [
+    ]
+  }
+});

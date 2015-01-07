@@ -1,0 +1,10 @@
+/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ruby -r ./siteconf20150101-54355-10bkyl6.rb extconf.rb
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+make: Nothing to be done for `install'.

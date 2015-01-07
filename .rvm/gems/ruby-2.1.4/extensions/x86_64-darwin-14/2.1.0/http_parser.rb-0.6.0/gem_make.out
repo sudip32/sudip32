@@ -1,0 +1,13 @@
+/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ruby -r ./siteconf20150101-59088-20t29u.rb extconf.rb 
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ruby_http_parser.bundle ./.gem.20150101-59088-1ujk4v6
+installing default ruby_http_parser libraries

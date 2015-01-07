@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- Facebook sharing information tags -->
+        <meta property="og:title" content="<%= subject %>" />
+        <title><%= subject %></title>
+		<style type="text/css">
+			/* Client-specific Styles */
+			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
+			body{width:100% !important;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+			body{-webkit-text-size-adjust:none;} /* Prevent Webkit platforms from changing default text sizes. */
+
+			/* Reset Styles */
+			body{margin:0; padding:0;}
+			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
+			table td{border-collapse:collapse;}
+			table th{text-align:left;}
+			#backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+
+			/**
+			* Set the background color for your email. You may want to choose one that matches your company's branding.
+			*/
+			body, #backgroundTable{
+				/*@editable*/ background-color:#FAFAFA;
+			}
+
+			/**
+			* @tip Set the border for your email.
+			*/
+			#templateContainer{
+				/*@editable*/ border: 1px solid #DDDDDD;
+				/*@editable*/ background-color:#FAFAFA;
+			}
+
+			/**
+			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
+			*/
+			h1, .h1{
+				/*@editable*/ color:#202020;
+				display:block;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:34px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tip Set the styling for all second-level headings in your emails.
+			*/
+			h2, .h2{
+				/*@editable*/ color:#202020;
+				display:block;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:30px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tip Set the styling for all third-level headings in your emails.
+			*/
+			h3, .h3{
+				/*@editable*/ color:#202020;
+				display:block;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:26px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
+			*/
+			h4, .h4{
+				/*@editable*/ color:#202020;
+				display:block;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:22px;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:100%;
+				margin-top:0;
+				margin-right:0;
+				margin-bottom:10px;
+				margin-left:0;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tip Set the background color for your email's body area.
+			*/
+			#templateContainer, .bodyContent{
+				/*@editable*/ background-color:#FFFFFF;
+			}
+
+			/**
+			* @tip Set the styling for your email's main content text. Choose a size and color that is easy to read.
+			*/
+			.bodyContent div, p, th, td {
+				/*@editable*/ color:#505050;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:14px;
+				/*@editable*/ line-height:150%;
+				/*@editable*/ text-align:left;
+			}
+
+      .bodyContent th {
+        text-align: left;
+      }
+
+			/**
+			* @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
+			*/
+			.bodyContent div a:link, .bodyContent div a:visited, /* Yahoo! Mail Override */ .bodyContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+
+			.bodyContent img{
+				display:inline;
+				height:auto;
+			}
+
+			/**
+			* @tip Set the background color and top border for your email's footer area.
+			*/
+			#templateFooter{
+				/*@editable*/ background-color:#f8f8f8;
+				/*@editable*/ border-top:0;
+			}
+
+			/**
+			* @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
+			*/
+			.footerContent div{
+				/*@editable*/ color:#666;
+				/*@editable*/ font-family:Arial;
+				/*@editable*/ font-size:10px;
+				/*@editable*/ line-height:125%;
+				/*@editable*/ text-align:left;
+			}
+
+			/**
+			* @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
+			*/
+			.footerContent div a:link, .footerContent div a:visited, /* Yahoo! Mail Override */ .footerContent div a .yshortcuts /* Yahoo! Mail Override */{
+				/*@editable*/ color:#336699;
+				/*@editable*/ font-weight:normal;
+				/*@editable*/ text-decoration:underline;
+			}
+
+			.footerContent img{
+				display:inline;
+			}
+      .footerContent h2.logo {
+        color: #666;
+      }
+
+			/**
+			* @tip Set the background color and border for your email's footer utility bar.
+			*/
+			#utility{
+				/*@editable*/ background-color:#FFFFFF;
+				/*@editable*/ border:0;
+			}
+
+			#utility div{
+				/*@editable*/ text-align:center;
+			}
+		</style>
+	</head>
+    <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    	<center>
+        	<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
+            	<tr>
+                	<td align="center" valign="top">
+                    	<table border="0" cellpadding="10" cellspacing="0" width="600" id="templateContainer">
+                        	<tr>
+                            	<td align="center" valign="top">
+                                    <!-- // Begin Template Body \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+                                    	<tr>
+                                            <td valign="top" class="bodyContent">
+                                                <!-- // Begin Module: Standard Content \\ -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td valign="top">
+                                                          <h2 class="h2"><%= status.pending == 0 ? 'Success!' : 'Error¡' %></h2>
+                                                          <p>
+                                                            Your batch finished in <%= (Time.now - status.created_at).to_i %> seconds.
+                                                            <%= status.total - status.pending %> of <%= status.total %> jobs finished successfully.
+                                                          </p>
+                                                          <% if Sidekiq.options[:web] %>
+                                                          <p>
+                                                            <a href="<%= Sidekiq.options[:web] %>/batches/<%= status.bid %>">Batch Details</a> |
+                                                            <a href="<%= Sidekiq.options[:web] %>/batches">All Batches</a>
+                                                          </p>
+                                                          <% end %>
+                                                          <% fails = status.failure_info; if fails.size > 0 %>
+                                                          <h3 class="h3">Failures</h3>
+                                                          <table border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                            <tr>
+                                                              <th style="text-align: left">Job</th>
+                                                              <th style="text-align: left">Error</th>
+                                                              <th style="text-align: left">Message</th>
+                                                            </tr>
+                                                            <% fails.each do |fail| %>
+                                                            <tr>
+                                                              <td><%= fail.jid %></td>
+                                                              <td><%= fail.error_class %></td>
+                                                              <td><%= fail.error_message %></td>
+                                                            </tr>
+                                                            <% end %>
+                                                          </table>
+                                                          <% end %>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Standard Content \\ -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Body \\ -->
+                                </td>
+                            </tr>
+                        	<tr style="background-color: #f8f8f8; font-size: 10px;">
+                            	<td align="center" valign="top">
+                                    <!-- // Begin Template Footer \\ -->
+                                	<table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                                    	<tr>
+                                        	<td valign="top" class="footerContent">
+                                                <!-- // Begin Module: Standard Footer \\ -->
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td valign="top" width="350">
+                                                            <div mc:edit="std_footer">
+                                                              Sidekiq v<%= Sidekiq::VERSION %> with Sidekiq Pro v<%= Sidekiq::Pro::VERSION %>
+                                                              <br />
+                                                            </div>
+                                                        </td>
+                                                        <td valign="top" width="170">
+                                                          <h2 style="margin: 0; line-height: inherit;"><a href="http://sidekiq.org/pro" style="color: #b1003e;text-decoration: none; font-size: 24px;">Sidekiq Pro</a></h2>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <!-- // End Module: Standard Footer \\ -->
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!-- // End Template Footer \\ -->
+                                </td>
+                            </tr>
+                        </table>
+                        <br />
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>

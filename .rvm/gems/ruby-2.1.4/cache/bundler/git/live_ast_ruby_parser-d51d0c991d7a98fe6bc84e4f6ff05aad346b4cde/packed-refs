@@ -1,0 +1,14 @@
+# pack-refs with: peeled fully-peeled 
+4b370970953a5f61b5dbcb84bc52e1c94d3ba7ba refs/heads/gemspec
+c1d2c3e53b10200c9cd018432712a6dcb5924690 refs/heads/gh-pages
+1802aabf8b582d64cd8443e38a817c1651d063e2 refs/heads/master
+a28999b381ec0579d3bd4c9e4b0eed32876d7341 refs/tags/live_ast_ruby_parser-0.3.0
+ff2f680d570d3cba8486ac3ead21f564ae46fafc refs/tags/live_ast_ruby_parser-0.4.0
+95f5f507a8f936065d3dd08e456526c43d735dd1 refs/tags/live_ast_ruby_parser-0.5.0
+18a544cb2f5a5a3b0a39702bab94f519b5a31f3c refs/tags/live_ast_ruby_parser-0.5.1
+347f396e745b201ca2261deda52b7b9071c18295 refs/tags/live_ast_ruby_parser-0.5.2
+643b051527c0f9fd3a2f3134d14dce0a687c0627 refs/tags/live_ast_ruby_parser-0.6.0
+3a643eb867d8bf4e0c190dbc0fdc7587bd8444d7 refs/tags/live_ast_ruby_parser-0.6.1
+f898d915a1610f0e2333b49830903cc2ad0e3ffc refs/tags/live_ast_ruby_parser-0.6.2
+246affff5fa5f5fed18d41d61bba8bd4287cf2a3 refs/tags/live_ast_ruby_parser-0.6.3
+318b4010de2a9639ac2dd1a7a38d816920188c40 refs/tags/live_ast_ruby_parser-0.6.4

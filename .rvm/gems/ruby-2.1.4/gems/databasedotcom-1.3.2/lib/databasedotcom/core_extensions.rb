@@ -1,0 +1,1 @@
+require 'databasedotcom/core_extensions/string_extensions'

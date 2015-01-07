@@ -1,0 +1,16 @@
+/Users/CloudFactory/.rvm/rubies/ruby-2.1.4/bin/ruby -r ./siteconf20150101-59088-17ifrn8.rb extconf.rb 
+extconf.rb:5:in `<main>': Use RbConfig instead of obsolete and deprecated Config.
+extconf.rb:5:in `<main>': Use RbConfig instead of obsolete and deprecated Config.
+ERROR: unknown ruby version: 2.1
+try passing the rubyversion by argument (1.8 or 1.9)
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling getsource_base.c
+linking shared-object getsource_base.bundle
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 getsource_base.bundle ./.gem.20150101-59088-5kq2fs
+installing default getsource_base libraries

@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled 
+3182cc9ad3be5b6d0a977c6b1d331e1abb68558f refs/heads/master
+4ef4b8a767f25e5c6f02a719816dc4268b6a324b refs/heads/string_number_chaos
+a6ddcae1d60f81794193b5713e53270e328ed6c9 refs/heads/time_out_duration
+5e438e89b1d4fb928f448565d5b1e71abe8f4d8a refs/tags/v1.0
+^3182cc9ad3be5b6d0a977c6b1d331e1abb68558f

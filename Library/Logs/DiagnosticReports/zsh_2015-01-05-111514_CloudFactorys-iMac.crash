@@ -1,0 +1,143 @@
+Process:               zsh [5007]
+Path:                  /bin/zsh
+Identifier:            zsh
+Version:               61
+Code Type:             X86-64 (Native)
+Parent Process:        ??? [5006]
+Responsible:           iTerm [504]
+User ID:               501
+
+Date/Time:             2015-01-05 11:15:14.283 +0545
+OS Version:            Mac OS X 10.10.1 (14B25)
+Report Version:        11
+Anonymous UUID:        9183D767-2DC8-9451-360C-9C68555E6B3D
+
+Sleep/Wake UUID:       5CF32121-70B1-456E-AB3A-74843E421547
+
+Time Awake Since Boot: 8700 seconds
+Time Since Wake:       4300 seconds
+
+Crashed Thread:        0  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_INVALID_ADDRESS at 0x0000000000000010
+
+VM Regions Near 0x10:
+--> 
+    __TEXT                 0000000106e71000-0000000106ee1000 [  448K] r-x/rwx SM=COW  /bin/zsh
+
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   zsh                           	0x0000000106ea809d hrealloc + 172
+1   zsh                           	0x0000000106ea1b29 add + 109
+2   zsh                           	0x0000000106ea1cd1 parsestrnoerr + 290
+3   zsh                           	0x0000000106ea3039 parse_subst_string + 3065
+4   zsh                           	0x0000000106ea1081 zshlex + 2084
+5   zsh                           	0x0000000106eb978e dump_autoload + 7858
+6   zsh                           	0x0000000106eb8aeb dump_autoload + 4623
+7   zsh                           	0x0000000106eb8a60 dump_autoload + 4484
+8   zsh                           	0x0000000106eb886e dump_autoload + 3986
+9   zsh                           	0x0000000106eb5448 parse_event + 317
+10  zsh                           	0x0000000106eb5345 parse_event + 58
+11  zsh                           	0x0000000106e97fce loop + 236
+12  zsh                           	0x0000000106e9ad4d zsh_main + 1331
+13  libdyld.dylib                 	0x00007fff8beb05c9 start + 1
+
+Thread 0 crashed with X86 Thread State (64-bit):
+  rax: 0x00007fb4f9803218  rbx: 0x0000000000000040  rcx: 0x0000000106ee84a8  rdx: 0x0000000000000040
+  rdi: 0x0000000000000000  rsi: 0x00007fb4f9087e00  rbp: 0x00007fff58d8e800  rsp: 0x00007fff58d8e7d0
+   r8: 0x0000000000000001   r9: 0x0000000000000000  r10: 0x0000000000000016  r11: 0x00007fb4f8500000
+  r12: 0x0000000000000080  r13: 0x00007fb4f9087e00  r14: 0x00007fb4f98031d8  r15: 0x0000000000000000
+  rip: 0x0000000106ea809d  rfl: 0x0000000000010246  cr2: 0x0000000000000010
+  
+Logical CPU:     0
+Error Code:      0x00000004
+Trap Number:     14
+
+
+Binary Images:
+       0x106e71000 -        0x106ee0fff  zsh (61) <97DE22E6-5A74-35E3-A693-6E7FFBFEFE6F> /bin/zsh
+       0x106f30000 -        0x106f34fff  parameter.so (61) <8F5422F5-D8D7-38AF-AAD3-3B998164B418> /usr/lib/zsh/5.0.5/zsh/parameter.so
+       0x106f39000 -        0x106f5bfff  zle.so (61) <3148B713-4C85-386D-A826-E7D8D8A8C65B> /usr/lib/zsh/5.0.5/zsh/zle.so
+       0x106f73000 -        0x106f88fff  complete.so (61) <D7E091C1-EBDE-3A31-9260-C47B1D5452ED> /usr/lib/zsh/5.0.5/zsh/complete.so
+       0x106f93000 -        0x106f97fff  zutil.so (61) <2B5B2E75-F977-3BC3-9E9E-42B6A58F39E0> /usr/lib/zsh/5.0.5/zsh/zutil.so
+       0x106f9c000 -        0x106f9cfff  terminfo.so (61) <E42977C9-686C-319A-85A0-E03D309E510B> /usr/lib/zsh/5.0.5/zsh/terminfo.so
+       0x106fa0000 -        0x106fa0fff  zleparameter.so (61) <76D2BF64-C44E-321A-BC54-5C3EE90DCCB4> /usr/lib/zsh/5.0.5/zsh/zleparameter.so
+       0x106fc9000 -        0x106fd2fff  compctl.so (61) <415F2B9E-2564-3745-AB53-26A9BE32242F> /usr/lib/zsh/5.0.5/zsh/compctl.so
+    0x7fff62017000 -     0x7fff6204d837  dyld (353.2.1) <4696A982-1500-34EC-9777-1EF7A03E2659> /usr/lib/dyld
+    0x7fff8266f000 -     0x7fff82670fff  libSystem.B.dylib (1213) <DA954461-EC6A-3DF0-8551-6FC810627627> /usr/lib/libSystem.B.dylib
+    0x7fff8267c000 -     0x7fff826c2ff7  libauto.dylib (186) <A260789B-D4D8-316A-9490-254767B8A5F1> /usr/lib/libauto.dylib
+    0x7fff827de000 -     0x7fff827e0ff7  libquarantine.dylib (76) <DC041627-2D92-361C-BABF-A869A5C72293> /usr/lib/system/libquarantine.dylib
+    0x7fff8286f000 -     0x7fff82877fff  libsystem_platform.dylib (63) <64E34079-D712-3D66-9CE2-418624A5C040> /usr/lib/system/libsystem_platform.dylib
+    0x7fff82878000 -     0x7fff82878ff7  liblaunch.dylib (559.1.22) <8A988924-8BE7-35FE-BF7D-322E90EFE49E> /usr/lib/system/liblaunch.dylib
+    0x7fff82acf000 -     0x7fff82ad5fff  libsystem_trace.dylib (72.1.3) <A9E6B7D8-C327-3742-AC54-86C94218B1DF> /usr/lib/system/libsystem_trace.dylib
+    0x7fff82ad6000 -     0x7fff82ad6ff7  libkeymgr.dylib (28) <77845842-DE70-3CC5-BD01-C3D14227CED5> /usr/lib/system/libkeymgr.dylib
+    0x7fff82b95000 -     0x7fff82b96fff  libDiagnosticMessagesClient.dylib (100) <2EE8E436-5CDC-34C5-9959-5BA218D507FB> /usr/lib/libDiagnosticMessagesClient.dylib
+    0x7fff83369000 -     0x7fff8336dfff  libcache.dylib (69) <45E9A2E7-99C4-36B2-BEE3-0C4E11614AD1> /usr/lib/system/libcache.dylib
+    0x7fff84371000 -     0x7fff843e7fe7  libcorecrypto.dylib (233.1.2) <E1789801-3985-3949-B736-6B3378873301> /usr/lib/system/libcorecrypto.dylib
+    0x7fff8480d000 -     0x7fff84835fff  libxpc.dylib (559.1.22) <9437C02E-A07B-38C8-91CB-299FAA63083D> /usr/lib/system/libxpc.dylib
+    0x7fff84836000 -     0x7fff8483efff  libsystem_dnssd.dylib (561.1.1) <62B70ECA-E40D-3C63-896E-7F00EC386DDB> /usr/lib/system/libsystem_dnssd.dylib
+    0x7fff85104000 -     0x7fff85104ff7  libunc.dylib (29) <5676F7EA-C1DF-329F-B006-D2C3022B7D70> /usr/lib/system/libunc.dylib
+    0x7fff8519b000 -     0x7fff851a3ffb  libcopyfile.dylib (118.1.2) <0C68D3A6-ACDD-3EF3-991A-CC82C32AB836> /usr/lib/system/libcopyfile.dylib
+    0x7fff8529d000 -     0x7fff8529fff7  libsystem_sandbox.dylib (358.1.1) <DB9962EF-8898-31CC-9B87-E01F8CE74C9D> /usr/lib/system/libsystem_sandbox.dylib
+    0x7fff85372000 -     0x7fff853a2ff7  libncurses.5.4.dylib (44) <F09809A4-53B9-3E91-A8FA-D3F584C03AA3> /usr/lib/libncurses.5.4.dylib
+    0x7fff853b3000 -     0x7fff853bcff7  libsystem_notify.dylib (133.1.1) <61147800-F320-3DAA-850C-BADF33855F29> /usr/lib/system/libsystem_notify.dylib
+    0x7fff865ba000 -     0x7fff865e5fff  libc++abi.dylib (125) <88A22A0F-87C6-3002-BFBA-AC0F2808B8B9> /usr/lib/libc++abi.dylib
+    0x7fff86935000 -     0x7fff8695dfff  libsystem_info.dylib (459) <B85A85D5-8530-3A93-B0C3-4DEC41F79478> /usr/lib/system/libsystem_info.dylib
+    0x7fff86a61000 -     0x7fff86a66ff7  libmacho.dylib (862) <126CA2ED-DE91-308F-8881-B9DAEC3C63B6> /usr/lib/system/libmacho.dylib
+    0x7fff86acb000 -     0x7fff86bbdff7  libiconv.2.dylib (42) <2A06D02F-8B76-3864-8D96-64EF5B40BC6C> /usr/lib/libiconv.2.dylib
+    0x7fff86c7d000 -     0x7fff86cb5ffb  libsystem_network.dylib (411) <C0B2313D-47BE-38A9-BEE6-2634A4F5E14B> /usr/lib/system/libsystem_network.dylib
+    0x7fff870b1000 -     0x7fff870b2ffb  libremovefile.dylib (35) <3485B5F4-6CE8-3C62-8DFD-8736ED6E8531> /usr/lib/system/libremovefile.dylib
+    0x7fff8712e000 -     0x7fff87137fff  libsystem_pthread.dylib (105.1.4) <26B1897F-0CD3-30F3-B55A-37CB45062D73> /usr/lib/system/libsystem_pthread.dylib
+    0x7fff8b0a6000 -     0x7fff8b0fafff  libc++.1.dylib (120) <1B9530FD-989B-3174-BB1C-BDC159501710> /usr/lib/libc++.1.dylib
+    0x7fff8ba0a000 -     0x7fff8ba0efff  libsystem_stats.dylib (163.1.4) <1DB04436-5974-3F16-86CC-5FF5F390339C> /usr/lib/system/libsystem_stats.dylib
+    0x7fff8baf3000 -     0x7fff8bb7ffff  libsystem_c.dylib (1044.1.2) <C185E862-7424-3210-B528-6B822577A4B8> /usr/lib/system/libsystem_c.dylib
+    0x7fff8be25000 -     0x7fff8be2aff7  libunwind.dylib (35.3) <BE7E51A0-B6EA-3A54-9CCA-9D88F683A6D6> /usr/lib/system/libunwind.dylib
+    0x7fff8bea1000 -     0x7fff8bea2ff7  libsystem_blocks.dylib (65) <9615D10A-FCA7-3BE4-AA1A-1B195DACE1A1> /usr/lib/system/libsystem_blocks.dylib
+    0x7fff8bead000 -     0x7fff8beb0ff7  libdyld.dylib (353.2.1) <19FAF435-C165-3374-9DEF-D7BBA7D61DB6> /usr/lib/system/libdyld.dylib
+    0x7fff8c78a000 -     0x7fff8c7a6ff7  libsystem_malloc.dylib (53.1.1) <19BCC257-5717-3502-A71F-95D65AFA861B> /usr/lib/system/libsystem_malloc.dylib
+    0x7fff8cc7a000 -     0x7fff8cc97fff  libsystem_kernel.dylib (2782.1.97) <93E0E0A9-75B6-3904-BB4E-4BC7C05F4B6B> /usr/lib/system/libsystem_kernel.dylib
+    0x7fff8cd0e000 -     0x7fff8cd19fff  libcommonCrypto.dylib (60061) <D381EBC6-69D8-31D3-8084-5A80A32CB748> /usr/lib/system/libcommonCrypto.dylib
+    0x7fff8cd6b000 -     0x7fff8cd7cff7  libsystem_coretls.dylib (35.1.2) <EBBF7EF6-80D8-3F8F-825C-B412BD6D22C0> /usr/lib/system/libsystem_coretls.dylib
+    0x7fff8ce76000 -     0x7fff8ce78ff7  libsystem_coreservices.dylib (9) <41B7C578-5A53-31C8-A96F-C73E030B0938> /usr/lib/system/libsystem_coreservices.dylib
+    0x7fff8f025000 -     0x7fff8f20a267  libobjc.A.dylib (646) <3B60CD90-74A2-3A5D-9686-B0772159792A> /usr/lib/libobjc.A.dylib
+    0x7fff8f8cd000 -     0x7fff8f8d4ff7  libcompiler_rt.dylib (35) <BF8FC133-EE10-3DA6-9B90-92039E28678F> /usr/lib/system/libcompiler_rt.dylib
+    0x7fff8fed6000 -     0x7fff8fedcff7  libsystem_networkextension.dylib (167.1.10) <29AB225B-D7FB-30ED-9600-65D44B9A9442> /usr/lib/system/libsystem_networkextension.dylib
+    0x7fff8ffd9000 -     0x7fff90009fff  libsystem_m.dylib (3086.1) <1E12AB45-6D96-36D0-A226-F24D9FB0D9D6> /usr/lib/system/libsystem_m.dylib
+    0x7fff9152f000 -     0x7fff91559ff7  libdispatch.dylib (442.1.4) <502CF32B-669B-3709-8862-08188225E4F0> /usr/lib/system/libdispatch.dylib
+    0x7fff91709000 -     0x7fff9171fff7  libsystem_asl.dylib (267) <F153AC5B-0542-356E-88C8-20A62CA704E2> /usr/lib/system/libsystem_asl.dylib
+    0x7fff91b4c000 -     0x7fff91b4efff  libsystem_configuration.dylib (699.1.5) <9FBA1CE4-97D0-347E-A443-93ED94512E92> /usr/lib/system/libsystem_configuration.dylib
+    0x7fff91c61000 -     0x7fff91c62fff  libsystem_secinit.dylib (18) <581DAD0F-6B63-3A48-B63B-917AF799ABAA> /usr/lib/system/libsystem_secinit.dylib
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 1
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 2674
+    thread_create: 0
+    thread_set_state: 0
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=78.0M resident=39.0M(50%) swapped_out_or_unallocated=39.0M(50%)
+Writable regions: Total=44.7M written=1556K(3%) resident=3072K(7%) swapped_out=0K(0%) unallocated=41.7M(93%)
+ 
+REGION TYPE                      VIRTUAL
+===========                      =======
+Kernel Alloc Once                     4K
+MALLOC                             36.3M
+MALLOC (admin)                       16K
+STACK GUARD                        56.0M
+Stack                              8192K
+VM_ALLOCATE                          12K
+__DATA                              796K
+__LINKEDIT                         70.4M
+__TEXT                             7788K
+shared memory                         4K
+===========                      =======
+TOTAL                             179.1M
+

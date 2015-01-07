@@ -1,0 +1,442 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="resume, make a resume, create a resume, cv template, yourcvbuilder, cv builder, cv, free, free cv builder, professional cv" />
+    <meta name="description" content="YourCVBuilder is a website that allows you to build / Create and keep updating your professional CV / Resume in minutes, for free!" />
+    <meta property="og:title" content="Build your CV now FOR FREE! It's Easy!" />
+    <meta property="og:description" content="yourcvbuilder.com allows you to build, update and download your professional CV/resume in PDF within minutes, for free!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.yourcvbuilder.com" />
+    <meta property="og:site_name" content="yourcvbuilder" />
+    <meta property="fb:admins" content="1" />
+    <meta property="og:image" content="http://www.yourcvbuilder.com/share.jpg"/>
+    <title>Free CV Builder, Free Resume Builder, cv templates</title>
+    <link type="image/x-icon" href="/favicon.png" rel="shortcut icon" />
+    <link href="/Content/styles.css" type="text/css" media="screen" rel="Stylesheet" />
+    <link href="/Content/uploaderStyles.css" type="text/css" media="screen" rel="Stylesheet" />
+    <link href="/Content/jquery.reject.css" rel="stylesheet"  type="text/css" />
+    <link href="/Content/freeow.css" rel="stylesheet"  type="text/css" />
+    <link href="https://google.com/+Yourcvbuilder-loading" rel=publisher />
+    <link rel="alternate" type="application/rss+xml" title="YourCVBuilder Feed" href="http://www.yourcvbuilder.com/rss.xml" />
+    <script type="text/javascript" src="/Scripts/Admin/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="/Scripts/Admin/jquery.ui.sortable.js"></script>
+    <script type="text/javascript" src="/Scripts/easing.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.reject.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.reject({
+                reject: {
+                    msie6: true, // Microsoft Internet Explorer 6
+                    msie7: true, // Microsoft Internet Explorer 7
+                    msie8: true, // Microsoft Internet Explorer 8
+                    msie9: true, // Microsoft Internet Explorer 8
+                    opera: true, // Opera
+                    unknown: true // Everything else
+                }
+            }); // Customized Browsers
+
+            return false;
+        });
+    </script>
+    <script type="text/javascript" src="/Scripts/jquery.freeow.js"></script>
+    <script type="text/javascript" src="/Scripts/javascript.js"></script>
+    
+    <script type="text/javascript" src="/Scripts/jquery.html5uploader.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var fileTemplate = "<div id=\"{{id}}\">";
+            
+            fileTemplate += "<div class=\"preview\"></div>";
+            fileTemplate += "<div class=\"deletePic\" onclick=\"deletePic()\"></div>";
+            //fileTemplate += "<div class=\"filename\">{{filename}}</div>";
+            fileTemplate += "</div>";
+            function slugify(text) {
+                text = text.replace(/[^-a-zA-Z0-9,&\s]+/ig, '');
+                text = text.replace(/-/gi, "_");
+                text = text.replace(/\s/gi, "-");
+                return text;
+            }
+            $("#SingleImage, #uploadPhoto").html5Uploader({
+                postUrl: "",
+                onClientLoadStart: function (e, file) {
+                    deletePic(); // delete pic before uploading another in this project only
+
+                    var upload = $("#uploadPhoto");
+                    if (upload.is(":hidden")) {
+                        upload.show();
+                    }
+                    upload.append(fileTemplate.replace(/{{id}}/g, slugify(file.name)).replace(/{{filename}}/g, file.name));
+                }, onClientLoad: function (e, file) {
+                    $("#" + slugify(file.name)).find(".preview").append("<img src=\"" + e.target.result + "\" alt=\"\">");
+                    $("#" + slugify(file.name)).find(".preview").append("<input name='imageSrc' id='imageSrc' type='hidden' value=\"" + e.target.result + "\" alt=\"\">");
+                    $("#imageSrc").val(e.target.result);
+                }, onServerLoadStart: function (e, file) {
+                    
+                }, onServerProgress: function (e, file) {
+                    
+                }, onServerLoad: function (e, file, response) {
+                    
+                }, onSuccess: function (e, file, response) {
+                    
+                }
+            });});
+    </script>
+    <script type="text/javascript">
+        $("document").ready(function () {
+            addAnotherExperience();
+            addAnotherEducation();
+        });
+
+        
+    </script>
+    
+    <script type="text/javascript">        var switchTo5x = true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">    stLight.options({ publisher: "89f1683d-e4f9-4f80-bc7f-ac5fc66bd302", doNotHash: false, doNotCopy: false, hashAddressBar: false });</script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23720825-11']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+    <div class="leftColumn">
+        <div class="advertisementContainer">
+            <ins class="adsbygoogle"
+             style="display:inline-block;width:160px;height:600px"
+             data-ad-client="ca-pub-7878397480073298"
+             data-ad-slot="3770412969"></ins>
+        </div>
+        <div class="shadow"></div>
+        <div class="leftArrow" onclick="moveDown()"></div>
+    </div>
+    <div class="rightColumn">
+        <div class="advertisementContainer">
+            <ins class="adsbygoogle"
+             style="display:inline-block;width:160px;height:600px"
+             data-ad-client="ca-pub-7878397480073298"
+             data-ad-slot="7982652965"></ins>
+        </div>
+        <div class="shadow"></div>
+        <div class="rightArrow" onclick="moveNext()"></div>
+    </div>
+    <div class="topHeader">
+        <div class="likers">
+            <div class="g-plusone" data-size="medium" data-href="http://www.yourcvbuilder.com/"></div>
+            <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style ">
+            <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+            <a class="addthis_button_tweet"></a>
+            <a style="width: 44px;" class="addthis_button_pinterest_pinit" pi:pinit:url="http://www.yourcvbuilder.com" pi:pinit:media="http://www.yourcvbuilder.com/yourcvbuilder-dot-com.png" pi:pinit:layout="horizontal"></a> 
+            <a class="addthis_counter addthis_pill_style"></a>
+            </div>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5149ef385279dd32"></script>
+            <!-- AddThis Button END -->
+        </div>
+        <!-- AddThis Follow BEGIN -->
+        <div class="addthis_toolbox addthis_32x32_style addthis_default_style" style="position: absolute; left: 470px; top: 7px;">
+        <a class="addthis_button_facebook_follow" addthis:userid="Loading.labs"></a>
+        <a class="addthis_button_twitter_follow" addthis:userid="Loadinglb"></a>
+        <a class="addthis_button_linkedin_follow" addthis:userid="loading" addthis:usertype="company"></a>
+        <a class="addthis_button_google_follow" addthis:userid="+Loadinglbs"></a>
+        </div>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee595e1bbf3cd8"></script>
+        <!-- AddThis Follow END -->
+        <div class="aboutContactHelp">
+            
+    
+    <script type="IN/Login"></script>
+    <a href="javascript:loginUp()" class="link loGinIn">Log in or Signup</a>
+    <div class="separator"></div>
+    
+    <a href="/Blog" style="position: relative;" class="link">Blog<div style="background-color: orange; color: white; font-weight: bold; border-radius: 6px; position: absolute; z-index: 1; padding-right: 14px; padding-left: 14px; font-size: 10px; padding-bottom: 1px; left: -11px; bottom: -14px;">New</div></a>
+    <div class="separator"></div>
+    <a href="/FAQ" class="link">FAQ</a>
+    <div class="separator"></div>
+    <a href="/AboutUs" class="link">About</a>
+    <div class="separator"></div>
+    <a href="/Advertise" class="link">Advertise</a>
+    <div class="separator"></div>
+    <a href="/CoverLetters" style="position: relative;"  class="link"><div style="background-color: orange; color: white; font-weight: bold; border-radius: 6px; position: absolute; z-index: 1; padding-right: 14px; padding-left: 14px; font-size: 10px; padding-bottom: 1px; left: 8px; bottom: -14px;">New</div>Cover Letters</a>
+
+        </div>
+    </div>
+    <div class="lowerHeader">
+        <a class="logo" href="/"><img src="/Content/Images/logo2.png" /></a>
+        <div class="socialMedia" style="z-index:1";>
+            <a target="_blank" class="twitter" href="http://www.twitter.com/loadinglb"></a>
+            <a target="_blank" class="facebook" href="https://www.facebook.com/loading.labs"></a>
+            <a class="skype" style="cursor:pointer;" onclick="window.open('skype:theloadingteam')"></a>
+        </div>
+        <div style="border: 0px none; position: relative; display: block; top: 6px; text-align: center;">
+            
+            <!-- 728x90-Leaderboard-homepage -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-7878397480073298"
+                 data-ad-slot="9816946565"></ins>
+        </div>
+        <div style="margin-right:auto; margin-left:auto; width:100%; max-width:664px; display:none;" id="lowerTopMenu">
+            <div class="lowerTopMenu">
+                <div class="lowerTopMenuItem" onclick="moveToBasics()"><div style="padding-left: 65px; padding-top: 13px;">Basics</div></div>
+                <div class="lowerTopMenuItem" onclick="moveToEducation()"><div style="padding-left: 25px; padding-top: 13px;">Education</div></div>
+                <div class="lowerTopMenuItem" onclick="moveToExperience()"><div style="padding-left: 21px; padding-top: 13px;">Experience</div></div>
+                <div class="lowerTopMenuItem" onclick="moveToSkills()" style="width: 94px;"><div style="padding-left: 25px; padding-top: 13px;">Skills</div></div>
+                <div class="lowerTopMenuItem" onclick="moveToTemplates()" style="width: 115px;"><div style="padding-left: 27px; padding-top: 13px;">Finish</div></div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        
+<script src="/scripts/ckeditor/ckeditor.js"></script>
+<style type="text/css">
+.cke_reset
+{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #9b9b9b;
+    overflow: hidden;
+}
+.cke_top, .cke_bottom
+{
+	display:none !important;
+}
+.cke_contents {
+    border: 0 none !importamt;
+}
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //CKEDITOR.replace('description');class="ckeditor"
+        $(".eduContainer, .expContainer").each(function () {
+            var idToChange = $(".eduContainer").find("textarea").attr("id");
+
+            CKEDITOR.replace(idToChange,
+            {
+                customConfig: 'config2.js',
+                contentsCss:"/Scripts/ckeditor/skins/moono/Precious.css",
+                width: 550,
+                height: 110,
+            });
+        });
+    });
+</script>
+    <div class="firstWrapper">
+        <div class="bigLogo"></div>
+        <div class="description">Our CV Builder helps you create a professional CV with international standards in only 5 minutes, for free.<br />We also offer a variety of professional templates that will certainly exceed your expectations. <b style="color:White; cursor:pointer;" onclick="moveUp();">Start building your CV now ?</b></div>
+        <div class="start" onclick="moveUp();"></div>
+    </div>
+    <form method="post" class="secondBigWrapper" name="formToSend" id="formToSend" action="/Home/createSession">
+        <div class="secondWrapper" id="secondWrapper"> 
+            <div class="title">1: Fill in your basic information</div>
+            <div class="form1">
+                <input type="text" onclick="if(this.value=='First Name')this.value=''" onblur="if(this.value=='')this.value='First Name'" id="firstName" name="firstName" value="First Name" />
+                <input type="text" onclick="if(this.value=='Last Name')this.value=''" onblur="if(this.value=='')this.value='Last Name'" id="lastName" name="lastName" value="Last Name" style="margin-left: 27px; margin-right: 0;" />
+                <input type="text" onclick="if(this.value=='Job Title')this.value=''" onblur="if(this.value=='')this.value='Job Title'" id="title" name="title" value="Job Title" />
+                <input type="text" onclick="if(this.value=='Nationality')this.value=''" onblur="if(this.value=='')this.value='Nationality'" id="nationality" name="nationality" value="Nationality" style="margin-left: 27px; margin-right: 0;" />
+                <input type="text" onclick="if(this.value=='Date of Birth:  dd/mm/year')this.value=''" onblur="if(this.value=='')this.value='Date of Birth:  dd/mm/year'" id="birthdate" name="birthdate" value="Date of Birth:  dd/mm/year" />
+                <input type="text" onclick="if(this.value=='E-mail Address')this.value=''" onblur="if(this.value=='')this.value='E-mail Address'" id="email" name="email" value="E-mail Address" style="margin-left: 27px; margin-right: 0;" />
+                <input type="text" onclick="if(this.value=='City of Birth')this.value=''" onblur="if(this.value=='')this.value='City of Birth'" id="cityOfBirth" name="cityOfBirth" value="City of Birth" />
+                <div id="uploadPhoto">
+                    
+                </div>
+                <input id="SingleImage" type="file" accept="image/*" style="display:none;" />
+                <input type="text" onclick="if(this.value=='Country of Birth')this.value=''" onblur="if(this.value=='')this.value='Country of Birth'" id="countryOfBirth" name="countryOfBirth" value="Country of Birth" style="margin-top: 11px;" />
+                <input type="text" onclick="if(this.value=='Phone Number')this.value=''" onblur="if(this.value=='')this.value='Phone Number'" id="number" name="number" value="Phone Number" />
+            </div>
+            
+        </div>
+        <div class="thirdWrapper" id="thirdWrapper">
+            <div class="title">2: Fill in your education information</div>
+            <div class="form2">
+            
+            </div>
+            
+            <div class="addMore" onclick="addAnotherEducation()"></div>
+        </div>
+        <div class="fourthWrapper" id="fourthWrapper">
+            <div class="title">3: Fill in your work experience</div>
+            <div class="form3">
+            
+            </div>
+            
+            <div class="addMore" onclick="addAnotherExperience()"></div>
+        </div>
+        <div class="fifthWrapper" id="fifthWrapper">
+            <div class="title">4: Add your skills, languages, references and objective</div>
+            <div class="form4">
+                <div class="objectiveContainer" style="margin-bottom: 23px;">
+                    <input type="text" style="width: 510px;" onclick="if(this.value=='Insert your objective for applying here')this.value=''" onblur="if(this.value=='')this.value='Insert your objective for applying here'" id="objective" name="objective" value="Insert your objective for applying here" />
+                </div>
+                
+                <div class="languageContainer">
+                    <input type="text" style="width: 510px;" onclick="if(this.value=='Insert a Language Skill  e.g. Italian (fluent in speech, writing and reading)')this.value=''" onblur="if(this.value=='')this.value='Insert a Language Skill  e.g. Italian (fluent in speech, writing and reading)'" id="languageSkill1" name="languageSkill1" value="Insert a Language Skill  e.g. Italian (fluent in speech, writing and reading)" />
+                    <div class="delete" onclick="deleteSkillsPart(this)"></div>
+                </div>
+                
+                <div class="addMore" onclick="addAnotherLanguage()"></div>
+                
+                <div class="languageContainer2">
+                    <input type="text" style="width: 510px;" onclick="if(this.value=='Insert a Technical Skill  e.g. Leading a work group')this.value=''" onblur="if(this.value=='')this.value='Insert a Technical Skill  e.g. Leading a work group'" id="technicalSkill1" name="technicalSkill1" value="Insert a Technical Skill  e.g. Leading a work group" />
+                    <div class="delete" onclick="deleteSkillsPart(this)"></div>
+                </div>
+                
+                <div class="addMore" onclick="addAnotherTechnical()"></div>
+                
+                <div class="languageContainer3">
+                    <input type="text" style="width: 510px;" onclick="if(this.value=='Insert a Computer Skill  e.g. Proficient in Microsoft Office 2007 and 2010')this.value=''" onblur="if(this.value=='')this.value='Insert a Computer Skill  e.g. Proficient in Microsoft Office 2007 and 2010'" id="computerSkill1" name="computerSkill1" value="Insert a Computer Skill  e.g. Proficient in Microsoft Office 2007 and 2010" />
+                    <div class="delete" onclick="deleteSkillsPart(this)"></div>
+                </div>
+                
+                <div class="addMore" onclick="addAnotherComputerTechnical()"></div>
+                
+                <div class="languageContainer4">
+                    <input type="text" style="width: 510px;" onclick="if(this.value=='Insert a Reference  e.g. Ms. Derpina, IT manager :  +64 213 546')this.value=''" onblur="if(this.value=='')this.value='Insert a Reference  e.g. Ms. Derpina, IT manager :  +64 213 546'" id="reference1" name="reference1" value="Insert a Reference  e.g. Ms. Derpina, IT manager :  +64 213 546" />
+                    <div class="delete" onclick="deleteSkillsPart(this)"></div>
+                </div>
+                
+                <div class="addMore" onclick="addAnotherReference()"></div>
+                
+            </div>
+        </div>
+        <div class="sixthWrapper" id="sixthWrapper">
+            <div class="title">5: Pick an awesome template</div>
+            <div class="form5" style="width: 600px;">
+                <!--div class="moveTemplateUp" onclick="moveTemplateUp()"></div>
+                <div class="moveTemplateDown" onclick="moveTemplateDown()"></div-->
+                <div class="templateWrapper">
+                    <div class="templateContainer">
+                        <div class="template " number="1">
+                            <img alt="" src="/Content/images/template1.jpg" width="" />
+                        </div>
+                        <div class="template " number="2">
+                            <img alt="" src="/Content/images/template2.jpg" />
+                        </div>
+                        <div class="template " number="3">
+                            <img alt="" src="/Content/images/template3.jpg" />
+                        </div>
+                        <div class="template " number="4">
+                            <img alt="" src="/Content/images/template4.jpg" />
+                        </div>
+                        <div class="template " number="5">
+                            <img alt="" src="/Content/images/template5.jpg" />
+                        </div>
+                        <div class="template " number="6">
+                            <img alt="" src="/Content/images/template6.jpg" />
+                        </div>
+                        <div class="template " number="7">
+                            <img alt="" src="/Content/images/template7.jpg" />
+                        </div>
+                        <div class="template " number="8">
+                            <img alt="" src="/Content/images/template8.jpg" />
+                        </div>
+                        
+                    </div>
+                    <input type="hidden" name="templateId" id="templateId" value="1" />
+                </div>
+                <div class="bigTemplate"><img alt="" src="/Content/images/template1.jpg" /></div>
+                <div class="finish" onclick="moveNext()"></div>
+            </div>
+        </div>
+        <div class="seventhWrapper" id="seventhWrapper">
+            <div class="title"><div></div></div>
+            <div class="form6">
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style addthis_32x32_style" style="position: absolute; bottom: -65px; left: 98px;">
+                <a class="addthis_button_facebook"></a>
+                <a class="addthis_button_twitter"></a>
+                <a class="addthis_button_linkedin"></a>
+                <a class="addthis_button_google_plusone_share"></a>
+                <a class="addthis_button_yahoobkm"></a>
+                <a class="addthis_button_pinterest_share"></a>
+                <a class="addthis_button_tumblr"></a>
+                <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+                </div>
+                <script type="text/javascript">    var addthis_config = { "data_track_addressbar": true };</script>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52ee595e1bbf3cd8"></script>
+                <!-- AddThis Button END -->
+                
+                <div class="save" style="background-image:url(/Content/images/savee2.png)" onclick="moveNext(); displayAssuranceMessage();"></div>
+                <div class="downloadpdf" onclick="moveNext(); displayAssuranceMessage();"></div>
+                <a class="goToOnlineLink" href="javascript:moveNext(); displayAssuranceMessage();"></a>
+                
+            </div>
+            <div class="onlineCvPopup">
+                
+                <div class="close" onclick="$(this).parent().addClass('hideForever');"></div>
+            </div>
+        </div>
+        <div class="eighthWrapper" id="eighthWrapper">
+            <div class="title"><b>Log in</b> to your account or <b>Sign up</b> for a new one.</div>
+            <div class="form7">
+                <div class="loginContainer">
+                    <input type="text" onclick="if(this.value=='E-mail addess')this.value=''" onblur="if(this.value=='')this.value='E-mail addess'" id="userName" name="userName" value="E-mail addess" style="margin-left: 27px; margin-right: 0; width: 186px; float: none;" />
+                    <input type="password" onclick="if(this.value=='Password')this.value=''" onblur="if(this.value=='')this.value='Password'" id="Password" name="Password" value="Password" style="margin-top: 40px; margin-left: 27px; margin-right: 0; width: 186px; float: none;" />
+                    <div class="forgotPassword" onclick="moveToForgotPass()">Forgot your password?</div>
+                    <div class="login" onclick="loginUser()"></div>
+                    <div class="loader"></div>
+                </div>
+                <div class="signupContainer">
+                    <input type="text" onclick="if(this.value=='First name')this.value=''" onblur="if(this.value=='')this.value='First name'" id="SignupFirstName" name="SignupFirstName" value="First name" style="margin-left: 27px; margin-right: 0; width: 186px; float: none;" />
+                    <input type="text" onclick="if(this.value=='Last name')this.value=''" onblur="if(this.value=='')this.value='Last name'" id="SignupLastName" name="SignupLastName" value="Last name" style="margin-top: 40px; margin-left: 27px; margin-right: 0; width: 186px; float: none;" />
+                    <input type="text" onclick="if(this.value=='E-mail address (Username)')this.value=''" onblur="if(this.value=='')this.value='E-mail address (Username)'" id="SignupUsername" name="SignupUsername" value="E-mail address (Username)" style="margin-top: 40px; margin-left: 27px; margin-right: 0; width: 186px; float: none;" />
+                    <input type="password" onclick="if(this.value=='Password')this.value=''" onblur="if(this.value=='')this.value='Password'" id="SignupPassword" name="SignupPassword" value="Password" style="margin-top: 36px; margin-left: 27px; margin-right: 0; width: 186px; float: none;" />
+                    <div id="showPasswordLetters" onclick="showPasswordLetters()">Show Letters</div>
+                    <div class="signup" onclick="signUpUser()"></div>
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ninethWrapper" id="ninethWrapper">
+            <div class="title"><b>Forgot your password? </b>No worries!</div>
+            <div class="form8">
+                <div class="forgotPasswordContainer">
+                    <input type="text" style="margin-right: 0px; float: none; margin-top: 64px; margin-left: 55px; width: 309px;" value="E-mail addess" id="forgotPassEmail" onblur="if(this.value=='')this.value='E-mail addess'" onclick="if(this.value=='E-mail addess')this.value=''" />
+                    <div class="sendforgot" onclick="sendforgot()"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    </div>
+    <div class="footer">
+        <a style="margin-left: 106px;" target="_blank" href="http://www.loading-lb.com" class="footerItem">
+            <img alt="" src="/Content/images/footerLoading.png" />
+        </a>
+        <a target="_blank" href="http://www.neoshamon.com" class="footerItem">
+            <img alt="" src="/Content/images/footerNeo.png" />
+        </a>
+        
+        <a id="loadingLink" title="Loading Australia Web Design Brisbane" target="_blank" href="http://www.loadingaustralia.com.au">yourcvbuilder &trade; 2013 &copy; Loading </a>
+        <a style="bottom: -27px;color: rgb(155, 155, 155);font-family: arial;font-size: 12px;left: 171px;position: absolute;text-decoration: none;" title="Read our privacy policy" href="/PrivacyPolicy">Privacy Policy</a>
+    </div>
+    <input value="" type="hidden" id="TempDownLink" />
+    <div class="suggestionClick">
+        <div class="close">x</div>
+    </div>
+    <div class="suggestionPopup">
+        <div class="close">x</div>
+        <textarea id="suggestionTextArea" onclick="if($.trim($(this).text()) == 'Write your suggestions here...')$(this).text('')" onblur="if($.trim($(this).text()) == '')$(this).text('Write your suggestions here...')">Write your suggestions here...</textarea>
+        <div class="submit" usefulId=''>Submit</div>
+    </div>
+    <div class="freeow freeow-top-right" id="alertMessages"></div>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>

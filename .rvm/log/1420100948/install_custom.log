@@ -1,0 +1,17 @@
+[2015-01-01 14:14:18] requirements_osx_brew_install_custom
+requirements_osx_brew_install_custom () 
+{ 
+    typeset __tap;
+    for __tap in "$@";
+    do
+        brew tap "${__tap}" || return $?;
+    done
+}
+current path: /Users/CloudFactory
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/CloudFactory/.rvm/bin
+command(2): requirements_osx_brew_install_custom homebrew/versions
++ typeset __tap
++ for __tap in '"$@"'
++ brew tap homebrew/versions
+Cloning into '/usr/local/Library/Taps/homebrew/homebrew-versions'...
+Tapped 169 formulae

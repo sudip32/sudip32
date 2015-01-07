@@ -1,0 +1,40 @@
+[2015-01-01 15:17:57] requirements_osx_brew_libs_install
+requirements_osx_brew_libs_install () 
+{ 
+    brew unlink "$@" || true;
+    brew install "$@" || { 
+        typeset ret=$?;
+        rvm_warn "There were package installation errors, make sure to read the log.
+
+Try \`brew tap --repair\` and make sure \`brew doctor\` looks reasonable.
+
+Check Homebrew requirements https://github.com/Homebrew/homebrew/wiki/Installation";
+        case "$_system_version" in 
+            10.6)
+                rvm_warn "
+On OSX 10.6 instead of command line tools install:
+    https://github.com/downloads/kennethreitz/osx-gcc-installer/GCC-10.6.pkg"
+            ;;
+        esac;
+        return $ret
+    }
+}
+current path: /Users/CloudFactory
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/CloudFactory/.rvm/bin
+command(3): requirements_osx_brew_libs_install gcc48 libksba
++ brew unlink gcc48 libksba
+Error: No such keg: /usr/local/Cellar/gcc48
++ true
++ brew install gcc48 libksba
+==> Installing gcc48 from homebrew/homebrew-versions
+==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/versions/gcc48-4.8.4.yosemite.bottle.tar.gz
+==> Pouring gcc48-4.8.4.yosemite.bottle.tar.gz
+🍺  /usr/local/Cellar/gcc48/4.8.4: 1028 files, 142M
+==> Installing libksba dependency: libgpg-error
+==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/libgpg-error-1.17.yosemite.bottle.tar.gz
+==> Pouring libgpg-error-1.17.yosemite.bottle.tar.gz
+🍺  /usr/local/Cellar/libgpg-error/1.17: 17 files, 332K
+==> Installing libksba
+==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/libksba-1.3.2.yosemite.bottle.tar.gz
+==> Pouring libksba-1.3.2.yosemite.bottle.tar.gz
+🍺  /usr/local/Cellar/libksba/1.3.2: 12 files, 372K
